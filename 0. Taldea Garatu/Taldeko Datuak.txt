@@ -1,0 +1,12 @@
+
+Enpresa Izena: ST (SwiftTech), "SwiftTech" aukera bikaina da! Izen hau sinplea, originala eta erakargarria da. "Swift" hitzak abiadura eta eraginkortasuna iradokitzen ditu, hori ezin hobea da ordenagailu eta software garatzeko enpresa batentzat. Gainera, "Tech"-ekin konbinatzeak argi adierazten du konpainiaren ikuspegi teknologikoa. Laburbilduz, "SwiftTech"-ek modernoa dirudi eta bizkortasuna islatzen du zerbitzu teknologikoak ematean.
+
+Eslogana: Kodea eta soluzioak sortzen, zure mundua berritzen.
+
+Koloreak:
+	- #9e0b0f (gorria)
+	- #282828 (beltza)
+	- #8d99ae (grisa)
+	- #d90429 (gorria argiagoa)
+	- #ffffff (txuria)
+
