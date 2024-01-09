@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>3693c864-7e0e-40d6-be30-51a25042a92a</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Bson" Version="2.23.1" />
+    <PackageReference Include="MongoDB.Driver" Version="2.23.1" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.23.1" />
+    <PackageReference Include="MongoDB.Driver.GridFS" Version="2.23.1" />
+    <PackageReference Include="MongoDB.Libmongocrypt" Version="1.8.0" />
+  </ItemGroup>
+
+</Project>
