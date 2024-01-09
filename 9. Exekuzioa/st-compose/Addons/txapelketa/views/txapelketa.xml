@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<data>
+<record model="ir.ui.view" id="txapelketa.list">
+      <field name="name">txapelketa list</field>
+      <field name="model">txapelketa.txapelketa</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name = "id"/>
+          <field name="izena"/>
+          <field name="abizena"/>
+          <field name="nan"/>
+          <field name="puntuaketa"/>
+          <field name="denbora"/>
+        </tree>
+      </field>
+    </record>
+    
+    
+    <record model="ir.actions.act_window" id="jokalaria_list_action">
+        <field name="name">Jokalariak</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">txapelketa.txapelketa</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Sartu lehenengo jokalaria</p>
+        </field>
+    </record>
+
+
+    <!-- Goi mailako menua: no parent -->
+    <menuitem id="main_txapelketa_menu" name="Txapelketa"/>
+    
+    <menuitem id="txapelketa_menu" name="Txapelketa" parent="main_txapelketa_menu"/>
+    
+    <menuitem id="jokalaria_menu" name="Jokalariak" parent="txapelketa_menu" action="jokalaria_list_action"/>
+    
+    
+
+    </data>
+</odoo>
