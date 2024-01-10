@@ -46,3 +46,5 @@ C:\Users\ikaltamirapaag2\Desktop\ST_Erronka2\9. Exekuzioa\WEB ORRIA\st_WebOrria\
 C:\Users\ikaltamirapaag2\Desktop\ST_Erronka2\9. Exekuzioa\WEB ORRIA\st_WebOrria\obj\Debug\net8.0\st_WebOrria.pdb
 C:\Users\ikaltamirapaag2\Desktop\ST_Erronka2\9. Exekuzioa\WEB ORRIA\st_WebOrria\obj\Debug\net8.0\st_WebOrria.genruntimeconfig.cache
 C:\Users\ikaltamirapaag2\Desktop\ST_Erronka2\9. Exekuzioa\WEB ORRIA\st_WebOrria\obj\Debug\net8.0\ref\st_WebOrria.dll
+C:\Users\ikaltamirapaag2\Desktop\ST_Erronka2\9. Exekuzioa\WEB ORRIA\st_WebOrria\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\ikaltamirapaag2\Desktop\ST_Erronka2\9. Exekuzioa\WEB ORRIA\st_WebOrria\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
