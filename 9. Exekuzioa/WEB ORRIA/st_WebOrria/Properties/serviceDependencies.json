@@ -1,11 +1,8 @@
 {
   "dependencies": {
-    "secrets1": {
-      "type": "secrets"
-    },
     "mongodb1": {
-      "type": "mongodb",
-      "connectionId": "mongoConnection"
+      "ignored": "true",
+      "type": "mongodb"
     }
   }
 }

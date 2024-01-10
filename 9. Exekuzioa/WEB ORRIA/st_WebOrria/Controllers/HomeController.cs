@@ -13,7 +13,7 @@ namespace st_WebOrria.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Hasiera()
         {
             return View();
         }
@@ -21,6 +21,11 @@ namespace st_WebOrria.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public IActionResult Proiektuak()
+        {
+            return View("Proiektuak");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

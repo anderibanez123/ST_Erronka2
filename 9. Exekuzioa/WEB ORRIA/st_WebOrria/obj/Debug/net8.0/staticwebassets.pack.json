@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\st_WebOrria.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\Irudiak\\Logoa.png",
+      "PackagePath": "staticwebassets\\Irudiak\\Logoa.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\Irudiak\\logoaa.png",
+      "PackagePath": "staticwebassets\\Irudiak\\logoaa.png"
+    },
+    {
       "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
