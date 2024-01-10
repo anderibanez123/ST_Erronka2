@@ -39,13 +39,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/background_btn"
-            android:textStyle="bold"
-            android:textColor="@color/primary_color"
             android:fontFamily="@font/chakrapetchbold"
-            android:textSize="20sp"
-            android:padding="8dp"
             android:onClick="main_btn"
-            android:text="Play" />
+            android:padding="8dp"
+            android:text="Play"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_setting"
@@ -53,14 +53,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/background_btn"
-            android:textStyle="bold"
-            android:textColor="@color/primary_color"
             android:fontFamily="@font/chakrapetchbold"
-            android:textSize="20sp"
-            android:padding="8dp"
             android:onClick="main_btn"
+            android:padding="8dp"
+            android:text="Setting"
+            android:textColor="@color/white"
+            android:textSize="20sp"
 
-            android:text="Setting" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_exit"
@@ -68,13 +68,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/background_btn"
-            android:textStyle="bold"
-            android:textColor="@color/primary_color"
             android:fontFamily="@font/chakrapetchbold"
-            android:textSize="20sp"
             android:onClick="main_btn"
-
             android:padding="8dp"
-            android:text="exit" />
+            android:text="exit"
+            android:textColor="@color/white"
+
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
