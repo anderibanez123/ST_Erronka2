@@ -13,6 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "st_jokoa"
+rootProject.name = "ST_Jokoa"
 include(":app")
- 

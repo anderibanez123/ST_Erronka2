@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.st_jokoa"
-        minSdk = 33
+        minSdk = 24
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
