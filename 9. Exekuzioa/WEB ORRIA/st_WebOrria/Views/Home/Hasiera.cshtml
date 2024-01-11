@@ -5,23 +5,39 @@
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="karrusela1.jpg" class="d-block w-100" alt="Lehenengo slide">
+            <img src="~/irudiak/karrusela1.png" class="d-block w-100" alt="Lehenengo slide">
         </div>
         <div class="carousel-item">
-            <img src="karrusela2.jpg" class="d-block w-100" alt="Bigarrengo slide">
+            <img src="~/irudiak/karrusela2.png" class="d-block w-100" alt="Bigarrengo slide">
         </div>
-        <!-- Agrega más elementos según sea necesario -->
+        <!-- Karrousel barruan elementu gehiago sartu -->
     </div>
 </div>
 
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-6">
-            <img src="hasiera1.jpg" class="img-fluid" alt="Ezkerreko irudia">
+        <div class="col-md-8">
+            <img src="~/irudiak/notizia2.png" style="border-radius: 10px; border: 1px black; cursor: pointer" class="img-fluid" alt="Ezkerreko irudia" data-bs-toggle="imagenModal" data-bs-target="#imagenModal">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2>Ezkerreko titulua</h2>
             <p>Ezkerreko irudia</p>
+        </div>
+    </div>
+
+    <!-- Modal para mostrar la imagen en grande -->
+    <div class="modal fade" id="imagenModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Albistegia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Asegúrate de usar la imagen correcta aquí -->
+                    <img src="~/irudiak/notizia1.png" class="img-fluid" alt="Ezkerreko irudia en grande">
+                </div>
+            </div>
         </div>
     </div>
 
@@ -31,10 +47,25 @@
             <p>Eskubiko testua</p>
         </div>
         <div class="col-md-6">
-            <img src="imagen4.jpg" class="img-fluid" alt="Eskubiko irudia">
+            <a href="~/irudiak/imagen4.jpg" data-bs-toggle="lightbox" data-bs-gallery="gallery1">
+                <img src="~/irudiak/imagen4.jpg" class="img-fluid" alt="Eskubiko irudia">
+            </a>
         </div>
     </div>
 </div>
 
-<!-- Agrega el script de Bootstrap para el carrusel -->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('[data-bs-toggle="imagenModal"]').click(function () {
+            var imgSrc = $(this).attr('src');
+            $('#imagenModal .modal-body img').attr('src', imgSrc);
+            $('#imagenModal').modal('toggle');
+        });
+    });
+</script>
