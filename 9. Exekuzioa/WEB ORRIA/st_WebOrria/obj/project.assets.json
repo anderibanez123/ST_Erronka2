@@ -1349,23 +1349,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ikaltamirapaag2\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\elect\\.nuget\\packages\\": {},
+    "D:\\CLASE\\VISUAL STUDIO 2022\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\st_WebOrria.csproj",
+      "projectUniqueName": "C:\\Users\\elect\\OneDrive\\Escritorio\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\st_WebOrria.csproj",
       "projectName": "st_WebOrria",
-      "projectPath": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\st_WebOrria.csproj",
-      "packagesPath": "C:\\Users\\ikaltamirapaag2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\obj\\",
+      "projectPath": "C:\\Users\\elect\\OneDrive\\Escritorio\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\st_WebOrria.csproj",
+      "packagesPath": "C:\\Users\\elect\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\elect\\OneDrive\\Escritorio\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\CLASE\\VISUAL STUDIO 2022\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ikaltamirapaag2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\elect\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
