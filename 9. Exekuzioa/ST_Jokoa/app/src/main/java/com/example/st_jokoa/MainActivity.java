@@ -2,33 +2,63 @@ package com.example.st_jokoa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int BTN_PLAY_ID = R.id.btn_Play;
-    private static final int BTN_SETTING_ID = R.id.btn_Setting;
-    private static final int BTN_EXIT_ID = R.id.btn_Exit;
+    private EditText editTextDNI; // Cambiado de username a DNI
+    private EditText editTextPassword;
+    private DatabaseHelper databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        editTextDNI = findViewById(R.id.editTextDNI); // Cambiado de username a DNI
+        editTextPassword = findViewById(R.id.editTextPassword);
+        databaseHelper = new DatabaseHelper(this);
     }
 
+    public void login(View view) {
+        String dni = editTextDNI.getText().toString(); // Cambiado de username a DNI
+        String password = editTextPassword.getText().toString();
 
-    public void main_btn(View view) {
-        int viewId = view.getId();
-
-        if (viewId == R.id.btn_Play) {
-            startActivity(new Intent(MainActivity.this, playActivity.class));
-        } else if (viewId == R.id.btn_Setting) {
-            startActivity(new Intent(MainActivity.this, settingActivity.class));
-        } else if (viewId == R.id.btn_Exit) {
-            this.finishAffinity();
+        if (authenticateUser(dni, password)) {
+            startActivity(new Intent(MainActivity.this, MenuActivity.class));
+        } else {
+            Toast.makeText(this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
         }
     }
+    public void register(View view) {
+        startActivity(new Intent(MainActivity.this, RegisterActivity.class));
+    }
+
+    private boolean authenticateUser(String nan, String pasahitza) {
+        SQLiteDatabase db = databaseHelper.getReadableDatabase();
+        Cursor cursor = db.query(
+                databaseHelper.getTableName(),
+                null,
+                databaseHelper.getColumnNan() + "=? AND " + databaseHelper.getPasswordColumnName() + "=?",
+                new String[]{nan, pasahitza},
+                null,
+                null,
+                null
+        );
+
+        boolean result = cursor.getCount() > 0;
+
+        cursor.close();
+        db.close();
+
+        return result;
+    }
+
+    // Otros métodos según sea necesario
 }
