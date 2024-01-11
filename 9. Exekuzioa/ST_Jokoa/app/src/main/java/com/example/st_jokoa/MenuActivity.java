@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
 
     private static final int BTN_PLAY_ID = R.id.btn_Play;
     private static final int BTN_SETTING_ID = R.id.btn_Setting;
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_menu);
     }
 
 
@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         int viewId = view.getId();
 
         if (viewId == R.id.btn_Play) {
-            startActivity(new Intent(MainActivity.this, playActivity.class));
+            startActivity(new Intent(MenuActivity.this, playActivity.class));
         } else if (viewId == R.id.btn_Setting) {
-            startActivity(new Intent(MainActivity.this, settingActivity.class));
+            startActivity(new Intent(MenuActivity.this, settingActivity.class));
         } else if (viewId == R.id.btn_Exit) {
             this.finishAffinity();
         }
