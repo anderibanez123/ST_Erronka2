@@ -6,12 +6,9 @@
       <field name="model">txapelketa.txapelketa</field>
       <field name="arch" type="xml">
         <tree>
-          <field name = "id"/>
           <field name="izena"/>
           <field name="abizena"/>
-          <field name="nan"/>
-          <field name="puntuaketa"/>
-          <field name="denbora"/>
+          <field name="puntuaketa" widget="integer" options="{'widget': 'integer', 'align': 'left'}"/>
         </tree>
       </field>
     </record>
