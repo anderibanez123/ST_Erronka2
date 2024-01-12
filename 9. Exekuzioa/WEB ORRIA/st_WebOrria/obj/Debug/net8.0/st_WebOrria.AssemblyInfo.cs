@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("st_WebOrria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5cbce6ce7d65e267d5a4792c6fe4c6ff8a7b298")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a60ded63fa922e40b2602ed36845fb1b99cde30")]
 [assembly: System.Reflection.AssemblyProductAttribute("st_WebOrria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("st_WebOrria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
