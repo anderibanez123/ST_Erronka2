@@ -1,16 +1,16 @@
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from fastapi.responses import JSONResponse
 
-# Instalazioa egiteko "pip install Flask psycopg2"
-from flask import Flask, jsonify
-import sqlite3
-import psycopg2
+app = FastAPI()
 
-app = Flask(__name__)
+class Item(BaseModel):
+    ruta: str
 
-@app.route('/datuak_berritu', methods=['GET'])
-def transferir_datos():
-    
+@app.get('/datuak_berritu')
+async def transferir_datos(item: Item):
     # SQLite datu basera konexioa ireki
-    sqlite_conn = sqlite3.connect('ruta/de/tu/bd.sqlite')
+    sqlite_conn = sqlite3.connect(item.ruta)
     sqlite_cursor = sqlite_conn.cursor()
 
     # Postgres datu basera konexioa egin
@@ -24,12 +24,22 @@ def transferir_datos():
     postgres_cursor = postgres_conn.cursor()
 
     # SQLiteko datuak hartu eta Postgresera pasatu
+    try:
+        # Adibide bat: SQLite-tik datuak irakurri
+        sqlite_cursor.execute("SELECT * FROM table_name")
+        data = sqlite_cursor.fetchall()
 
-    # Konexioak itxi
-    sqlite_conn.close()
-    postgres_conn.close()
+        # Adibide bat: Postgres-era datuak sartu
+        for row in data:
+            postgres_cursor.execute("INSERT INTO table_name VALUES (%s, %s)", (row[0], row[1]))
 
-    return jsonify({"Mezua": "Datuak berritu dira."})
+        # Commit egin datuak gordetzeko
+        postgres_conn.commit()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    finally:
+        # Konexioak itxi
+        sqlite_conn.close()
+        postgres_conn.close()
 
-if __name__ == '__main__':
-    app.run(debug=True)
+    return JSONResponse(content={"Mezua": "Datuak berritu dira."}, status_code=200)
