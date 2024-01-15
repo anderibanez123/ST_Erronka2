@@ -24,7 +24,7 @@ namespace st_WebOrria.Controllers
         }
         public IActionResult Ranking()
         {
-            return View();
+            return View("Ranking");
         }
 
 

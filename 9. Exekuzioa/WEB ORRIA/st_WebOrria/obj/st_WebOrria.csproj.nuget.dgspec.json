@@ -47,26 +47,6 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.0, )"
-            },
-            "MongoDB.Bson": {
-              "target": "Package",
-              "version": "[2.23.1, )"
-            },
-            "MongoDB.Driver": {
-              "target": "Package",
-              "version": "[2.23.1, )"
-            },
-            "MongoDB.Driver.Core": {
-              "target": "Package",
-              "version": "[2.23.1, )"
-            },
-            "MongoDB.Driver.GridFS": {
-              "target": "Package",
-              "version": "[2.23.1, )"
-            },
-            "MongoDB.Libmongocrypt": {
-              "target": "Package",
-              "version": "[1.8.0, )"
             }
           },
           "imports": [

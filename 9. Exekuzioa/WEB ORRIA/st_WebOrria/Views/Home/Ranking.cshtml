@@ -2,6 +2,23 @@
     ViewBag.Title = "Ranking";
 }
 
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Realiza la solicitud GET a tu API FastAPI al cargar la página
+            $.get("http://stenpresa.pythonanywhere.com:8012/lortu_datuak", function (data) {
+                // Manipula el DOM para mostrar los datos en la tabla
+                data.forEach(function (jokalaria) {
+                    var row = "<tr><td>" + jokalaria.izena + "</td><td>" + jokalaria.abizena + "</td><td>" + jokalaria.puntuak + "</td></tr>";
+                    $("tbody").append(row);
+                });
+            });
+        });
+    </script>
+}
+
+
 @inject st_WebOrria.Models.Jokalariak.JokalariakZerrenda JokalariakZerrenda
 
 <div class="container mt-5">
@@ -21,7 +38,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var jokalaria in JokalariakZerrenda.JokalariakIrakurri())
+                @foreach (var jokalaria in Model)
                 {
                     <tr>
                         <td>@jokalaria.izena</td>
