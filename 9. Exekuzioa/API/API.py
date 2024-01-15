@@ -8,7 +8,7 @@ class Item(BaseModel):
     ruta: str
 
 @app.get('/datuak_berritu')
-async def transferir_datos(item: Item):
+async def datuak_transferentzia(item: Item):
     # SQLite datu basera konexioa ireki
     sqlite_conn = sqlite3.connect(item.ruta)
     sqlite_cursor = sqlite_conn.cursor()
@@ -25,6 +25,7 @@ async def transferir_datos(item: Item):
 
     # SQLiteko datuak hartu eta Postgresera pasatu
     try:
+        
         # Adibide bat: SQLite-tik datuak irakurri
         sqlite_cursor.execute("SELECT * FROM table_name")
         data = sqlite_cursor.fetchall()
@@ -35,9 +36,12 @@ async def transferir_datos(item: Item):
 
         # Commit egin datuak gordetzeko
         postgres_conn.commit()
+        
+        
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     finally:
+        
         # Konexioak itxi
         sqlite_conn.close()
         postgres_conn.close()

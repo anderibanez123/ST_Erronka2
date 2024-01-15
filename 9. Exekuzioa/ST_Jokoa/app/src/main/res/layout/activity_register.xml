@@ -3,22 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:fontFamily="@font/chakrapetchbold"
+    android:background="@color/primary_color"
+    >
 
     <EditText
         android:id="@+id/editTextNewUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nuevo nombre de usuario" />
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/chakrapetchbold"
+        android:hint="Izena" />
+
+    <EditText
+        android:id="@+id/Abizena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNewUsername"
+        android:layout_marginTop="8dp"
+        android:hint="Abizena"
+        android:fontFamily="@font/chakrapetchbold"/>
 
     <EditText
         android:id="@+id/editTextNewDNI"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextNewUsername"
-        android:layout_marginTop="8dp"
-        android:hint="Nuevo DNI"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/chakrapetchbold"
+        android:hint="DNI" />
 
     <EditText
         android:id="@+id/editTextNewPassword"
@@ -26,16 +40,32 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextNewDNI"
         android:layout_marginTop="8dp"
-        android:hint="Nueva contraseña"
+        android:hint="Pasahitz berria"
         android:inputType="textPassword"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:fontFamily="@font/chakrapetchbold"/>
+
+    <EditText
+        android:id="@+id/BaieztatuPasahitza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNewDNI"
+        android:layout_marginTop="74dp"
+        android:fontFamily="@font/chakrapetchbold"
+        android:hint="Baieztatu pasahitza"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextNewPassword"
-        android:layout_marginTop="16dp"
-        android:text="Registrarse"
-        android:onClick="register" />
+        android:layout_below="@+id/BaieztatuPasahitza"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/background_btn"
+        android:fontFamily="@font/chakrapetchbold"
+        android:onClick="register"
+        android:padding="8dp"
+        android:text="Erregistratu"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
 </RelativeLayout>
