@@ -1,0 +1,3 @@
+fastAPI controlak:
+- Kodea aktualizatu: git pull origin main (Aktualizatu behar den direktorio barruan egon behar da)
+- Entzuten hasi APIa: uvicorn st_datos_FASTAPI:app --host=0.0.0.0 --port=8012
