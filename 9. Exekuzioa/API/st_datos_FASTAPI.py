@@ -1,13 +1,15 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse
-from fastapi.middleware.cors import CORSMiddleware  # Importa el middleware CORS
+from fastapi.middleware.cors import CORSMiddleware
+import sqlite3
+import psycopg2
+
 
 app = FastAPI()
 
 
-
-# Configura CORS para permitir solicitudes desde todos los dominios
+# Dominio denetatik hartzeko
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -17,15 +19,31 @@ app.add_middleware(
 )
 
 
-
 class Item(BaseModel):
     ruta: str
 
+# NAN Postgre datu base barruan existitzen al den konprobatu
+def check_nan_exists(postgres_cursor, nan_value):
+    postgres_cursor.execute("SELECT COUNT(*) FROM txapelketa_txapelketa WHERE NAN = %s", (nan_value,))
+    count = postgres_cursor.fetchone()[0]
+    return count > 0
 
+# NAN postgreSQL barruan existitzen bada, denbora eta puntuaketa datuak aktualizatu
+def update_nan_data(postgres_cursor, nan_value, denbora, puntuaketa):
+    postgres_cursor.execute("UPDATE txapelketa_txapelketa SET denbora = %s, puntuaketa = %s WHERE NAN = %s",
+                            (denbora, puntuaketa, nan_value))
 
+# NAN postgreSQL barruan ez bada existitzen, insert bat egin, datua berriak sartu ahal izateko
+def insert_nan_data(postgres_cursor, row):
+    postgres_cursor.execute("INSERT INTO txapelketa_txapelketa (NAN, izena, abizena, denbora, puntuaketa) VALUES (%s, %s, %s, %s, %s)",
+                            (row[0], row[1], row[2], row[3], row[4]))
+
+# SQLiteko datua postgreSQLra pasatzeko funtzioa
 @app.post('/datuak_berritu')
 async def datuak_transferentzia(item: Item):
+    
     try:
+        
         # SQLite datu basera konexioa ireki
         sqlite_conn = sqlite3.connect(item.ruta)
         sqlite_cursor = sqlite_conn.cursor()
@@ -42,13 +60,22 @@ async def datuak_transferentzia(item: Item):
         postgres_cursor = postgres_conn.cursor()
 
         # SQLiteko datuak hartu eta Postgresera pasatu
-        sqlite_cursor.execute("SELECT * FROM table_name")
+        sqlite_cursor.execute("SELECT * FROM txapelketa")
         data = sqlite_cursor.fetchall()
 
-        # Postgres-era datuak sartu
+        # Datuak prozesatu
         for row in data:
-            postgres_cursor.execute("INSERT INTO table_name (NAN, izena, abizena, denbora, puntuaketa) VALUES (%s, %s, %s, %s, %s)",
-                                    (row[0], row[1], row[2], row[3], row[4]))
+            
+            nan_value = row[0]
+            denbora = row[3]
+            puntuaketa = row[4]
+
+            if check_nan_exists(postgres_cursor, nan_value):
+                # Aktualizatu datuak
+                update_nan_data(postgres_cursor, nan_value, denbora, puntuaketa)
+            else:
+                # Inserta egin
+                insert_nan_data(postgres_cursor, row)
 
         # Commit egin datuak gordetzeko
         postgres_conn.commit()
@@ -63,8 +90,7 @@ async def datuak_transferentzia(item: Item):
 
     return JSONResponse(content={"Mezua": "Datuak berritu dira."}, status_code=200)
 
-
-
+# PostgreSQLko datuak lortu MVC barruan irakusteko
 @app.get('/lortu_datuak')
 async def lortu_datuak():
     try:
@@ -79,7 +105,7 @@ async def lortu_datuak():
         
         postgres_cursor = postgres_conn.cursor()
 
-        # Adibide bat: Postgres-etik datuak irakurri
+        # Postgres-etik datuak irakurri
         postgres_cursor.execute("SELECT * FROM table_name")
         data = postgres_cursor.fetchall()
 
@@ -95,4 +121,4 @@ async def lortu_datuak():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8012)
