@@ -22,6 +22,11 @@ namespace st_WebOrria.Controllers
         {
             return View();
         }
+        public IActionResult Ranking()
+        {
+            return View();
+        }
+
 
         public IActionResult Proiektuak()
         {
