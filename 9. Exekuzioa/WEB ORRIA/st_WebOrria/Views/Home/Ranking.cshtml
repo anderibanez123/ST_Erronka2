@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Ranking";
+}
+
+@inject st_WebOrria.Models.Jokalariak.JokalariakZerrenda JokalariakZerrenda
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Ranking de Jokalariak</h1>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Izena</th>
+                    <th>Abizena</th>
+                    <th>Puntuak</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var jokalaria in JokalariakZerrenda.JokalariakIrakurri())
+                {
+                    <tr>
+                        <td>@jokalaria.izena</td>
+                        <td>@jokalaria.abizena</td>
+                        <td>@jokalaria.puntuak</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
