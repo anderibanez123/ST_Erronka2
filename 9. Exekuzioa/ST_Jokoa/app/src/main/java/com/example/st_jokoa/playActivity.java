@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class playActivity extends AppCompatActivity {
@@ -22,6 +24,8 @@ public class playActivity extends AppCompatActivity {
     boolean isclickBtn = false;
     String valueChoose = "";
     Button btn_click;
+    Galdera currentGaldera;  // Agregado para almacenar la pregunta actual
+    int maxQuestionsToShow = 10;  // Definir el número máximo de preguntas para mostrar
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +50,8 @@ public class playActivity extends AppCompatActivity {
             if (isclickBtn) {
                 isclickBtn = false;
 
-                if (!valueChoose.equals(Galdera.getErantzunZuzena())) {
+                // Cambios aquí
+                if (!valueChoose.equals(currentGaldera.getErantzunZuzena())) {
                     Toast.makeText(playActivity.this, "gaizki", Toast.LENGTH_LONG).show();
                     btn_click.setBackgroundResource(R.drawable.background_btn_erreur);
                 } else {
@@ -56,7 +61,7 @@ public class playActivity extends AppCompatActivity {
                 }
 
                 new Handler().postDelayed(() -> {
-                    if (currentQuestion < dbHelper.getQuestionCount()) {
+                    if (currentQuestion < maxQuestionsToShow - 1) {
                         currentQuestion++;
                         remplirData();
                         valueChoose = "";
@@ -65,6 +70,7 @@ public class playActivity extends AppCompatActivity {
                         btn_choose3.setBackgroundResource(R.drawable.background_btn_choose);
                         btn_choose4.setBackgroundResource(R.drawable.background_btn_choose);
                     } else {
+                        // Cambios aquí
                         Intent intent = new Intent(playActivity.this, ResulteActivity.class);
                         intent.putExtra("Emaitza", scorePlayer);
                         startActivity(intent);
@@ -78,23 +84,32 @@ public class playActivity extends AppCompatActivity {
     }
 
     void remplirData() {
-        cpt_question.setText((currentQuestion + 1) + "/" + dbHelper.getQuestionCount());
+        // Cambios aquí
+        cpt_question.setText((currentQuestion + 1) + "/" + maxQuestionsToShow);
 
-        // Obtener 10 preguntas aleatorias de la base de datos
-        List<Galdera> galderaList = dbHelper.getRandomGalderak(10);
+        List<Galdera> galderaList = dbHelper.getRandomGalderak(maxQuestionsToShow);
 
         if (currentQuestion < galderaList.size()) {
-            Galdera galdera = galderaList.get(currentQuestion);
-            text_question.setText(galdera.getGaldera());
+            currentGaldera = galderaList.get(currentQuestion);
+            text_question.setText(currentGaldera.getGaldera());
 
-            btn_choose1.setText(galdera.getErantzunZuzena());
-            btn_choose2.setText(galdera.getErantzunOkerra1());
-            btn_choose3.setText(galdera.getErantzunOkerra2());
-            btn_choose4.setText(galdera.getErantzunOkerra3());
+            // Obtener las respuestas y barajarlas
+            List<String> respuestas = Arrays.asList(
+                    currentGaldera.getErantzunZuzena(),
+                    currentGaldera.getErantzunOkerra1(),
+                    currentGaldera.getErantzunOkerra2(),
+                    currentGaldera.getErantzunOkerra3()
+            );
+
+            // Establecer las respuestas en los botones después de barajarlas
+            List<Button> buttons = Arrays.asList(btn_choose1, btn_choose2, btn_choose3, btn_choose4);
+            Collections.shuffle(buttons);
+
+            for (int i = 0; i < buttons.size(); i++) {
+                buttons.get(i).setText(respuestas.get(i));
+            }
         }
     }
-
-
 
     public void ClickChoose(View view) {
         btn_click = (Button) view;
@@ -114,3 +129,4 @@ public class playActivity extends AppCompatActivity {
         valueChoose = btn_click.getText().toString();
     }
 }
+

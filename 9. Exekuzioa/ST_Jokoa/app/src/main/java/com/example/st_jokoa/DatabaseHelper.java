@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -84,10 +85,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+
     @SuppressLint("Range")
     public List<Galdera> getRandomGalderak(int count) {
         List<Galdera> galderaList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
+        Random random = new Random();
 
         // Obtener todas las preguntas
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_GALDERAK, null);
@@ -102,6 +105,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 galdera.setErantzunOkerra2(cursor.getString(cursor.getColumnIndex(COLUMN_ERANTZUN_OKERRA_2)));
                 galdera.setErantzunOkerra3(cursor.getString(cursor.getColumnIndex(COLUMN_ERANTZUN_OKERRA_3)));
 
+                // Establecer aleatoriamente el índice de la respuesta correcta
+                int correctAnswerIndex = random.nextInt(4); // 4 opciones posibles
+                galdera.setCorrectAnswerIndex(correctAnswerIndex);
+
                 galderaList.add(galdera);
             } while (cursor.moveToNext());
         }
@@ -110,9 +117,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
 
         // Barajar aleatoriamente la lista y devolver el número especificado de preguntas
-        Collections.shuffle(galderaList, new Random(System.currentTimeMillis()));
+        Collections.shuffle(galderaList, random);
         return galderaList.subList(0, count);
     }
+
+
+
+
 
 
     public String getUsernameColumnName() {

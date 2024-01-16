@@ -17,6 +17,7 @@
             android:exported="false" />
         <activity android:name=".playActivity" />
         <activity android:name=".settingActivity" />
+        <activity android:name=".ResulteActivity" />
 
         <activity
             android:name=".MenuActivity"
