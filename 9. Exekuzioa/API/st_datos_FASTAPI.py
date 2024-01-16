@@ -116,7 +116,7 @@ async def lortu_datuak():
         # Konexioa itxi
         postgres_conn.close()
 
-    return JSONResponse(content={"data": data}, status_code=200)
+    return JSONResponse(content={"Jokalariak": data}, status_code=200)
 
 
 if __name__ == "__main__":
