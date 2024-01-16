@@ -42,7 +42,7 @@
             android:fontFamily="@font/chakrapetchbold"
             android:onClick="main_btn"
             android:padding="8dp"
-            android:text="Play"
+            android:text="Jolastu"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -70,7 +70,7 @@
             android:fontFamily="@font/chakrapetchbold"
             android:onClick="main_btn"
             android:padding="8dp"
-            android:text="exit"
+            android:text="Irten"
             android:textColor="@color/white"
 
             android:textSize="20sp"

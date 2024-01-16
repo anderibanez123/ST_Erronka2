@@ -3,10 +3,11 @@ package com.example.st_jokoa;
 public class Galdera {
     private int id;
     private String galdera;
-    private static String erantzunZuzena;
+    private String erantzunZuzena;
     private String erantzunOkerra1;
     private String erantzunOkerra2;
     private String erantzunOkerra3;
+    private int correctAnswerIndex;
 
     public Galdera() {
         // Constructor vacío necesario para trabajar con SQLite
@@ -37,7 +38,7 @@ public class Galdera {
         this.galdera = galdera;
     }
 
-    public static String getErantzunZuzena() {
+    public String getErantzunZuzena() {
         return erantzunZuzena;
     }
 
@@ -67,5 +68,12 @@ public class Galdera {
 
     public void setErantzunOkerra3(String erantzunOkerra3) {
         this.erantzunOkerra3 = erantzunOkerra3;
+    }
+    public int getCorrectAnswerIndex() {
+        return correctAnswerIndex;
+    }
+
+    public void setCorrectAnswerIndex(int correctAnswerIndex) {
+        this.correctAnswerIndex = correctAnswerIndex;
     }
 }

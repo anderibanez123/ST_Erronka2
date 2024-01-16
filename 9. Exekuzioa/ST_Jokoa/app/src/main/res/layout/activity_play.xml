@@ -65,15 +65,16 @@
         android:id="@+id/btn_next"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:fontFamily="@font/chakrapetchbold"
+        android:padding="12sp"
         android:text="Next"
         android:textColor="@color/white"
-        android:fontFamily="@font/chakrapetchbold"
         android:textSize="20sp"
-        android:padding="12sp"
-        android:background="@color/primary_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -14,7 +14,7 @@ public class ResulteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resulte);
         textView = findViewById(R.id.textView);
-        int score = getIntent().getIntExtra("Resute",0);
+        int score = getIntent().getIntExtra("Emaitza",0);
         textView.setText("Score : " + score);
 
         findViewById(R.id.btn_restart).setOnClickListener(
