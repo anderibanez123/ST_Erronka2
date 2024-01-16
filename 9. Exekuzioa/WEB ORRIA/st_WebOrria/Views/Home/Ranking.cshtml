@@ -10,13 +10,13 @@
         $(document).ready(function () {
 
             $.get("http://10.23.28.190:8012/lortu_datuak", function (response) {
-                var data = response.Jokalariak; // Accede a la propiedad 'Jokalariak'
+                var data = response.Jokalariak;
                 console.log(data);
 
                 var posizioa = 0;
 
                 data.forEach(function (jokalaria) {
-                    console.log(jokalaria); // Imprime el objeto para depuración
+                    console.log(jokalaria);
                     posizioa++;
                     var row = "<tr><td>" + posizioa + "</td><td>" + jokalaria[1] + "</td><td>" + jokalaria[2] + "</td><td>" + jokalaria[4] + "</td></tr>";
                     $("tbody").append(row);
@@ -31,7 +31,7 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1>Ranking de Jokalariak</h1>
+            <h1>JOKALARIAK RANKING</h1>
         </div>
     </div>
 
