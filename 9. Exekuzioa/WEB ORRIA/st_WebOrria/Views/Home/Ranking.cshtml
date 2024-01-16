@@ -8,17 +8,25 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function () {
-            
-            $.get("http://stenpresa.pythonanywhere.com:8012/lortu_datuak", function (data) {
-                
+
+            $.get("http://10.23.28.190:8012/lortu_datuak", function (response) {
+                var data = response.Jokalariak; // Accede a la propiedad 'Jokalariak'
+                console.log(data);
+
+                var posizioa = 0;
+
                 data.forEach(function (jokalaria) {
-                    var row = "<tr><td>" + jokalaria.izena + "</td><td>" + jokalaria.abizena + "</td><td>" + jokalaria.puntuak + "</td></tr>";
+                    console.log(jokalaria); // Imprime el objeto para depuración
+                    posizioa++;
+                    var row = "<tr><td>" + posizioa + "</td><td>" + jokalaria[1] + "</td><td>" + jokalaria[2] + "</td><td>" + jokalaria[4] + "</td></tr>";
                     $("tbody").append(row);
                 });
             });
+
         });
     </script>
 }
+
 
 <div class="container mt-5">
     <div class="row">
@@ -31,6 +39,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th>Posizioa</th>
                     <th>Izena</th>
                     <th>Abizena</th>
                     <th>Puntuak</th>
