@@ -1,17 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using st_WebOrria.Models;
 using System.Diagnostics;
+using static st_WebOrria.Models.Jokalariak;
 
 namespace st_WebOrria.Controllers
 {
     public class JokalariakController : Controller
     {
-        private readonly ILogger<JokalariakController> _logger;
-        private readonly Jokalariak.JokalariakZerrenda _jokalariakZerrenda;
+        private readonly JokalariakZerrenda _jokalariakZerrenda;
 
-        public JokalariakController(ILogger<JokalariakController> logger, Jokalariak.JokalariakZerrenda jokalariakZerrenda)
+        public JokalariakController(JokalariakZerrenda jokalariakZerrenda)
         {
-            _logger = logger;
             _jokalariakZerrenda = jokalariakZerrenda;
         }
 
@@ -36,5 +36,6 @@ namespace st_WebOrria.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }

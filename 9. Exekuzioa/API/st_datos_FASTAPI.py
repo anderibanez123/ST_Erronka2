@@ -106,7 +106,7 @@ async def lortu_datuak():
         postgres_cursor = postgres_conn.cursor()
 
         # Postgres-etik datuak irakurri
-        postgres_cursor.execute("SELECT * FROM table_name")
+        postgres_cursor.execute("SELECT * FROM txapelketa_txapelketa")
         data = postgres_cursor.fetchall()
 
     except Exception as e:

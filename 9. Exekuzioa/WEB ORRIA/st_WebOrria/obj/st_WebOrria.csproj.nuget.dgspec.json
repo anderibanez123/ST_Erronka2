@@ -47,6 +47,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "SimpleInjector.Integration.ServiceCollection": {
+              "target": "Package",
+              "version": "[5.5.0, )"
             }
           },
           "imports": [
