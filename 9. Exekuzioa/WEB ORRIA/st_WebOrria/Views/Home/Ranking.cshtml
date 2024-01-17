@@ -15,12 +15,39 @@
 
                 var posizioa = 0;
 
+                // Jokalariak iteratzeko buklea
                 data.forEach(function (jokalaria) {
-                    console.log(jokalaria);
                     posizioa++;
-                    var row = "<tr><td>" + posizioa + "</td><td>" + jokalaria[1] + "</td><td>" + jokalaria[2] + "</td><td>" + jokalaria[4] + "</td></tr>";
-                    $("tbody").append(row);
+
+                    if (posizioa > 10) {
+
+                        // Buklea bukatu
+                        return false;
+
+                    }
+                    else {
+
+                        if (posizioa > 0 && posizioa < 4) {
+
+                            // Irudiaren URL-a eraikitzen Url.Content erabiliz
+                            var irudia = '@Url.Content("~/irudiak/Top")' + posizioa + '.png';
+
+                            // Taula errenkadak sortu
+                            var row = "<tr><td><img style='width: 50px;' src='" + irudia + "'></td><td>" + jokalaria[1] + "</td><td>" + jokalaria[2] + "</td><td>" + jokalaria[4] + "</td></tr>";
+                            $("tbody").append(row);
+
+                        } else {
+
+                            // Taula errenkadak sortu
+                            var row = "<tr><td>" + posizioa + "</td><td>" + jokalaria[1] + "</td><td>" + jokalaria[2] + "</td><td>" + jokalaria[4] + "</td></tr>";
+                            $("tbody").append(row);
+
+                        }
+
+                    }
+
                 });
+
             });
 
         });
@@ -29,25 +56,28 @@
 
 <link rel="stylesheet" href="~/assets/css/ollie.css">
 
-<div class="container mt-5">
+<div class="container mt-5" style="text-align: center;">
     <div class="row">
         <div class="col-md-12 text-center">
+            <!-- Taularen izenburua -->
             <h1>JOKALARIAK RANKING</h1>
         </div>
     </div>
 
     <div class="row mt-5">
+        <!-- Taula definitzen da -->
         <table class="table">
             <thead>
                 <tr>
+                    <!-- Taularen goiburuko errenkaden izenak -->
                     <th>Posizioa</th>
                     <th>Izena</th>
                     <th>Abizena</th>
                     <th>Puntuak</th>
                 </tr>
             </thead>
+            <!-- Taularen gorputza -->
             <tbody>
-                
             </tbody>
         </table>
     </div>
