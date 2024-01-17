@@ -1,6 +1,7 @@
 package com.example.st_jokoa;
 
 import android.annotation.SuppressLint;
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -120,6 +121,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Collections.shuffle(galderaList, random);
         return galderaList.subList(0, count);
     }
+    public void updateTxapelketaTable(int puntuaketa, long denbora, String nan) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_PUNTUAKETA, puntuaketa);
+        values.put(COLUMN_DENBORA, denbora);
+
+        // Puedes personalizar la condición WHERE según tus necesidades
+        db.update(TABLE_TXAPELKETA, values, COLUMN_NAN2 + "=?", new String[]{nan});
+        db.close();
+    }
 
 
 
@@ -129,6 +140,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public String getUsernameColumnName() {
         return COLUMN_NAME;
     }
+    public String getUsernameColumnName2() {
+        return COLUMN_NAME2;
+    }
     public String getColumnNan() {
         return COLUMN_NAN;
     }
@@ -136,8 +150,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public String getPasswordColumnName() {
         return COLUMN_PASSWORD;
     }
+    public String getColumnPuntuaketa(){
+        return COLUMN_PUNTUAKETA;
+    }
     public String getTableName() {
         return TABLE_USERS;
+    }
+    public String getTableName2() {
+        return TABLE_TXAPELKETA;
     }
     public String getColumnGaldera(int i){
         return COLUMN_GALDERA;

@@ -1,5 +1,7 @@
 package com.example.st_jokoa;
 
+import static com.example.st_jokoa.MainActivity.editTextDNI;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -18,6 +20,8 @@ import java.util.List;
 public class playActivity extends AppCompatActivity {
     private static final int POINTS_PER_CORRECT_ANSWER = 100;
     private static final int MAX_SECONDS_PER_QUESTION = 30;
+    private CountDownTimer globalTimer;
+    private long totalTimeElapsedMillis = 0;
 
     DatabaseHelper dbHelper;
     TextView cpt_question, text_question, timerTextView;
@@ -50,6 +54,9 @@ public class playActivity extends AppCompatActivity {
 
         dbHelper = new DatabaseHelper(this);
 
+        // Iniciar el temporizador global
+        startGlobalTimer();
+
         findViewById(R.id.image_back).setOnClickListener(a -> finish());
         remplirData();
 
@@ -70,7 +77,7 @@ public class playActivity extends AppCompatActivity {
                 new Handler().postDelayed(() -> {
                     // Continuar con la lógica del juego (cambiar de pregunta, etc.)
                     nextQuestion();
-                }, 2000);
+                }, 1000);
             } else {
                 Toast.makeText(playActivity.this, "Erantzun bat aukeratu behar duzu", Toast.LENGTH_LONG).show();
             }
@@ -79,13 +86,35 @@ public class playActivity extends AppCompatActivity {
         // Iniciar el temporizador
         startCountdownTimer();
     }
+    private void startGlobalTimer() {
+        globalTimer = new CountDownTimer(Long.MAX_VALUE, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                totalTimeElapsedMillis += 1000;
+            }
 
+            @Override
+            public void onFinish() {
+                // No debería ocurrir en este caso
+            }
+        }.start();
+    }
+
+    private void stopGlobalTimer() {
+        if (globalTimer != null) {
+            globalTimer.cancel();
+        }
+    }
     private void startCountdownTimer() {
         countDownTimer = new CountDownTimer(MAX_SECONDS_PER_QUESTION * 1000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 // Actualizar el contador de tiempo en tu interfaz si es necesario
                 timerTextView.setText(String.valueOf(currentSecondsRemaining));
+
+                // Restar puntos cada segundo
+                scorePlayer -= calculatePointsDeductionPerSecond();
+
                 currentSecondsRemaining--;
             }
 
@@ -95,6 +124,10 @@ public class playActivity extends AppCompatActivity {
                 handleTimeout();
             }
         }.start();
+    }
+    private int calculatePointsDeductionPerSecond() {
+        // Personaliza la lógica de deducción de puntos por segundo aquí
+        return 1;  // Por ejemplo, resta 1 punto por cada segundo transcurrido
     }
 
     private void handleTimeout() {
@@ -139,9 +172,18 @@ public class playActivity extends AppCompatActivity {
             Intent intent = new Intent(playActivity.this, ResulteActivity.class);
             intent.putExtra("Emaitza", scorePlayer);
             startActivity(intent);
+
+            // Detener el temporizador global
+            stopGlobalTimer();
+            countDownTimer.cancel();
+            String dni = editTextDNI.getText().toString();
+            // Actualizar la tabla txapelketa con los puntos y el tiempo total
+            dbHelper.updateTxapelketaTable(scorePlayer, totalTimeElapsedMillis / 1000, dni);
+
             finish();
         }
     }
+
 
     void remplirData() {
         // Cambios aquí

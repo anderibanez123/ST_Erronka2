@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText editTextDNI; // Cambiado de username a DNI
+    public static EditText editTextDNI; // Cambiado de username a DNI
     private EditText editTextPassword;
     private DatabaseHelper databaseHelper;
 
