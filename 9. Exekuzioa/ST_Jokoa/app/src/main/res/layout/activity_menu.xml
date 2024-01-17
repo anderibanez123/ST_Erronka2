@@ -38,8 +38,7 @@
             android:id="@+id/btn_Play"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/background_btn"
-            android:fontFamily="@font/chakrapetchbold"
+            android:backgroundTint="@color/Botoien_kolorea"            android:fontFamily="@font/chakrapetchbold"
             android:onClick="main_btn"
             android:padding="8dp"
             android:text="Jolastu"
@@ -47,12 +46,13 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
+
         <Button
             android:id="@+id/btn_Setting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@drawable/background_btn"
+            android:backgroundTint="@color/Botoien_kolorea"
             android:fontFamily="@font/chakrapetchbold"
             android:onClick="main_btn"
             android:padding="8dp"
@@ -66,14 +66,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@drawable/background_btn"
-            android:fontFamily="@font/chakrapetchbold"
+            android:backgroundTint="@color/Botoien_kolorea"            android:fontFamily="@font/chakrapetchbold"
             android:onClick="main_btn"
             android:padding="8dp"
             android:text="Irten"
             android:textColor="@color/white"
-
             android:textSize="20sp"
             android:textStyle="bold" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

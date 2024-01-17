@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         if (authenticateUser(dni, password)) {
             startActivity(new Intent(MainActivity.this, MenuActivity.class));
         } else {
-            Toast.makeText(this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Erabiltzaile edo pasahitz ez zuzenak", Toast.LENGTH_SHORT).show();
         }
     }
     public void register(View view) {

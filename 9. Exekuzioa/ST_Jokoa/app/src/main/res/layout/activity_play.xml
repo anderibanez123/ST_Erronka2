@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/primary_color"
+    android:visibility="visible"
     tools:context=".playActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -64,9 +66,10 @@
 
     <Button
         android:id="@+id/btn_next"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/primary_color"
+        android:layout_width="485dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="-4dp"
+        android:backgroundTint="@color/primary_color"
         android:fontFamily="@font/chakrapetchbold"
         android:padding="12sp"
         android:text="Next"
@@ -93,11 +96,11 @@
             android:id="@+id/btn_choose1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/background_btn_choose"
+            android:backgroundTint="@color/primary_color"
             android:fontFamily="@font/chakrapetchbold"
             android:onClick="ClickChoose"
             android:text="choose 1"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
         <Button
@@ -105,11 +108,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:background="@drawable/background_btn_choose"
+            android:backgroundTint="@color/primary_color"
             android:fontFamily="@font/chakrapetchbold"
             android:onClick="ClickChoose"
             android:text="choose 2"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
         <Button
@@ -117,11 +120,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:background="@drawable/background_btn_choose"
+            android:backgroundTint="@color/primary_color"
             android:fontFamily="@font/chakrapetchbold"
             android:onClick="ClickChoose"
             android:text="choose 3"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
         <Button
@@ -129,29 +132,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:background="@drawable/background_btn_choose"
+            android:backgroundTint="@color/primary_color"
             android:fontFamily="@font/chakrapetchbold"
             android:onClick="ClickChoose"
             android:text="choose 4"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="16sp" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/timerTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="62dp"
+        android:layout_height="77dp"
         android:layout_marginStart="189dp"
         android:layout_marginTop="13dp"
         android:layout_marginEnd="192dp"
         android:layout_marginBottom="30dp"
         android:fontFamily="@font/chakrapetchbold"
         android:text="30"
-        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textColor="@color/second_color"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.166" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
