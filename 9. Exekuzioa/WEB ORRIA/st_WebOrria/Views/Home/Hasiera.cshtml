@@ -1,106 +1,333 @@
-﻿@{
-    ViewData["Title"] = "Hasiera";
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
 }
 
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="~/irudiak/karrusela1.png" class="d-block w-100" alt="Lehenengo slide">
-        </div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- font icons -->
+    <link rel="stylesheet" href="~/assets/vendors/themify-icons/css/themify-icons.css">
 
+    <!-- owl carousel -->
+    
+    <link rel="stylesheet" href="~/assets/vendors/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/assets/vendors/owl-carousel/css/owl.theme.default.css">
 
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card" style="width: 26rem; text-align: center">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <!-- Bootstrap + Ollie main styles -->
+    <link rel="stylesheet" href="~/assets/css/ollie.css">
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <header id="home" class="header">
+        <div class="overlay"></div>
+
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="container">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="carousel-title">Teknologia hobea da <br> Jendea elkartzen duenenan</h1>
+                            <button class="btn btn-primary btn-rounded">Irakurri gehiago</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="carousel-title">Irudikatzen duzu <br> Programatu dezakegu</h1>
+                            <button class="btn btn-primary btn-rounded">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="carousel-title">Arazoak dituzu <br> Konpontzen dizugu</h1>
+                            <button class="btn btn-primary btn-rounded">Learn More</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 26rem; text-align: center">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+        <div class="infos container mb-4 mb-md-2">
+            <div class="title">
+                <h5>SwiftTech</h5>
+                <p class="font-small">Kodea eta soluzioak sortzen, zure mundua berritzen.</p>
+            </div>
+            <div class="socials text-right">
+                <div class="row justify-content-between">
+                    <div class="col">
+                        <a class="d-block subtitle"><i class="ti-microphone pr-2"></i> 943 026 298</a>
+                        <a class="d-block subtitle"><i class="ti-email pr-2"></i> kontaktua@stech.eus</a>
+                    </div>
+                    <div class="col">
+                        <h6 class="subtitle font-weight-normal mb-2">Sare sozialak</h6>
+                        <div class="social-links">
+                            <a href="javascript:void(0)" class="link pr-1"><i class="ti-facebook"></i></a>
+                            <a href="javascript:void(0)" class="link pr-1"><i class="ti-twitter-alt"></i></a>
+                            <a href="javascript:void(0)" class="link pr-1"><i class="ti-google"></i></a>
+                            <a href="javascript:void(0)" class="link pr-1"><i class="ti-pinterest-alt"></i></a>
+                            <a href="javascript:void(0)" class="link pr-1"><i class="ti-instagram"></i></a>
+                            <a href="javascript:void(0)" class="link pr-1"><i class="ti-rss"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 26rem; text-align: center">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+    </header>
+
+    <section class="section" id="about">
+
+        <div class="container">
+
+            <div class="row align-items-center mr-auto">
+                <div class="col-md-4">
+                    <h6 class="xs-font mb-0">SwiftTECH-ren historia</h6>
+                    <h3 class="section-title">Gu geu</h3>
+                    <p>SwiftTECH-n, teknologia aurreratua eta zerbitzu paregabea konbinatzen ditugu. Berrikuntza teknologikoak aztertzen ditugu, ordenagailuen ahuleziak konpontzen ditugu eta software aurreratua sortzen dugu.</p>
+
+                    <a href="javascript:void(0)">Gehiago irakurri...</a>
+                </div>
+                <div class="col-sm-6 col-md-4 ml-auto">
+                    <div class="widget">
+                        <div class="icon-wrapper">
+                            <i class="ti-calendar"></i>
+                        </div>
+                        <div class="infos-wrapper">
+                            <h4 class="text-primary">15+</h4>
+                            <p>Urte Berrikuntza Teknologikoa</p>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="icon-wrapper">
+                            <i class="ti-face-smile"></i>
+                        </div>
+                        <div class="infos-wrapper">
+                            <h4 class="text-primary">125+</h4>
+                            <p>Proiektu arrakastatsuak</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="widget">
+                        <div class="icon-wrapper">
+                            <i class="ti-star"></i>
+                        </div>
+                        <div class="infos-wrapper">
+                            <h4 class="text-primary">3434+</h4>
+                            <p>Balorazio positiboak</p>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="icon-wrapper">
+                            <i class="ti-user"></i>
+                        </div>
+                        <div class="infos-wrapper">
+                            <h4 class="text-primary">80+</h4>
+                            <p>Gure langileria</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
+    <section class="section">
+        <div class="container">
+            <h6 class="xs-font mb-0">Zertan gaude espezializatuak</h6>
+            <h3 class="section-title mb-4">Zerbitzuak</h3>
 
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-6">
-            <img src="~/irudiak/aw.png" style="border-radius: 10px; border: 1px black; cursor: pointer" class="img-fluid" alt="Ezkerreko irudia" data-bs-toggle="imagenModal" data-bs-target="#imagenModal">
-        </div>
-        <div class="col-md-6">
-            <h2>Ezkerreko titulua</h2>
-            <p>Ezkerreko irudia</p>
-        </div>
-    </div>
-
-
-    <div class="modal fade" id="imagenModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Albistegia</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="row text-center">
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="card border-0 text-dark">
+                        <img class="card-img-top" src="~/assets/imgs/zerbitzuak1.png">
+                        <span class="card-body">
+                            <h4 class="title mt-4">Berrikuntza mugagabea</h4>
+                            <p class="xs-font">Berrikuntza liderra dugu puntako soluzio eta softwareekin.</p>
+                        </span>
+                    </a>
                 </div>
-                <div class="modal-body">
-                    <img src="~/irudiak/notizia1.png" class="img-fluid" alt="Ezkerreko irudia en grande">
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="card border-0 text-dark">
+                        <img class="card-img-top" src="~/assets/imgs/zerbitzuak2.png">
+                        <span class="card-body">
+                            <h4 class="title mt-4">Bikaintasuna berreskuratzea</h4>
+                            <p class="xs-font">Konfiatu gurekin edozein arazo tekniko zehaztasunez konpontzeko.</p>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="card border-0 text-dark">
+                        <img class="card-img-top" src="~/assets/imgs/zerbitzuak3.png">
+                        <span class="card-body">
+                            <h4 class="title mt-4">Kodearen Eraginkortasuna</h4>
+                            <p class="xs-font">Sortzen ditugun irtenbide digital eraginkorrak.</p>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-
-    <div class="row mt-5">
-        <div class="col-md-6">
-            <h2>Eskubiko titulua</h2>
-            <p>Eskubiko testua</p>
+    <section class="section" id="portfolio">
+        <div class="container">
+            <h6 class="xs-font mb-0">Gurekin lan egiten duten enpresak.</h6>
+            <h3 class="section-title pb-4">Kolaboratzaileak</h3>
         </div>
-        <div class="col-md-6">
-            <a href="~/irudiak/imagen4.jpg" data-bs-toggle="lightbox" data-bs-gallery="gallery1">
-                <img src="~/irudiak/imagen4.jpg" class="img-fluid" alt="Eskubiko irudia">
+
+        <div id="owl-portfolio" class="owl-carousel owl-theme mt-4">
+            <a href="javascript:void(0)" class="item expertises-item">
+                <img src="~/assets/imgs/kolaboratzaileak1.jpg" class="box-shadow">
+                <h6 class="mt-3 mb-2">PC Componentes</h6>
+                <p class="xs-font">"PCCom: Urte berria, teknologia berria"</p>
+            </a>
+            <a href="javascript:void(0)" class="item expertises-item">
+                <img src="~/assets/imgs/kolaboratzaileak2.jpg" class="box-shadow">
+                <h6 class="mt-3 mb-2">Synology</h6>
+                <p class="xs-font">"Synology: zure ideiak konektatzea, zure mundua indartzea".</p>
+            </a>
+            <a href="javascript:void(0)" class="item expertises-item">
+                <img src="~/assets/imgs/kolaboratzaileak3.jpg" class="box-shadow">
+                <h6 class="mt-3 mb-2">Izarraitz LH</h6>
+                <p class="xs-font">"Izarraitz Lanbide Heziketa: Moduluen Aniztasuna, Hezkuntza Aukeren Mundua".</p>
+            </a>
+            <a href="javascript:void(0)" class="item expertises-item">
+                <img src="~/assets/imgs/kolaboratzaileak4.jpg" class="box-shadow">
+                <h6 class="mt-3 mb-2">Logitech</h6>
+                <p class="xs-font">"Logitech: Ideiak errealitate bihurtuta"</p>
             </a>
         </div>
-    </div>
-</div>
+    </section>
 
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <section class="section" id="testmonial">
+        <div class="container">
+            <h6 class="xs-font mb-0">Culpa perferendis excepturi.</h6>
+            <h3 class="section-title">Testmonials</h3>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+            <div id="owl-testmonial" class="owl-carousel owl-theme mt-4">
+                <div class="item">
+                    <div class="textmonial-item">
+                        <img src="~/assets/imgs/avatar1.jpg" class="avatar" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        <div class="des">
+                            <h5 class="ti-quote-left font-weight-bold"></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ea facere voluptatum corrupti doloremque odit sequi labore rerum maiores libero.adipisicing elit. Vitae quasi voluptatem sed quaerat dolorum architecto reiciendis magni laboriosam, illum, nobis, quae dolor, ducimus libero! Sapiente deleniti sit dolor, ex possimus.</p>
+                            <h5 class="ti-quote-left text-right font-weight-bold"></h5>
+
+                            <div class="line"></div>
+                            <h6 class="name">Emma Re</h6>
+                            <h6 class="xs-font">Full stack developer</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="textmonial-item">
+                        <img src="~/assets/imgs/avatar2.jpg" class="avatar" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        <div class="des">
+                            <h5 class="ti-quote-left font-weight-bold"></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ea facere voluptatum corrupti doloremque odit sequi labore rerum maiores libero.adipisicing elit. Vitae quasi voluptatem sed quaerat dolorum architecto reiciendis magni laboriosam, illum, nobis, quae dolor, ducimus libero! Sapiente deleniti sit dolor, ex possimus.</p>
+                            <h5 class="ti-quote-left text-right font-weight-bold"></h5>
+
+                            <div class="line"></div>
+                            <h6 class="name">John Doe</h6>
+                            <h6 class="xs-font">Graphic Designer</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="textmonial-item">
+                        <img src="~/assets/imgs/avatar3.jpg" class="avatar" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        <div class="des">
+                            <h5 class="ti-quote-left font-weight-bold"></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ea facere voluptatum corrupti doloremque odit sequi labore rerum maiores libero.adipisicing elit. Vitae quasi voluptatem sed quaerat dolorum architecto reiciendis magni laboriosam, illum, nobis, quae dolor, ducimus libero! Sapiente deleniti sit dolor, ex possimus.</p>
+                            <h5 class="ti-quote-left text-right font-weight-bold"></h5>
+
+                            <div class="line"></div>
+                            <h6 class="name">Emily Roe</h6>
+                            <h6 class="xs-font">Freelancer</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-overlay">
+
+        <div class="container">
+            <div class="infos mb-4 mb-md-2">
+                <div class="title">
+                    <h6 class="subtitle font-weight-normal">Are locking for</h6>
+                    <h5>Lorem inpsum</h5>
+                    <p class="font-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="socials">
+                    <div class="row justify-content-between">
+                        <div class="col">
+                            <a class="d-block subtitle"><i class="ti-microphone"></i> (123) 456-7890</a>
+                            <a class="d-block subtitle"><i class="ti-email"></i> info@website.com</a>
+                        </div>
+                        <div class="col">
+                            <h6 class="subtitle font-weight-normal mb-1">Social Media</h6>
+                            <div class="social-links">
+                                <a href="javascript:void(0)" class="link pr-1"><i class="ti-facebook"></i></a>
+                                <a href="javascript:void(0)" class="link pr-1"><i class="ti-twitter-alt"></i></a>
+                                <a href="javascript:void(0)" class="link pr-1"><i class="ti-google"></i></a>
+                                <a href="javascript:void(0)" class="link pr-1"><i class="ti-pinterest-alt"></i></a>
+                                <a href="javascript:void(0)" class="link pr-1"><i class="ti-instagram"></i></a>
+                                <a href="javascript:void(0)" class="link pr-1"><i class="ti-rss"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section mb-4" id="blog">
+
+        <div class="container mb-3">
+            <h6 class="xs-font mb-0">Culpa perferendis excepturi.</h6>
+            <h3 class="section-title mb-5">Our Blog</h3>
+
+            <div class="blog-wrapper">
+                <div class="img-wrapper">
+                    <img src="~/assets/imgs/img-3.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                    <div class="date-container">
+                        <h6 class="day">29</h6>
+                        <h6 class="mun">Jun</h6>
+                    </div>
+                </div>
+                <div class="txt-wrapper">
+                    <h4 class="blog-title">Lorem ipsum dolor.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum vitae ducimus dolor sed numquam, assumenda non dolorem in facilis eius alias voluptates, fugit maiores aspernatur ad rem saepe molestiae consequuntur. adipisicing elit. Repellat nam placeat laboriosam dolorum aperiam fuga voluptate, quis ea vel ab sunt incidunt quasi, molestias atque deserunt voluptates quae voluptatum sit.</p>
+
+                    <a href="#" class="badge badge-info">Graphic Design</a>
+
+                    <h6 class="blog-footer">
+                        <a href="javascript:void(0)"><i class="ti-user"></i> Admin </a> |
+                        <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 213 </a> |
+                        <a href="javascript:void(0)"><i class="ti-comments"></i> 123</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </section>
+                
+
+    <!-- core  -->
+    <script src="~/assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="~/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="~/assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Owl carousel  -->
+    <script src="~/assets/vendors/owl-carousel/js/owl.carousel.js"></script>
 
 
-<script>
-    $(document).ready(function () {
-        $('[data-bs-toggle="imagenModal"]').click(function () {
-            var imgSrc = $(this).attr('src');
-            $('#imagenModal .modal-body img').attr('src', imgSrc);
-            $('#imagenModal').modal('toggle');
-        });
-    });
-</script>
+    <!-- Ollie js -->
+    <script src="~/assets/js/Ollie.js"></script>
+
+</body>
+</html>

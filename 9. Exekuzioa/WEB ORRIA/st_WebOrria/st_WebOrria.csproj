@@ -12,4 +12,8 @@
     <PackageReference Include="SimpleInjector.Integration.ServiceCollection" Version="5.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\scss\base\" />
+  </ItemGroup>
+
 </Project>
