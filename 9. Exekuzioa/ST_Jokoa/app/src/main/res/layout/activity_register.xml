@@ -6,7 +6,8 @@
     tools:context=".RegisterActivity"
     android:fontFamily="@font/chakrapetchbold"
     android:background="@color/primary_color"
-    android:padding="30dp"    >
+    android:padding="30dp"
+    >
 
     <EditText
         android:id="@+id/editTextNewUsername"
@@ -16,6 +17,7 @@
         android:layout_marginTop="146dp"
         android:fontFamily="@font/chakrapetchbold"
         android:hint="Izena"
+        android:textColorHint="@color/Textuaren_Kolorea"
         android:textColor="@color/white" />
 
     <EditText
@@ -26,6 +28,7 @@
         android:textColor="@color/white"
         android:layout_marginTop="8dp"
         android:hint="Abizena"
+        android:textColorHint="@color/Textuaren_Kolorea"
         android:fontFamily="@font/chakrapetchbold"/>
 
     <EditText
@@ -36,6 +39,7 @@
         android:layout_marginTop="70dp"
         android:textColor="@color/white"
         android:fontFamily="@font/chakrapetchbold"
+        android:textColorHint="@color/Textuaren_Kolorea"
         android:hint="DNI" />
 
     <EditText
@@ -47,6 +51,7 @@
         android:hint="Pasahitz berria"
         android:textColor="@color/white"
         android:inputType="textPassword"
+        android:textColorHint="@color/Textuaren_Kolorea"
         android:fontFamily="@font/chakrapetchbold"/>
 
     <EditText
@@ -58,22 +63,23 @@
         android:textColor="@color/white"
         android:fontFamily="@font/chakrapetchbold"
         android:hint="Baieztatu pasahitza"
+        android:textColorHint="@color/Textuaren_Kolorea"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="361dp"
-        android:layout_height="96dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/BaieztatuPasahitza"
-        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
         android:layout_marginTop="33dp"
         android:layout_marginBottom="125dp"
         android:backgroundTint="@color/Botoien_kolorea"
         android:fontFamily="@font/chakrapetchbold"
         android:onClick="register"
-        android:padding="8dp"
         android:text="Erregistratu"
+        android:padding="8dp"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
 </RelativeLayout>

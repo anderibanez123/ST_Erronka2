@@ -16,7 +16,7 @@ import java.util.Random;
 // DatabaseHelper.java
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "users.db";
+    private static final String DATABASE_NAME = "GaldetegiaST.db";
     private static final int DATABASE_VERSION = 1;
 
     //taula "erabiltzaileak"
@@ -76,6 +76,105 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_TABLE_USERS);
         db.execSQL(CREATE_TABLE_GALDERAK);
+        db.execSQL(CREATE_TABLE_TXAPELKETA);
+
+        galderakSortu(db);
+    }
+
+    private void galderakSortu(SQLiteDatabase db) {
+        // Insertar preguntas de ejemplo
+        insertQuestion(db, "Ordenagailuko teklatuari begiratzen badiozu, ze letra aurkitzen da E eta T letren artean?", "R", "D", "F", "U");
+        insertQuestion(db, "Zein da munduko kirolik ezagunena?", "Futbola", "Saskibaloia", "Boleibola", "Surfa");
+        insertQuestion(db, "Kolore horia eta kolore urdina nahasten badituzu, zein kolore lortuko duzu?", "Berdea", "Gorria", "Laranja", "Morea");
+        insertQuestion(db, "Munduko zein hiritan aurkitzen da Eiffel dorrea?", "Paris", "Erroma", "Iruñea", "Pisa");
+        insertQuestion(db, "Haragia jaten duten animaliak dira...", "Haragijaleak", "Orojaleak", "Belarjaleak", "Landarejaleak");
+        insertQuestion(db, "Zein hilabetek izan ditzake 28 edo 29 egun urtearen arabera?", "Otsaila", "Martxoa", "Urtarrila", "Apirila");
+        insertQuestion(db, "Zenbat minutu ditu ordu batek?", "60", "100", "50", "600");
+        insertQuestion(db, "Zenbat silaba ditu \"ordenagailua\" hitzak?", "6", "4", "5", "7");
+        insertQuestion(db, "Lasterketa batean bigarren doanari aurreratzen badiot, ze posizioan geratuko naiz?", "Bigarrena", "Lehenengoa", "Hirugarrena", "Laugarrena");
+        insertQuestion(db, "Nola esaten da \"osteguna\" ingelesez?", "Thursday", "Wednesday", "Tuesday", "Monday");
+        insertQuestion(db, "Zenbat alde ditu hexagono batek?", "6", "4", "7", "5");
+        insertQuestion(db, "Zein da giza gorputzeko hezurrik luzeena?", "Femurra (hanka)", "Humeroa (besoa)", "Buruhezurra (burua)", "Saihetsak (enborra)");
+        insertQuestion(db, "Zein da Iruñeatik pasatzen den ibaia?", "Arga", "Urumea", "Irati", "Aragoi");
+        insertQuestion(db, "Nola deitzen da pertsona itsuek erabiltzen duten idazteko eta irakurtzeko metodoa?", "Braille", "Marrazkiak", "Zeinuak", "Trise");
+        insertQuestion(db, "Gorputzeko zein atal du neurri berdina jaiotzerakoan eta helduak garenean?", "Begiak", "Hortzak", "Mingaina", "Hankako bietz txikia");
+        insertQuestion(db, "Mozart izan zen...", "Musikaria", "Margolaria", "Kirolaria", "Idazlea");
+        insertQuestion(db, "Hurrengo hirietatik, zein du itsasoa?", "Donostia", "Iruñea", "Gasteiz", "Maule");
+        insertQuestion(db, "Zein da munduko mendirik altuena?", "Everest", "Annapurna", "Hiru Errege Mahaia", "Jaizkibel");
+        insertQuestion(db, "Zer da niretzako nire aitaren anaiaren semea?", "Lehengusua", "Osaba", "Anaia", "Iloba");
+        insertQuestion(db, "Zein urtaroetan dira egunak gauak baino luzeagoak?", "Uda", "Negua", "Udazkena", "Udaberria");
+        insertQuestion(db, "Nondik ateratzen da eguzkia?", "Ekialdea", "Iparraldea", "Hegoaldea", "Mendebaldea");
+        insertQuestion(db, "Zein da ozeanorik handiena?", "Barea", "Artikoa", "Atlantikoa", "Indikoa");
+        insertQuestion(db, "Zein da munduko animaliarik azkarrena?", "Gepardoa", "Barraskiloa", "Tigrea", "Azeria");
+        insertQuestion(db, "Pablo Picasso izan zen...", "Margolaria", "Musikaria", "Arkitektoa", "Idazlea");
+        insertQuestion(db, "Giza gorputzeko zein aparatuk laguntzen digu oxigenoa hartzen?", "Arnas-aparatua", "Digestio-aparatua", "Iraitz-aparatua", "Lokomozio-aparatua");
+        insertQuestion(db, "Zergatik urte batean ditugu lau urtaro desberdin?", "Lurraren traslazio mugimenduagatik", "Ilargiaren errotazio mugimenduagatik", "Oporrengatik", "Egutegiagatik");
+        insertQuestion(db, "Zein da Bizkaiko hiriburua?", "Bilbo", "Gasteiz", "Maule", "Donostia");
+        insertQuestion(db, "Zein da Nafarroako mendirik altuena?", "Hiru Errege Mahaia", "Annapurna", "Ezkaba", "Izarraitz");
+        insertQuestion(db, "Ze eraikuntza mota aurkituko ditugu Egiptona bidaiatzen badugu?", "Piramideak", "Gazteluak", "Tipiak", "Etxe-orratzak");
+        insertQuestion(db, "HAINBAT (...?) AGERTZEN DA", "LIBURUTAN", "LIBURUETAN", "LIBURUAN", "DENAK DIRA ZUZENAK");
+        insertQuestion(db, "ZEIN DA ZUZENA?", "Medikuarenetik nator", "Medikuarengatik nator", "Medikuatik nator", "Medikutik nator");
+        insertQuestion(db, "(...?) EROSI DUT ETXEA", "DIRUARI ESKER", "DIRUARENGATIK ESKER", "DIRUARI ESKERRAK", "DIRUAREN ESKER");
+        insertQuestion(db, "AMAIA (...?) ETORRI ZEN", "Urtarrilaren 8an", "Urtarrilak 8an", "Urtarrila 8an", "Urtarrila 8");
+        insertQuestion(db, "POSPOSIZIOAK", "GALTZEKO BELDUR DAUDE", "GALTZEAREN BELDUR DIRA", "GALTZEKO BELDUR DIRA", "GALTZEAREN BELDUR DAUDE");
+        insertQuestion(db, "ZEIN DA ZUZENA?", "8 EUROTAN SALDU DUT", "8 EURORENGATIK SALDU DUT", "BIAK ZUZENAK DIRA", "EZ DIRA ZUZENAK");
+        insertQuestion(db, "TELEBISTA (...?) OHARTU ZEN", "IKUSTEAN", "IKUSIAN", "IKUSTERAKOAN", "DENAK DIRA ZUZENAK");
+        insertQuestion(db, "MAIALENEK BERE URTEBETETZE FESTARA", "JOATEKO ESAN ZIGUN", "JOATEA ESAN ZIGUN", "BIAK ZUZENAK DIRA", "EZ DIRA ZUZENAK");
+        insertQuestion(db, "ZEIN DA ZUZENA?", "ZUREGATIK", "ZUREGAITIK", "ZURE GATIK", "ZURE GAITIK");
+        insertQuestion(db, "ALDE BATERA (...?) ZUEN LANAK", "UTZI", "HUTSI", "HUTZI", "UTSI");
+        insertQuestion(db, "AMAK (...?) EMAT DIZKIGU", "AHOLKUAK", "AOLKUAL", "HAOLKUAK", "DENAK GAIZKI");
+        insertQuestion(db, "ZABORRONTZIA...", "HUTSIK", "HUTZIK", "UTZIK", "UTSIK");
+        insertQuestion(db, "HIZTEGIAN (...?) EMATEN DA ONTZAT", "AURRERAPAUSO", "AURRERAPAUSU", "AURRERA PAUSO", "AURRERA PAUSU");
+        insertQuestion(db, "Zeinen kontra jolastu/ko du errealak 2020 erregearen kopa?", "Athletic", "Barça", "Getafe", "Real Madrid");
+        insertQuestion(db, "Zein da Lopez Ufarteren ezizena?", "Pequeño diablo", "Pequeño topo", "Gran hormiga", "El txopo Ufarte");
+        insertQuestion(db, "Zeinen kontra irabazi behar izan zuten realeko neskek erregearen kopa lortzeko?", "Atletico Madrid", "Athletic", "Getafe", "Real Madrid");
+        insertQuestion(db, "Zertarako erabiltzen dira barra diagramak?", "Datuak konparatzeko", "Joerak aztertzeko eta aurreikuspenak egiteko", "Maiztasun erlatiboak adierazteko, ehuneko batekiko", "Biztanleria aztertzeko");
+        insertQuestion(db, "Zein da biztanleriaren banaketa adin tarteka eta sexuaren arabera adierazten duen diagrama?", "Adin piramidea", "Barra diagrama", "Ziklograma", "Infograma");
+        insertQuestion(db, "Mundu mailan, zein dira dentsitate handieneko guneak?", "Asia eta Europa", "Europa eta Amerika", "Amerika eta Asia", "Amerika eta Afrika");
+        insertQuestion(db, "Nola deitzen da herriei buruz informazioa biltzen duen tresna?", "Errolda", "Adin piramidea", "Ziklograma", "Errentaren aitorpena");
+        insertQuestion(db, "Zein dira biztanleria adin talde nagusiak?", "Gazteak, helduak eta adinekoak", "Haurrak, gazteak eta helduak", "Gazteak eta Helduak", "Helduak eta adinekoak");
+        insertQuestion(db, "Zer da protokolo bat?", "komunikaziorako arau multzo bat", "komunikaziorako harau multzo bat", "arau bat", "albokoak ez daki");
+        insertQuestion(db, "ZEIN DA OSI ARKITEKTURAREN 6. MAILA", "aurkezpen-maila", "maila-fisikoa", "aplikazio maila", "garraio maila");
+        insertQuestion(db, "Zer era ez da informazioa transmititzeko", "GUZTIAK TXARTO DAUDE", "WIFI", "IZPI INFRAGORRIAK", "BLUETOOTH");
+        insertQuestion(db, "Zer motatako helbidea da 255.250.250.265", "Okerra da", "B", "C", "E");
+        insertQuestion(db, "informazio bat sareko ordenagailu guzti-guztiei bidaltzeko erabiltzen da", "difusio edo broadcast", "broadcast", "trama", "difusio");
+        insertQuestion(db, "Zer da ISP", "Internet Service Provider", "Instituto de Salud Pública de Chile.", "Instituto Sistemas Perú.", "In-System Programming");
+        insertQuestion(db, "(orain) Zu ere ikasturte amaierako bidaiara joan ............. gurasoek utziz gero.", "zaitezke", "diezaiezuke", "dakizuke", "dezakezu");
+        insertQuestion(db, "(alegiazkoa) Nik zuek busti ..........", "zintzaketet", "nenkizuekeen", "zintezketet", "zenkizkidaketen");
+        insertQuestion(db, "(alegiazkoa) Oinatz eta Iraitz aitonari gertura .........diru apur bat eskatzeko asmoz.", "lekizkioke", "litzaiokete", "lekiekete", "litzakete");
+        insertQuestion(db, "(lehen) Ni tabernako mutilari hurrera .......... bakarrik geratzean.", "nenkiokeen", "nekiokeen", "nezakeen", "zezakedan");
+        insertQuestion(db, "Non sortzen da islama?", "Arabiako basamortua", "Indonesia", "Jerusalem", "Zarauzko desertu txikian");
+        insertQuestion(db, "Zein da Islamaren liburu Sakratua", "Korana", "Biblia", "Buda", "Meka");
+        insertQuestion(db, "Zein da judaismoaren liburu sakratua", "Tora", "Koran", "Biblia", "Buda");
+        insertQuestion(db, "Zein erlijioetan izan zen profeta Mahoma?", "Islamean", "Budismoan", "Kristautasunean", "Hinduismoan");
+        insertQuestion(db, "Nola deitzen dira Islam erlijioaren eraikin sakratuak?", "Mezkitak", "Elizak", "Gazteluak", "Anfiteatroak");
+        insertQuestion(db, "Nola deitzen Hinduismoaren tenpluak?", "Mandir", "Meka", "Eliza", "Gaztelua");
+        insertQuestion(db, "Ze taldetako zalea zein Bin Laden?", "Arsenal", "Psg", "Madrid", "Barcelona");
+        insertQuestion(db, "Nork irabazi zuen 2002ko munduko txapelketa?", "Brasil", "Alemania", "Italia", "Frantzia");
+        insertQuestion(db, "Soldataren 2/3 gastatu dut eta oraindik 210€ geratzen zaizkit. Zenbateko soldata daukat?", "630", "420", "620", "600");
+        insertQuestion(db, "Gela baten 2/3 kirola egiten dute eta horietatik 3/4 futbola. Zer zatiki egiten du futbola?", "1/2", "1/4", "6/12", "3/12");
+        insertQuestion(db, "Zein herrialdek ditu biztanle gutxien?", "Araba", "Gipuzkoa", "Nafarroa", "Bizkaia");
+        insertQuestion(db, "4 kg malluki eta 2 kg angurri erosi baditut (Mallukiak 2.5 euro/kg Angurria 6 euro/kg), zenbat ordaindu dut?", "22 €", "26 €", "20 €", "25 €");
+        insertQuestion(db, "Bukatu esaera: Kalean uso, etxean…", "otso", "multzo", "atso", "mantso");
+        insertQuestion(db, "Zelan deitzen da Ibarrolak margoztutako basoa?", "Omako basoa", "Ibarrola basoa", "Baso magikoa", "Koloredun basoa");
+        insertQuestion(db, "Euskal kondairetako Mari pertsonaia , zein mendirekin lotzen dugu?", "Anboto", "Sollube", "Gorbeia", "Oiz");
+        insertQuestion(db, "Euskararen eguna", "Abenduak 3", "Abenduak 17", "Urtarrilak 4", "Irailak 16");
+        insertQuestion(db, "Zer esan nahi du IHINTZA hitzak?", "Rocío", "Espuma", "Cincha", "Brisa");
+        insertQuestion(db, "Zer da morokila?", "Janaria", "Herri baten izena", "Argeliatik ekarritako tresna", "Jolasa");
+        insertQuestion(db, "Non dago Euskal Herriko txapela fabrikarik garrantzitsuena?", "Balmaseda", "Castro", "Eibar", "Mungia");
+        insertQuestion(db, "Zein da Bertsolaritza txapelketa irabazi duen emakume bakarra?", "Maialen Lujanbio", "Miren Amuriza", "Inaxi Etxaberri", "Oihane Muñiz");
+        insertQuestion(db, "Urteko zein hilabetetan ospatzen da Durangoko Azoka?", "Abendua", "Otsaila", "Azaroa", "Iraila");
+    }
+
+    private void insertQuestion(SQLiteDatabase db, String pregunta, String respuestaCorrecta, String respuestaIncorrecta1, String respuestaIncorrecta2, String respuestaIncorrecta3) {
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_GALDERA, pregunta);
+        values.put(COLUMN_ERANTZUN_ZUZENA, respuestaCorrecta);
+        values.put(COLUMN_ERANTZUN_OKERRA_1, respuestaIncorrecta1);
+        values.put(COLUMN_ERANTZUN_OKERRA_2, respuestaIncorrecta2);
+        values.put(COLUMN_ERANTZUN_OKERRA_3, respuestaIncorrecta3);
+
+        db.insert(TABLE_GALDERAK, null, values);
     }
 
     @Override

@@ -7,7 +7,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.st_jokoa"
+        applicationId = "com.stenpresa.st_jokoa"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

@@ -60,5 +60,5 @@ public class MainActivity extends AppCompatActivity {
         return result;
     }
 
-    // Otros métodos según sea necesario
+
 }
