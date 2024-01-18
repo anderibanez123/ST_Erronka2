@@ -56,7 +56,7 @@
             android:fontFamily="@font/chakrapetchbold"
             android:onClick="main_btn"
             android:padding="8dp"
-            android:text="Setting"
+            android:text="Eguneratu"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />

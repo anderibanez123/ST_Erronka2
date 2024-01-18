@@ -164,6 +164,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         insertQuestion(db, "Non dago Euskal Herriko txapela fabrikarik garrantzitsuena?", "Balmaseda", "Castro", "Eibar", "Mungia");
         insertQuestion(db, "Zein da Bertsolaritza txapelketa irabazi duen emakume bakarra?", "Maialen Lujanbio", "Miren Amuriza", "Inaxi Etxaberri", "Oihane Muñiz");
         insertQuestion(db, "Urteko zein hilabetetan ospatzen da Durangoko Azoka?", "Abendua", "Otsaila", "Azaroa", "Iraila");
+        insertQuestion(db, "Zein da Mario Nistalen ezizena?", "Ez dauka", "Mariolo", "Nistales", "Luigi");
+        insertQuestion(db, "Zenbat jokalari jolasten dute futbol zelai batean?", "22", "11", "10", "20");
+        insertQuestion(db, "Joko hau ze enpresak sortu du?", "ST enpresa", "TSB", "M&M", "Supercell");
+        insertQuestion(db, "Hiru hauetako bat ez da besteen esanahikidea. Zein?", "Zertarako", "Zelako", "Nolako", "Zertako");
+        insertQuestion(db, "Euskal Herriko zein hiriburutakoei egozten zaie harroputzak izatea?", "Bilbokoei", "Donostiakoei", "Gasteizekoei", "Azpeitikoei");
+        insertQuestion(db, "Nori deitu zioten 'Lepantoko besamotza'?", "Miguel de Cervantes", "Miguel Delibes", "Quevedo", "Francisco Javier Arrutia");
+        insertQuestion(db, "Zer ospatzen da Eguberri egunean?", "Jesusen jaiotza", "Jesusen piztuera", "Jesusen heriotza", "Jesusen hezkontza");
+        insertQuestion(db, "Zenbat sektore ditu ekonomiak?", "3", "2", "4", "5");
+        insertQuestion(db, "Zenbat denbora behar izan zuen Phileas Fogg-ek munduari bira emateko?", "80 egun", "Hilabete", "Urte erdia", "2 urte");
+        insertQuestion(db, "Noiz eta non ospatu ziren lehen Joku Olinpiko modernoak?", "1896 Atenasen", "1902an Atlantan", "1892an Erroman", "1906an Munichen");
+        insertQuestion(db, "Non sortu ziren lehenengo Jaurerriak?", "Nafarroan", "Bizkaian", "Araban", "Gipuzkoan");
+        insertQuestion(db, "Nor izan zen lehena Hego Polora iristen?", "Roal Amundsen", "Robert Falcon Scott", "Haakon Norvegiakoa", "Mr Tartaria");
+        insertQuestion(db, "Non jaio zen Marco Polo?", "Venezioan", "Sizilian", "Milanen", "Florenzian");
+
     }
 
     private void insertQuestion(SQLiteDatabase db, String pregunta, String respuestaCorrecta, String respuestaIncorrecta1, String respuestaIncorrecta2, String respuestaIncorrecta3) {

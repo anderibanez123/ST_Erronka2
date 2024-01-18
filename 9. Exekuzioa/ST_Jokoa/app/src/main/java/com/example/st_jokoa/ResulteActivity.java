@@ -19,7 +19,7 @@ public class ResulteActivity extends AppCompatActivity {
 
         findViewById(R.id.btn_restart).setOnClickListener(
                 restart->{
-                    Intent intent  = new Intent(ResulteActivity.this , MainActivity.class);
+                    Intent intent  = new Intent(ResulteActivity.this , MenuActivity.class);
                     startActivity(intent);
                     finish();
                 }

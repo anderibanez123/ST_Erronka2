@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -34,7 +35,7 @@ public class playActivity extends AppCompatActivity {
     Button btn_click;
     Galdera currentGaldera;
     CountDownTimer countDownTimer;
-    int maxQuestionsToShow = 10;  // Definir el número máximo de preguntas para mostrar
+    int maxQuestionsToShow = 10;  // Definir galdera kopuru maximoa
     int currentSecondsRemaining = MAX_SECONDS_PER_QUESTION;
 
     @Override
@@ -54,38 +55,37 @@ public class playActivity extends AppCompatActivity {
 
         dbHelper = new DatabaseHelper(this);
 
-        // Iniciar el temporizador global
+        // Jokoa hasi
         startGlobalTimer();
-
         findViewById(R.id.image_back).setOnClickListener(a -> finish());
-        remplirData();
+        fillData();
 
         btn_next.setOnClickListener(view -> {
             if (isclickBtn) {
                 isclickBtn = false;
 
-                // Cambios aquí
                 if (valueChoose.equals(currentGaldera.getErantzunZuzena())) {
-                    Toast.makeText(playActivity.this, "ondo", Toast.LENGTH_LONG).show();
-                    btn_click.setBackgroundResource(R.drawable.background_btn_correct);
+                    Toast.makeText(playActivity.this, "Ondo", Toast.LENGTH_LONG).show();
+                    btn_click.setBackgroundColor(ContextCompat.getColor(this, R.color.erantzun_Zuzena));
                     scorePlayer += POINTS_PER_CORRECT_ANSWER;
                 } else {
-                    Toast.makeText(playActivity.this, "gaizki", Toast.LENGTH_LONG).show();
-                    btn_click.setBackgroundResource(R.drawable.background_btn_erreur);
+                    Toast.makeText(playActivity.this, "Gaizki", Toast.LENGTH_LONG).show();
+                    btn_click.setBackgroundColor(ContextCompat.getColor(this, R.color.Botoien_kolorea));
                 }
 
                 new Handler().postDelayed(() -> {
-                    // Continuar con la lógica del juego (cambiar de pregunta, etc.)
+                    // Jokoaren logika jarraitu (galdera aldatu, eta abar)
                     nextQuestion();
                 }, 1000);
             } else {
-                Toast.makeText(playActivity.this, "Erantzun bat aukeratu behar duzu", Toast.LENGTH_LONG).show();
+                Toast.makeText(playActivity.this, "Erantzun bat hautatu behar duzu", Toast.LENGTH_LONG).show();
             }
         });
 
-        // Iniciar el temporizador
+        // Temporizadorea hasi
         startCountdownTimer();
     }
+
     private void startGlobalTimer() {
         globalTimer = new CountDownTimer(Long.MAX_VALUE, 1000) {
             @Override
@@ -95,7 +95,7 @@ public class playActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                // No debería ocurrir en este caso
+                // Kasu honetan ez du egin behar
             }
         }.start();
     }
@@ -105,14 +105,15 @@ public class playActivity extends AppCompatActivity {
             globalTimer.cancel();
         }
     }
+
     private void startCountdownTimer() {
         countDownTimer = new CountDownTimer(MAX_SECONDS_PER_QUESTION * 1000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                // Actualizar el contador de tiempo en tu interfaz si es necesario
+                // Denbora kounter-a eguneratu
                 timerTextView.setText(String.valueOf(currentSecondsRemaining));
 
-                // Restar puntos cada segundo
+                // Denbora bera amaitzean puntuak kendu
                 scorePlayer -= calculatePointsDeductionPerSecond();
 
                 currentSecondsRemaining--;
@@ -120,64 +121,65 @@ public class playActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                // El tiempo ha llegado a cero, realiza las acciones necesarias
+                // Denbora amaitu da, egin beharreko ekintzak burutu
                 handleTimeout();
             }
         }.start();
     }
+
     private int calculatePointsDeductionPerSecond() {
-        // Personaliza la lógica de deducción de puntos por segundo aquí
-        return 1;  // Por ejemplo, resta 1 punto por cada segundo transcurrido
+        // Puntuak segundu bakoitzeko kalkulatzeko logika pertsonalizatu
+        return 1;  // Adibidez, segundo bakoitzeko puntu bat kendu
     }
 
     private void handleTimeout() {
-        // Puedes deducir puntos o realizar otras acciones
-        Toast.makeText(playActivity.this, "Se ha agotado el tiempo", Toast.LENGTH_LONG).show();
+        // Puntuak kendu edo beste ekintzak burutu
+        Toast.makeText(playActivity.this, "Denbora agortu da", Toast.LENGTH_LONG).show();
         deductPointsDueToTimeout();
 
-        // Continuar con la lógica del juego (cambiar de pregunta, etc.)
+        // Jokoaren logika jarraitu (galdera aldatu, eta abar)
         nextQuestion();
     }
 
     private void deductPointsDueToTimeout() {
-        // Resta puntos al puntaje del jugador según sea necesario
+        // Jokalariaren puntuak behar bezala kentzeko
         scorePlayer -= calculatePointsDeduction();
     }
 
     private int calculatePointsDeduction() {
-        // Puedes personalizar la lógica de deducción de puntos aquí
-        return 10;  // Por ejemplo, resta 10 puntos por agotar el tiempo
+        // Puntuak kentzeko logika pertsonalizatu
+        return 10;  // Adibidez, denboraren amaitzean 10 puntu kentzen ditu
     }
 
     private void nextQuestion() {
-        // Detener el temporizador actual
+        // Temporizadorea gelditu
         countDownTimer.cancel();
 
-        // Reiniciar el temporizador y el contador de segundos
+        // Temporizadorea eta segundu kounter-a berrabiatu
         currentSecondsRemaining = MAX_SECONDS_PER_QUESTION;
         startCountdownTimer();
 
-        // Continuar con la lógica de cargar la siguiente pregunta (rellenarData, etc.)
+        btn_choose1.setBackgroundColor(ContextCompat.getColor(this, R.color.primary_color));
+        btn_choose2.setBackgroundColor(ContextCompat.getColor(this, R.color.primary_color));
+        btn_choose3.setBackgroundColor(ContextCompat.getColor(this, R.color.primary_color));
+        btn_choose4.setBackgroundColor(ContextCompat.getColor(this, R.color.primary_color));
+
+        // Jokoaren logika jarraitu (galdera aldatu, eta abar)
         if (currentQuestion < maxQuestionsToShow - 1) {
             currentQuestion++;
-            remplirData();
+            fillData();
             valueChoose = "";
-            btn_choose1.setBackgroundResource(R.drawable.background_btn_choose);
-            btn_choose2.setBackgroundResource(R.drawable.background_btn_choose);
-            btn_choose3.setBackgroundResource(R.drawable.background_btn_choose);
-            btn_choose4.setBackgroundResource(R.drawable.background_btn_choose);
         } else {
-            // Lógica para cuando se haya completado la cantidad de preguntas deseadas
-            // Puedes iniciar la actividad de resultados aquí
+            // Preguntak desiratuta, ekintzak burutu (adibidez, emaitzen pantaila ireki)
             Intent intent = new Intent(playActivity.this, ResulteActivity.class);
             intent.putExtra("Emaitza", scorePlayer);
             startActivity(intent);
 
-            // Detener el temporizador global
+            // Temporizadore globala gelditu
             stopGlobalTimer();
             countDownTimer.cancel();
             String dni = editTextDNI.getText().toString();
-            // Actualizar la tabla txapelketa con los puntos y el tiempo total
+            // Txapelketa taula puntu eta denbora guztiekin eguneratu
             dbHelper.updateTxapelketaTable(scorePlayer, totalTimeElapsedMillis / 1000, dni);
 
             finish();
@@ -185,8 +187,8 @@ public class playActivity extends AppCompatActivity {
     }
 
 
-    void remplirData() {
-        // Cambios aquí
+    void fillData() {
+        // Aldaketak hemen
         cpt_question.setText((currentQuestion + 1) + "/" + maxQuestionsToShow);
 
         List<Galdera> galderaList = dbHelper.getRandomGalderak(maxQuestionsToShow);
@@ -195,20 +197,20 @@ public class playActivity extends AppCompatActivity {
             currentGaldera = galderaList.get(currentQuestion);
             text_question.setText(currentGaldera.getGaldera());
 
-            // Obtener las respuestas y barajarlas
-            List<String> respuestas = Arrays.asList(
+            // Erantzunak hartu eta nahastu
+            List<String> erantzunak = Arrays.asList(
                     currentGaldera.getErantzunZuzena(),
                     currentGaldera.getErantzunOkerra1(),
                     currentGaldera.getErantzunOkerra2(),
                     currentGaldera.getErantzunOkerra3()
             );
 
-            // Establecer las respuestas en los botones después de barajarlas
-            List<Button> buttons = Arrays.asList(btn_choose1, btn_choose2, btn_choose3, btn_choose4);
-            Collections.shuffle(buttons);
+            // Nahastutako erantzunak botoietan ezarri
+            List<Button> botoiak = Arrays.asList(btn_choose1, btn_choose2, btn_choose3, btn_choose4);
+            Collections.shuffle(botoiak);
 
-            for (int i = 0; i < buttons.size(); i++) {
-                buttons.get(i).setText(respuestas.get(i));
+            for (int i = 0; i < botoiak.size(); i++) {
+                botoiak.get(i).setText(erantzunak.get(i));
             }
         }
     }
@@ -217,16 +219,16 @@ public class playActivity extends AppCompatActivity {
         btn_click = (Button) view;
 
         if (isclickBtn) {
-            btn_choose1.setBackgroundResource(R.drawable.background_btn);
-            btn_choose2.setBackgroundResource(R.drawable.background_btn);
-            btn_choose3.setBackgroundResource(R.drawable.background_btn);
-            btn_choose4.setBackgroundResource(R.drawable.background_btn);
+            btn_choose1.setBackgroundColor(ContextCompat.getColor(this, R.color.primary_color));
+            btn_choose2.setBackgroundColor(ContextCompat.getColor(this, R.color.primary_color));
+            btn_choose3.setBackgroundColor(ContextCompat.getColor(this, R.color.primary_color));
+            btn_choose4.setBackgroundColor(ContextCompat.getColor(this, R.color.primary_color));
         }
         chooseBtn();
     }
 
     void chooseBtn() {
-        btn_click.setBackgroundResource(R.drawable.background_btn_choose_color);
+        btn_click.setBackgroundColor(ContextCompat.getColor(this, R.color.Textuaren_Kolorea));
         isclickBtn = true;
         valueChoose = btn_click.getText().toString();
     }
