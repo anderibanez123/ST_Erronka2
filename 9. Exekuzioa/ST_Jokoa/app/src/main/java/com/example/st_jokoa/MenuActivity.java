@@ -32,7 +32,7 @@ public class MenuActivity extends AppCompatActivity {
 
         } else if (viewId == R.id.btn_Setting) {
             // Botón "Eguneratu" bidez API deia egin
-            new SendDataToAPI().execute();
+            new DatuakBidali(getApplicationContext()).execute();
 
         } else if (viewId == R.id.btn_Exit) {
 

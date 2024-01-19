@@ -20,9 +20,9 @@ app.add_middleware(
 
 
 class Ranking(BaseModel):
-    nan: str
     izena: str
     abizena: str
+    nan: str
     puntuaketa: str
     denbora: str
     
@@ -52,14 +52,8 @@ def insert_nan_data(postgres_cursor, row):
 
 # SQLiteko datua postgreSQLra pasatzeko funtzioa
 @app.post('/datuak_berritu')
-async def datuak_transferentzia(Ranking):
-    
+async def datuak_transferentzia(ranking: Ranking):
     try:
-        
-        # SQLite datu basera konexioa ireki
-        sqlite_conn = sqlite3.connect(Ranking)
-        sqlite_cursor = sqlite_conn.cursor()
-
         # Postgres datu basera konexioa egin
         postgres_conn = psycopg2.connect(
             database="st_db",
@@ -71,23 +65,19 @@ async def datuak_transferentzia(Ranking):
         
         postgres_cursor = postgres_conn.cursor()
 
-        # SQLiteko datuak hartu eta Postgresera pasatu
-        sqlite_cursor.execute("SELECT * FROM txapelketa")
-        data = sqlite_cursor.fetchall()
+        # Obtener datos del JSON
+        izena = ranking.izena
+        abizena = ranking.abizena
+        nan_value = ranking.nan
+        denbora = ranking.denbora
+        puntuaketa = ranking.puntuaketa
 
-        # Datuak prozesatu
-        for row in data:
-            
-            nan_value = row[0]
-            denbora = row[3]
-            puntuaketa = row[4]
-
-            if check_nan_exists(postgres_cursor, nan_value):
-                # Aktualizatu datuak
-                update_nan_data(postgres_cursor, nan_value, denbora, puntuaketa)
-            else:
-                # Inserta egin
-                insert_nan_data(postgres_cursor, row)
+        if check_nan_exists(postgres_cursor, nan_value):
+            # Aktualizatu datuak
+            update_nan_data(postgres_cursor, nan_value, denbora, puntuaketa)
+        else:
+            # Inserta egin
+            insert_nan_data(postgres_cursor, (nan_value, ranking.izena, ranking.abizena, denbora, puntuaketa))
 
         # Commit egin datuak gordetzeko
         postgres_conn.commit()
@@ -97,7 +87,6 @@ async def datuak_transferentzia(Ranking):
 
     finally:
         # Konexioak itxi
-        sqlite_conn.close()
         postgres_conn.close()
 
     return JSONResponse(content={"Mezua": "Datuak berritu dira."}, status_code=200)

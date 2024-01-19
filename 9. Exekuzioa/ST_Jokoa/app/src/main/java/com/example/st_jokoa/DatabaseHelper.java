@@ -40,13 +40,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     //taula "txapelketa"
-    private static final String TABLE_TXAPELKETA = "txapelketa";
-    private static final String COLUMN_ID3 = "id";
-    private static final String COLUMN_IZENA = "izena";
-    private static final String COLUMN_ABIZENA = "abizena";
-    private static final String COLUMN_DENBORA = "denbora";
-    private static final String COLUMN_NAN2 = "nan";
-    private static final String COLUMN_PUNTUAKETA = "puntuaketa";
+    public static final String TABLE_TXAPELKETA = "txapelketa";
+    public static final String COLUMN_ID3 = "id";
+    public static final String COLUMN_IZENA = "izena";
+    public static final String COLUMN_ABIZENA = "abizena";
+    public static final String COLUMN_DENBORA = "denbora";
+    public static final String COLUMN_NAN2 = "nan";
+    public static final String COLUMN_PUNTUAKETA = "puntuaketa";
 
     private static final String CREATE_TABLE_USERS =
             "CREATE TABLE " + TABLE_USERS + " (" +
