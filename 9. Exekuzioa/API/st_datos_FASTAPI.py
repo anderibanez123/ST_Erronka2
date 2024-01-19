@@ -57,7 +57,7 @@ async def datuak_transferentzia(Ranking):
     try:
         
         # SQLite datu basera konexioa ireki
-        sqlite_conn = sqlite3.connect()
+        sqlite_conn = sqlite3.connect(Ranking)
         sqlite_cursor = sqlite_conn.cursor()
 
         # Postgres datu basera konexioa egin
