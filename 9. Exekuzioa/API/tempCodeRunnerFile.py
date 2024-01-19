@@ -19,12 +19,8 @@ app.add_middleware(
 )
 
 
-class Ranking(BaseModel):
-    nan: str
-    izena: str
-    abizena: str
-    puntuaketa: str
-    denbora: str
+class Item(BaseModel):
+    ruta: str
     
 class Jokalariak(BaseModel):
     id: int
@@ -47,17 +43,17 @@ def update_nan_data(postgres_cursor, nan_value, denbora, puntuaketa):
 
 # NAN postgreSQL barruan ez bada existitzen, insert bat egin, datua berriak sartu ahal izateko
 def insert_nan_data(postgres_cursor, row):
-    postgres_cursor.execute("INSERT INTO txapelketa_txapelketa (nan, izena, abizena, denbora, puntuaketa) VALUES (%s, %s, %s, %s, %s)",
+    postgres_cursor.execute("INSERT INTO txapelketa_txapelketa (NAN, izena, abizena, denbora, puntuaketa) VALUES (%s, %s, %s, %s, %s)",
                             (row[0], row[1], row[2], row[3], row[4]))
 
 # SQLiteko datua postgreSQLra pasatzeko funtzioa
 @app.post('/datuak_berritu')
-async def datuak_transferentzia(Ranking):
+async def datuak_transferentzia(item: Item):
     
     try:
         
         # SQLite datu basera konexioa ireki
-        sqlite_conn = sqlite3.connect()
+        sqlite_conn = sqlite3.connect(item.ruta)
         sqlite_cursor = sqlite_conn.cursor()
 
         # Postgres datu basera konexioa egin

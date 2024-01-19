@@ -183,6 +183,43 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         insertQuestion(db, "Non sortu ziren lehenengo Jaurerriak?", "Nafarroan", "Bizkaian", "Araban", "Gipuzkoan");
         insertQuestion(db, "Nor izan zen lehena Hego Polora iristen?", "Roal Amundsen", "Robert Falcon Scott", "Haakon Norvegiakoa", "Mr Tartaria");
         insertQuestion(db, "Non jaio zen Marco Polo?", "Venezioan", "Sizilian", "Milanen", "Florenzian");
+        insertQuestion(db, "Zein da lurreko lekurik hotzena?", "Antartida", "Alaska", "Rusia", "Everest");
+        insertQuestion(db, "Zein da munduko ibairik luzeena?", "Nilo", "Amazonas", "Mississippi", "Yangtsé");
+        insertQuestion(db, "Non sortu ziren Olinpiar Jokoak?", "Grecia", "Londres", "Roma", "AEB");
+        insertQuestion(db, "Zenbat hezur daude giza gorputzean?", "206", "200", "203", "205");
+        insertQuestion(db, "Nork margotu zuen “Azken Afaria”?", "Leonardo da Vinci", "Miguel Ángel", "Picasso", "Rafael Sanzio");
+        insertQuestion(db, "50 % 100 bada, zer da % 90?", "45", "60", "40", "42");
+        insertQuestion(db, "Zein herrialdetan dago Taj Mahal monumentu ospetsua?", "India", "China", "Mongolia", "Arabia Saudita");
+        insertQuestion(db, "Zenbat urte ditu lustro batek?", "5", "10", "15", "7");
+        insertQuestion(db, "Android sistema eragilea konpainiarena da...", "Google", "Microsoft", "Samsung", "Apple");
+        insertQuestion(db, "Whatsapp konpainiarena da...", "Facebook", "Google", "Apple", "Sony");
+        insertQuestion(db, "MEGABYTE BAT BALIOKIDEA DA...", "1024 kiloBytes", "1024 bits", "1024 bytes", "1000 kiloBytes");
+        insertQuestion(db, "Proiektorea periferiko bat da...", "Irtera", "Sarrera", "Komunikazioa", "Biltegiratzea");
+        insertQuestion(db, ".odt luzapena softwareari dagokio...", "LibreOffice Writer", "LibreOffice Impress", "Microsoft PowerPoint", "Microsoft Word");
+        insertQuestion(db, "Scratch bat da...", "Programazio lengoaia", "Bideo editorea", "Web nabegatzailea", "Testu prozesadorea");
+        insertQuestion(db, "Gure gailuekin ordainketak egiteko aukera ematen digun haririk gabeko teknologiari deitzen zaio...", "NFC", "infragorriak", "Bluetooth", "Wifi");
+        insertQuestion(db, "Programa hauetatik zein da web-arakatzailea?", "Mozilla Firefox", "FaceBook", "Google", "Instagram");
+        insertQuestion(db, "Zer da hardwarea?", "Ordenagailuaren zati fisikoa da.", "Programak dira.", "Birus mota bat da.", "Noveldako otordu tipikoa");
+        insertQuestion(db, "Zertarako erabiltzen dira lasterbide-teklak ordena berean: Moztu, Kopiatu eta Itsatsi?", "Ctrl + X, Ctrl + C y Ctrl + V", "Ctrl + X, Ctrl + O y Ctrl + V", "Ctrl + X, Ctrl + C y Ctrl + P", "Ctrl + Z, Ctrl + C y Ctrl + V");
+        insertQuestion(db, "Hauetatik zeintzuk dira birus motak?", "Spywareak, troiarrak eta malwareak.", "Firewalls, P2P eta Blocks.", "AVG, Norton eta Aviras", "Flotters, Spirros eta Gryps.");
+        insertQuestion(db, "1 byte da...", "8 bits", "1024 bits", "6 bits", "10 bits");
+        insertQuestion(db, "Zein urtetan hasi zen Bigarren Mundu Gerra?", "1939", "1945", "1927", "1935");
+        insertQuestion(db, "Zenbat planeta daude gure Eguzki Sisteman?", "8", "9", "10", "7");
+        insertQuestion(db, "Nola du izena Frantziako ereserki nazionalak?", "La Marsellesa", "La Brabançonne", "La Congolaise", "Gens du pays");
+        insertQuestion(db, "Zein da Europan bizirik dagoen hizkuntzarik zaharrena?", "Euskara", "Gaztelania", "Rumaniarra", "Frantzesa");
+        insertQuestion(db, "Zein da Austriako hiriburua?", "Viena", "Berlín", "Praga", "Zagreb");
+        insertQuestion(db, "Zein urtetan gertatu ziren New Yorkeko Dorre Bikien aurkako erasoak?", "2001", "2011", "2111", "2002");
+        insertQuestion(db, "Zenbat balio du Pi zenbakiak?", "3.1416", "3.1422", "2.1415", "3.1614");
+        insertQuestion(db, "Nork abestu zuen \"Hey Jude\" abestia?", "The Beatles", "Queen", "Rolling stones", "Oasis");
+        insertQuestion(db, "Zein urtetan erori zen Berlingo harresia?", "1989", "1987", "1978", "1998");
+        insertQuestion(db, "Zein margolari susmatzen zen 1911n Mona Lisa lapurtu zuela?", "Pablo Picasso", "Henri Matisse", "Paul Cézanne", "Claude Monet");
+        insertQuestion(db, "NASAren arabera, zenbat denbora behar izan zuen Apollo 11 misioak ilargira iristeko?", "Hiru egun", "Egun bat", "Aste bat", "Hiru aste");
+        insertQuestion(db, "Zein da giza urdailaren lana?", "Janaria elikagaietan zatitu", "Eman intsulina gorputzari", "Iragazi hondakinak gorputzetik", "Ponpa odola gorputz osoan");
+        insertQuestion(db, "Neguan Mexikora migratzen den tximeleta monarka zein prozesu mota bezala ezagutzen da?", "Egokitzapena", "Hibernazioa", "Kamuflajea", "Harrapaketa");
+        insertQuestion(db, "Zein zenbaki erromatar da hau XIX", "19", "59", "21", "10110");
+        insertQuestion(db, "Zein zenbaki erromatar da hau XIX", "19", "59", "21", "10110");
+        insertQuestion(db, "Zein da Australiako hiriburua?", "Canberra", "Melbourne", "Sídney", "Brisbane");
+        insertQuestion(db, "Neil Armstrong izan zen ilargiko lehen pertsona. NASAren arabera, nor izan zen bigarrena?", "Buzz Aldrin", "Michael Collins", "Yuri Gagarin", "Alan Shephard");
 
     }
 
