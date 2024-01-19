@@ -14,8 +14,16 @@ public class ResulteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resulte);
         textView = findViewById(R.id.textView);
+
         int score = getIntent().getIntExtra("Emaitza",0);
-        textView.setText("Puntuazioa : " + score);
+
+        // Puntuazioa negatiboa ez izateko
+        if (score < 0){
+            textView.setText("Puntuazioa : " + 0);
+        }else {
+            textView.setText("Puntuazioa : " + score);
+        }
+
 
         findViewById(R.id.btn_restart).setOnClickListener(
                 restart->{

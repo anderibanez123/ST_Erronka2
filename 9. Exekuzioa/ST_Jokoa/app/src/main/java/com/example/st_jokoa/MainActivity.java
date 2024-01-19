@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
-        String dni = editTextDNI.getText().toString(); // Cambiado de username a DNI
+        String dni = editTextDNI.getText().toString();
         String password = editTextPassword.getText().toString();
 
         if (authenticateUser(dni, password)) {

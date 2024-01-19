@@ -31,9 +31,8 @@ public class MenuActivity extends AppCompatActivity {
             startActivity(new Intent(MenuActivity.this, playActivity.class));
 
         } else if (viewId == R.id.btn_Setting) {
-            // "Eguneratu" botoiaren kasuan, ezarpenetako pantaila ireki
-
-
+            // Botón "Eguneratu" bidez API deia egin
+            new UpdateDataTask().execute();
 
         } else if (viewId == R.id.btn_Exit) {
 

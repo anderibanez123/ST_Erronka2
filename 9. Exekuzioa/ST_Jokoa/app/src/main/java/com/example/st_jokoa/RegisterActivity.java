@@ -39,9 +39,9 @@ public class RegisterActivity extends AppCompatActivity {
         if (registerUser(newUsername, newDNI, newPassword)) {
             Toast.makeText(this, "Erabiltzailea erregistratu da.", Toast.LENGTH_SHORT).show();
             registerTxapelketa(newUsername,newAbizena,newDNI);
-            // Redirigir a MainActivity después de registrar
+
             startActivity(new Intent(RegisterActivity.this, MainActivity.class));
-            finish(); // Cerrar RegisterActivity para que no pueda regresar con el botón de retroceso
+            finish();
         } else {
             Toast.makeText(this, "Errorea erabiltzailea erregistratzen", Toast.LENGTH_SHORT).show();
         }

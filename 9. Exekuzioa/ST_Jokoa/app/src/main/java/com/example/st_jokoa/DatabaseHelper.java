@@ -19,6 +19,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "GaldetegiaST.db";
     private static final int DATABASE_VERSION = 1;
 
+
     //taula "erabiltzaileak"
     private static final String TABLE_USERS = "erabiltzaileak";
     private static final String COLUMN_ID = "id";
@@ -26,6 +27,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_NAME2 = "abizena";
     private static final String COLUMN_PASSWORD = "pasahitza";
     private static final String COLUMN_NAN = "nan";
+
+
     //taula "galderak"
     private static final String COLUMN_ID2 = "id";
     private static final String TABLE_GALDERAK = "galderak";
@@ -34,6 +37,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_ERANTZUN_OKERRA_1 = "erantzunOkerra1";
     private static final String COLUMN_ERANTZUN_OKERRA_2 = "erantzunOkerra2";
     private static final String COLUMN_ERANTZUN_OKERRA_3 = "erantzunOkerra3";
+
+
     //taula "txapelketa"
     private static final String TABLE_TXAPELKETA = "txapelketa";
     private static final String COLUMN_ID3 = "id";
@@ -59,6 +64,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     COLUMN_ERANTZUN_OKERRA_1 + " TEXT, " +
                     COLUMN_ERANTZUN_OKERRA_2 + " TEXT, " +
                     COLUMN_ERANTZUN_OKERRA_3 + " TEXT);";
+
     private static final String CREATE_TABLE_TXAPELKETA =
             "CREATE TABLE " + TABLE_TXAPELKETA + " (" +
                     COLUMN_ID3 + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -234,6 +240,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Collections.shuffle(galderaList, random);
         return galderaList.subList(0, count);
     }
+
+
     public void updateTxapelketaTable(int puntuaketa, long denbora, String nan) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -242,6 +250,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Puedes personalizar la condición WHERE según tus necesidades
         db.update(TABLE_TXAPELKETA, values, COLUMN_NAN2 + "=?", new String[]{nan});
+
+
+
         db.close();
     }
 

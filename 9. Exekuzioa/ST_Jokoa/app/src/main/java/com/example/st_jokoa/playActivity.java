@@ -65,12 +65,30 @@ public class playActivity extends AppCompatActivity {
                 isclickBtn = false;
 
                 if (valueChoose.equals(currentGaldera.getErantzunZuzena())) {
-                    Toast.makeText(playActivity.this, "Ondo", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(playActivity.this, "Ondo", Toast.LENGTH_LONG).show();
                     btn_click.setBackgroundColor(ContextCompat.getColor(this, R.color.erantzun_Zuzena));
                     scorePlayer += POINTS_PER_CORRECT_ANSWER;
                 } else {
-                    Toast.makeText(playActivity.this, "Gaizki", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(playActivity.this, "Gaizki", Toast.LENGTH_LONG).show();
                     btn_click.setBackgroundColor(ContextCompat.getColor(this, R.color.Botoien_kolorea));
+
+                    if (btn_choose1.getText().equals(currentGaldera.getErantzunZuzena())){
+
+                        btn_choose1.setBackgroundColor(ContextCompat.getColor(this, R.color.erantzun_Zuzena));
+
+                    }else if (btn_choose2.getText().equals(currentGaldera.getErantzunZuzena())){
+
+                        btn_choose2.setBackgroundColor(ContextCompat.getColor(this, R.color.erantzun_Zuzena));
+
+                    }else if (btn_choose3.getText().equals(currentGaldera.getErantzunZuzena())){
+
+                        btn_choose3.setBackgroundColor(ContextCompat.getColor(this, R.color.erantzun_Zuzena));
+
+                    }else if (btn_choose4.getText().equals(currentGaldera.getErantzunZuzena())){
+
+                        btn_choose4.setBackgroundColor(ContextCompat.getColor(this, R.color.erantzun_Zuzena));
+
+                    }
                 }
 
                 new Handler().postDelayed(() -> {
@@ -170,7 +188,7 @@ public class playActivity extends AppCompatActivity {
             fillData();
             valueChoose = "";
         } else {
-            // Preguntak desiratuta, ekintzak burutu (adibidez, emaitzen pantaila ireki)
+            // Galderak desiratuta, ekintzak burutu (adibidez, emaitzen pantaila ireki)
             Intent intent = new Intent(playActivity.this, ResulteActivity.class);
             intent.putExtra("Emaitza", scorePlayer);
             startActivity(intent);
