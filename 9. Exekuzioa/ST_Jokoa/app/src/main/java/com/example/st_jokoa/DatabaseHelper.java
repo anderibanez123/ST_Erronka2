@@ -74,6 +74,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     COLUMN_PUNTUAKETA + " INTEGER, " +
                     COLUMN_DENBORA + " INTEGER);";
 
+
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }

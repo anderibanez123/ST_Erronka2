@@ -23,8 +23,8 @@ class Ranking(BaseModel):
     izena: str
     abizena: str
     nan: str
-    puntuaketa: str
-    denbora: str
+    puntuaketa: int
+    denbora: int
     
 class Jokalariak(BaseModel):
     id: int

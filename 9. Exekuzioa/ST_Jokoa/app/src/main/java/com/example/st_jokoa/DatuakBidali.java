@@ -1,5 +1,6 @@
 package com.example.st_jokoa;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -21,6 +22,7 @@ import java.net.URL;
 
 public class DatuakBidali extends AsyncTask<Void, Void, Void> {
 
+    @SuppressLint("StaticFieldLeak")
     private final Context context;
 
     public DatuakBidali(Context context) {
@@ -31,7 +33,7 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
     protected Void doInBackground(Void... voids) {
         try {
             // URL de tu API
-            String apiUrl = "http://10.23.28.192:8012/datuak_berritu";
+            String apiUrl = "http://10.23.28.190:8012/datuak_berritu";
 
             // Crea una instancia de la clase SQLite
             DatabaseHelper dbHelper = new DatabaseHelper(context);
@@ -49,12 +51,6 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
                 JSONObject jsonObject = new JSONObject();
 
                 // Verificar la existencia de la columna "izena"
-                int nanIndex = cursor.getColumnIndex("nan");
-                if (nanIndex != -1) {
-                    jsonObject.put("nan", cursor.getString(nanIndex));
-                }
-
-                // Verificar la existencia de la columna "izena"
                 int izenaIndex = cursor.getColumnIndex("izena");
                 if (izenaIndex != -1) {
                     jsonObject.put("izena", cursor.getString(izenaIndex));
@@ -66,10 +62,16 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
                     jsonObject.put("abizena", cursor.getString(abizenaIndex));
                 }
 
+                // Verificar la existencia de la columna "izena"
+                int nanIndex = cursor.getColumnIndex("nan");
+                if (nanIndex != -1) {
+                    jsonObject.put("nan", cursor.getString(nanIndex));
+                }
+
                 // Verificar la existencia de la columna "puntuazioa"
-                int puntuazioaIndex = cursor.getColumnIndex("puntuaketa");
-                if (puntuazioaIndex != -1) {
-                    jsonObject.put("puntuaketa", cursor.getInt(puntuazioaIndex));
+                int puntuaketaIndex = cursor.getColumnIndex("puntuaketa");
+                if (puntuaketaIndex != -1) {
+                    jsonObject.put("puntuaketa", cursor.getInt(puntuaketaIndex));
                 }
 
                 // Verificar la existencia de la columna "puntuazioa"
