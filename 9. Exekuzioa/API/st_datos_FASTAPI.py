@@ -34,15 +34,18 @@ def check_nan_exists(postgres_cursor, nan_value):
     count = postgres_cursor.fetchone()[0]
     return count > 0
 
+
 # NAN postgreSQL barruan existitzen bada, denbora eta puntuaketa datuak aktualizatu
-def update_nan_data(postgres_cursor, nan_value, denbora, puntuaketa):
+def update_nan_data(postgres_cursor, row):
     postgres_cursor.execute("UPDATE txapelketa_txapelketa SET denbora = %s, puntuaketa = %s WHERE NAN = %s",
-                            (denbora, puntuaketa, nan_value))
+                            (row[3], row[4], row[2]))
 
 # NAN postgreSQL barruan ez bada existitzen, insert bat egin, datua berriak sartu ahal izateko
 def insert_nan_data(postgres_cursor, row):
     postgres_cursor.execute("INSERT INTO txapelketa_txapelketa (izena, abizena, nan, denbora, puntuaketa) VALUES (%s, %s, %s, %s, %s)",
                             (row[0], row[1], row[2], row[3], row[4]))
+    
+    
 
 from fastapi import FastAPI, HTTPException
 
@@ -71,7 +74,23 @@ async def datuak_transferentzia(ranking_list: List[Ranking]):
 
         # Insertar datos en PostgreSQL
         for ranking in ranking_list:
-            insert_nan_data(postgres_cursor, (ranking.izena, ranking.abizena, ranking.nan, ranking.denbora, ranking.puntuaketa))
+            
+            # Konprobatu existitzen al den, datu base barruan DNI hori
+            kantitatea = check_nan_exists(postgres_cursor, ranking.nan)
+
+            
+            
+            if(kantitatea > 0):
+                
+                # Datu base barruan existitzen bada, update egin datuei
+                update_nan_data(postgres_cursor, (ranking.izena, ranking.abizena, ranking.nan, ranking.denbora, ranking.puntuaketa))
+                
+            else: 
+                
+                # Existitzen ez bada datu base barruan, insert egin
+                insert_nan_data(postgres_cursor, (ranking.izena, ranking.abizena, ranking.nan, ranking.denbora, ranking.puntuaketa))
+                
+
 
         # Commit para guardar los datos
         postgres_conn.commit()
