@@ -22,7 +22,7 @@ import java.net.URL;
 
 public class DatuakBidali extends AsyncTask<Void, Void, Void> {
 
-    @SuppressLint("StaticFieldLeak")
+
     private final Context context;
 
     public DatuakBidali(Context context) {
@@ -83,6 +83,9 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
                 // Agregar el objeto JSON al array
                 jsonArray.put(jsonObject);
             }
+
+            cursor.close();
+            db.close();
 
             // Establecer la conexión
             URL url = new URL(apiUrl);
