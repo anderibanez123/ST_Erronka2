@@ -221,7 +221,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         insertQuestion(db, "Zein zenbaki erromatar da hau XIX", "19", "59", "21", "10110");
         insertQuestion(db, "Zein da Australiako hiriburua?", "Canberra", "Melbourne", "Sídney", "Brisbane");
         insertQuestion(db, "Neil Armstrong izan zen ilargiko lehen pertsona. NASAren arabera, nor izan zen bigarrena?", "Buzz Aldrin", "Michael Collins", "Yuri Gagarin", "Alan Shephard");
-
+        insertQuestion(db, "Zein probintziatan dago Zaldibar?", "Bizkaian", "Araban", "Nafarroan", "Gipuzkoan");
+        insertQuestion(db, "Zein da Bizkaiko herririk handiena?", "Karrantza", "Zeanuri", "Elantxobe", "Bilbo");
+        insertQuestion(db, "Nor izan zen Urepeleko artzaina?", "Xalbador", "Lazkao Txiki", "Gorka Urbizu", "Eñaut Elorrieta");
+        insertQuestion(db, "Non jaiotzen da ibaizabal ibaia?", "Anboton", "Solluben", "Gorbean", "Serantesen");
+        insertQuestion(db, "Nork egin zuen lehenengo euskalkien mapa?", "Louis Bonaparte", "Koldo Zuazo", "Arrate Beristain", "Xabier Euzkitze");
+        insertQuestion(db, "Nor bizi da Anboton?", "Mari", "Gargantua", "Tartalo", "Urkullu");
+        insertQuestion(db, "''Ongi etorri'' erronkariko euskalkian:", "Onki xin!", "Untsa izan!", "Halan ekarri!", "Antzarrak");
+        insertQuestion(db, "Noiz ospatzen da ''San Jorge'' eguna?", "Apirilak 23", "Apirilak 15", "Apirilak 30", "Uztailak 16");
+        insertQuestion(db, "Non dago Lakua?", "Gasteizen", "Gernikan", "Bilbon", "Donostian");
+        insertQuestion(db, "Zein zuhaitz mota da Gernikako arbola?", "Haritza", "Gaztainondoa", "Sagarrondoa", "Pagoa");
+        insertQuestion(db, "Hendaia eta Irun banatzen dituen ibaiaren izena?", "Bidasoa", "Zadorra", "Urumea", "Nerbioi");
+        insertQuestion(db, "Olentzeroren lagunaren izena", "Mari Domingi", "Arantza Quiroga", "Lamia", "Anbotoko Mario");
+        insertQuestion(db, "Nola du izena Gatibu taldeko abeslariak?", "Alex Sardui", "Evaristo", "Iker Casanova", "Alex Txikon");
+        insertQuestion(db, "Zein da Santurtzi AEKren izena?", "Xaribari", "Lizardi", "Sirigeldo", "Ez dauka izenik");
+        insertQuestion(db, "17-2-2-2=", "11", "10", "9", "13");
+        insertQuestion(db, "Istorioa kontazen duen pertsonaia........da", "Narratzailea", "Gidoilaria", "Protagonista", "Kameralaria");
+        insertQuestion(db, "¿Can I go to the toillet please?", "Komunera joan ahal naiteke?", "Egunon", "Gaur ni naiz makinista", "Ze bazkari gozoa");
+        insertQuestion(db, "Patata tortilla egiteko zein osagai ez dugu erabiltzen?", "Esnea", "Olioa", "Arrautzak", "Patata");
+        insertQuestion(db, "Sinonimoak, zein da okerra?", "Laguntza-Gogoa", "Aldia-Garaia", "Umorea-Aldartea", "Jarduera-Ariketa");
+        insertQuestion(db, "Irakasle eta politikatia", "Argitxu Noblia", "Aitzpea Leizaola", "Andrea Tapia", "Maria Nistal");
+        insertQuestion(db, "Futbol World Cup 1938", "Italia", "Uruguay", "Brasil", "Alemania");
+        insertQuestion(db, "Non dantzatzen da aldapako Ezpata-dantza?", "Iruñea", "Ustaritze", "Ermua", "Eibar");
+        insertQuestion(db, "Lazaragatarren jauregia, zein herritan dago?", "Zalduondo", "Leitza", "Helduayen", "Zaldibar");
+        insertQuestion(db, "Bilboko alkate izandakoa", "Pablo Altzola", "Jose Luis Berasategui", "Odon Elorza", "Unai Usabiaga");
+        insertQuestion(db, "Marikita Tanburin euskal idazlea. Non jaio zen?", "Baigorri", "Gamarte", "Muxika", "Etxebarri");
+        insertQuestion(db, "Noiz ospatzen dira San Lorenzoak?", "Abuztuak 10", "Abuztuak 11", "Abuztuak 21", "Abuztuak 15");
+        insertQuestion(db, "Zein herrialdek du azalerarik handiena?", "Bielorrusia", "Guinea Bisau", "Belgika", "Austria");
+        insertQuestion(db, "Non dago Ibarrola herria?", "Behe Nafarroa", "Gipuzkoa", "Araban", "Bizkaian");
+        insertQuestion(db, "Berria egunkariaren Podcast feminista", "Berria FM", "Emakunde", "Xerezaderen Artxiboa", "Aurrera Neskak");
+        insertQuestion(db, "Emakumeak noiz hartu zuten parte lehenengo aldiz kontxako banderan?", "2008", "2012", "2014", "2005");
+        insertQuestion(db, "Abeslaria", "Kenye West", "Jamoroquei", "Will Smith", "Lander Chamorro");
     }
 
     private void insertQuestion(SQLiteDatabase db, String pregunta, String respuestaCorrecta, String respuestaIncorrecta1, String respuestaIncorrecta2, String respuestaIncorrecta3) {
