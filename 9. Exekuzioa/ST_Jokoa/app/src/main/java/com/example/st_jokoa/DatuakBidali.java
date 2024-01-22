@@ -38,7 +38,8 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
 
         try {
             // URL de tu API
-            String apiUrl = "http://10.23.28.190:8012/datuak_berritu";
+            //String apiUrl = "http://10.23.28.190:8012/datuak_berritu";
+            String apiUrl = "http://stEnpresa.pythonanywhere.com:8012/datuak_berritu";
 
             // Crea una instancia de la clase SQLite
             DatabaseHelper dbHelper = new DatabaseHelper(context);

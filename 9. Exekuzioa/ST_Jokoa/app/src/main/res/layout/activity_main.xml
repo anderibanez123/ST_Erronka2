@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_color"
+    android:padding="30dp"
     tools:context=".MainActivity"
-    android:padding="30dp">
+    tools:layout_editor_absoluteX="2dp"
+    tools:layout_editor_absoluteY="18dp">
 
     <EditText
         android:id="@+id/editTextDNI"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="312dp"
+        android:layout_marginTop="264dp"
         android:fontFamily="@font/chakrapetchbold"
         android:hint="Sartu zure DNIa"
         android:textColor="@color/white"
         android:textColorHint="@color/Textuaren_Kolorea"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
@@ -27,13 +29,14 @@
         android:id="@+id/btn_Login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="@color/Botoien_kolorea"
         android:fontFamily="@font/chakrapetchbold"
         android:onClick="login"
         android:text="SARTU"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
@@ -41,13 +44,14 @@
         android:id="@+id/btn_Register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/Botoien_kolorea"
         android:fontFamily="@font/chakrapetchbold"
         android:onClick="register"
         android:text="IZENA EMAN"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Login" />
 
@@ -55,27 +59,28 @@
         android:id="@+id/editTextPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/chakrapetchbold"
         android:hint="Zure pasahitza sartu"
-        android:textColorHint="@color/Textuaren_Kolorea"
         android:inputType="textPassword"
         android:textColor="@color/white"
+        android:textColorHint="@color/Textuaren_Kolorea"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDNI"
         tools:ignore="TouchTargetSizeCheck" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="213dp"
-        android:layout_height="121dp"
+        android:id="@+id/AppLogoa"
+        android:layout_width="348dp"
+        android:layout_height="180dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextDNI"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.502"
-        app:srcCompat="@drawable/logoaa2" />
+        app:srcCompat="@drawable/logoaapp2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
