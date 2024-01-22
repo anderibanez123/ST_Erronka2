@@ -13,7 +13,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedWriter;
 import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -29,8 +32,10 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
         this.context = context;
     }
 
+    @SuppressLint("Range")
     @Override
     protected Void doInBackground(Void... voids) {
+
         try {
             // URL de tu API
             String apiUrl = "http://10.23.28.190:8012/datuak_berritu";
@@ -41,7 +46,7 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
             // Abre la base de datos en modo lectura
             SQLiteDatabase db = dbHelper.getReadableDatabase();
 
-            Cursor cursor = db.rawQuery("SELECT izena, abizena, nan, puntuaketa, denbora FROM " + DatabaseHelper.TABLE_TXAPELKETA, null);
+            Cursor cursor = db.rawQuery("SELECT id, izena, abizena, nan, puntuaketa, denbora FROM " + DatabaseHelper.TABLE_TXAPELKETA, null);
 
             // Crear un array JSON para almacenar los datos
             JSONArray jsonArray = new JSONArray();
@@ -50,35 +55,13 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
             while (cursor.moveToNext()) {
                 JSONObject jsonObject = new JSONObject();
 
-                // Verificar la existencia de la columna "izena"
-                int izenaIndex = cursor.getColumnIndex("izena");
-                if (izenaIndex != -1) {
-                    jsonObject.put("izena", cursor.getString(izenaIndex));
-                }
-
-                // Verificar la existencia de la columna "abizena"
-                int abizenaIndex = cursor.getColumnIndex("abizena");
-                if (abizenaIndex != -1) {
-                    jsonObject.put("abizena", cursor.getString(abizenaIndex));
-                }
-
-                // Verificar la existencia de la columna "izena"
-                int nanIndex = cursor.getColumnIndex("nan");
-                if (nanIndex != -1) {
-                    jsonObject.put("nan", cursor.getString(nanIndex));
-                }
-
-                // Verificar la existencia de la columna "puntuazioa"
-                int puntuaketaIndex = cursor.getColumnIndex("puntuaketa");
-                if (puntuaketaIndex != -1) {
-                    jsonObject.put("puntuaketa", cursor.getInt(puntuaketaIndex));
-                }
-
-                // Verificar la existencia de la columna "puntuazioa"
-                int denboraIndex = cursor.getColumnIndex("denbora");
-                if (denboraIndex != -1) {
-                    jsonObject.put("denbora", cursor.getInt(denboraIndex));
-                }
+                // Agregar los datos al objeto JSON
+                jsonObject.put("id", cursor.getInt(cursor.getColumnIndex("id")));
+                jsonObject.put("izena", cursor.getString(cursor.getColumnIndex("izena")));
+                jsonObject.put("abizena", cursor.getString(cursor.getColumnIndex("abizena")));
+                jsonObject.put("nan", cursor.getString(cursor.getColumnIndex("nan")));
+                jsonObject.put("puntuaketa", cursor.getInt(cursor.getColumnIndex("puntuaketa")));
+                jsonObject.put("denbora", cursor.getInt(cursor.getColumnIndex("denbora")));
 
                 // Agregar el objeto JSON al array
                 jsonArray.put(jsonObject);
@@ -86,6 +69,9 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
 
             cursor.close();
             db.close();
+
+            // Guardar el JSON en un archivo local
+            saveJsonToFile(jsonArray.toString());
 
             // Establecer la conexión
             URL url = new URL(apiUrl);
@@ -102,8 +88,6 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
 
             // Obtener la respuesta si es necesario
             int responseCode = urlConnection.getResponseCode();
-            // Puedes leer la respuesta aquí si es necesario
-
 
             // Desconectar
             urlConnection.disconnect();
@@ -112,5 +96,17 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
         }
 
         return null;
+    }
+
+    private void saveJsonToFile(String jsonString) {
+        try {
+            File file = new File(context.getFilesDir(), "json_data.json");
+            FileWriter fileWriter = new FileWriter(file);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.write(jsonString);
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
