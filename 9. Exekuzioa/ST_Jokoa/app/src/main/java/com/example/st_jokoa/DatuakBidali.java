@@ -37,9 +37,11 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
     protected Void doInBackground(Void... voids) {
 
         try {
-            // URL de tu API
-            //String apiUrl = "http://10.23.28.190:8012/datuak_berritu";
-            String apiUrl = "http://stEnpresa.pythonanywhere.com:8012/datuak_berritu";
+            // URL API barrotik sartzeko
+            String apiUrl = "http://10.23.28.190:8012/datuak_berritu";
+
+            // URL API kanpotik sartzeko
+            //String apiUrl = "https://www.pythonanywhere.com:8012/datuak_berritu";
 
             // Crea una instancia de la clase SQLite
             DatabaseHelper dbHelper = new DatabaseHelper(context);
@@ -99,6 +101,7 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
         return null;
     }
 
+    // Ondo al doan konprobatzeko JSON gorde
     private void saveJsonToFile(String jsonString) {
         try {
             File file = new File(context.getFilesDir(), "json_data.json");
