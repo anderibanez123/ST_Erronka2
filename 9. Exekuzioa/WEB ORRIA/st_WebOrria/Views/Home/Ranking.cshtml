@@ -33,13 +33,13 @@
                             var irudia = '@Url.Content("~/irudiak/Top")' + posizioa + '.png';
 
                             // Taula errenkadak sortu
-                            var row = "<tr><td><img style='width: 50px;' src='" + irudia + "'></td><td>" + jokalaria[1] + "</td><td>" + jokalaria[2] + "</td><td>" + jokalaria[4] + "</td></tr>";
+                            var row = "<tr><td><img style='width: 50px;' src='" + irudia + "'></td><td>" + jokalaria.izena + "</td><td>" + jokalaria.abizena + "</td><td>" + jokalaria.puntuaketa + "</td></tr>";
                             $("tbody").append(row);
 
                         } else {
 
                             // Taula errenkadak sortu
-                            var row = "<tr><td>" + posizioa + "</td><td>" + jokalaria[1] + "</td><td>" + jokalaria[2] + "</td><td>" + jokalaria[4] + "</td></tr>";
+                            var row = "<tr><td>" + posizioa + "</td><td>" + jokalaria.izena + "</td><td>" + jokalaria.abizena + "</td><td>" + jokalaria.puntuaketa + "</td></tr>";
                             $("tbody").append(row);
 
                         }
@@ -52,6 +52,7 @@
 
         });
     </script>
+
 }
 
 <link rel="stylesheet" href="~/assets/css/ollie.css">
