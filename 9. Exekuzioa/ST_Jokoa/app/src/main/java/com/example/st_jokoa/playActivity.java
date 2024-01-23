@@ -8,6 +8,7 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,8 @@ public class playActivity extends AppCompatActivity {
     DatabaseHelper dbHelper;
     TextView cpt_question, text_question, timerTextView;
     Button btn_choose1, btn_choose2, btn_choose3, btn_choose4, btn_next;
+
+    ImageView atzera_botoia;
 
     int currentQuestion = 0;
     int scorePlayer = 0;
@@ -53,11 +56,28 @@ public class playActivity extends AppCompatActivity {
         btn_choose4 = findViewById(R.id.btn_choose4);
         btn_next = findViewById(R.id.btn_next);
 
+        // Atzera botoia
+        atzera_botoia = findViewById(R.id.image_back);
+
         dbHelper = new DatabaseHelper(this);
 
         // Jokoa hasi
         startGlobalTimer();
-        findViewById(R.id.image_back).setOnClickListener(a -> finish());
+
+        // Atzera botoiari sakatzerakoan hau egingo du
+        atzera_botoia.setOnClickListener(view -> {
+
+            // Denbora gelditu
+            stopGlobalTimer();
+
+            // Partidako denbora gelditu
+            countDownTimer.cancel();
+
+            // Leixue itxi
+            finish();
+
+        });
+
         fillData();
 
         btn_next.setOnClickListener(view -> {

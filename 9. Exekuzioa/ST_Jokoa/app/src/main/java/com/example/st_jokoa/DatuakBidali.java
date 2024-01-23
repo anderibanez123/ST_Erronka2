@@ -25,9 +25,9 @@ import java.net.URL;
 
 public class DatuakBidali extends AsyncTask<Void, Void, Void> {
 
-
     private final Context context;
 
+    // Eraikitzailea: DatuakBidali klasearen instantzia sortzeko erabiliko den metodoa
     public DatuakBidali(Context context) {
         this.context = context;
     }
@@ -43,22 +43,23 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
             // URL API kanpotik sartzeko
             //String apiUrl = "https://www.pythonanywhere.com:8012/datuak_berritu";
 
-            // Crea una instancia de la clase SQLite
+            // SQLite klasearen instantzia sortu
             DatabaseHelper dbHelper = new DatabaseHelper(context);
 
-            // Abre la base de datos en modo lectura
+            // Datu-basea irakurtzeko moduan ireki
             SQLiteDatabase db = dbHelper.getReadableDatabase();
 
+            // Txapelketako datu guztiak hautatu
             Cursor cursor = db.rawQuery("SELECT id, izena, abizena, nan, puntuaketa, denbora FROM " + DatabaseHelper.TABLE_TXAPELKETA, null);
 
-            // Crear un array JSON para almacenar los datos
+            // JSON array bat sortu datuak gordetzeko
             JSONArray jsonArray = new JSONArray();
 
-            // Formatea los datos como un array JSON
+            // Datuak JSON array-era formatu egiten du
             while (cursor.moveToNext()) {
                 JSONObject jsonObject = new JSONObject();
 
-                // Agregar los datos al objeto JSON
+                // Datuak JSON objektuan sartu
                 jsonObject.put("id", cursor.getInt(cursor.getColumnIndex("id")));
                 jsonObject.put("izena", cursor.getString(cursor.getColumnIndex("izena")));
                 jsonObject.put("abizena", cursor.getString(cursor.getColumnIndex("abizena")));
@@ -66,33 +67,34 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
                 jsonObject.put("puntuaketa", cursor.getInt(cursor.getColumnIndex("puntuaketa")));
                 jsonObject.put("denbora", cursor.getInt(cursor.getColumnIndex("denbora")));
 
-                // Agregar el objeto JSON al array
+                // JSON array-era objektua gehitu
                 jsonArray.put(jsonObject);
             }
 
+            // Cursor eta datu-basea ixteko
             cursor.close();
             db.close();
 
-            // Guardar el JSON en un archivo local
+            // JSON-a fitxategi batean gorde
             saveJsonToFile(jsonArray.toString());
 
-            // Establecer la conexión
+            // Konexioa ezarri
             URL url = new URL(apiUrl);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("POST");
             urlConnection.setRequestProperty("Content-Type", "application/json");
             urlConnection.setDoOutput(true);
 
-            // Enviar los datos como cuerpo de la solicitud
+            // JSON-a bidaltzeko
             OutputStream os = urlConnection.getOutputStream();
             os.write(jsonArray.toString().getBytes());
             os.flush();
             os.close();
 
-            // Obtener la respuesta si es necesario
+            // Erantzuna behar bada, lortu
             int responseCode = urlConnection.getResponseCode();
 
-            // Desconectar
+            // Konexioa itxi
             urlConnection.disconnect();
         } catch (Exception e) {
             e.printStackTrace();
@@ -101,7 +103,7 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
         return null;
     }
 
-    // Ondo al doan konprobatzeko JSON gorde
+    // JSON-a fitxategi batera gordeko duen metodoa
     private void saveJsonToFile(String jsonString) {
         try {
             File file = new File(context.getFilesDir(), "json_data.json");
