@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputFilter;
+import android.text.Spanned;
 import android.text.TextWatcher;
 import android.text.method.DigitsKeyListener;
 import android.view.View;
@@ -24,23 +25,29 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText baieztatzePassword;
     private EditText editTextAbizena;     // Abizena sartzeko EditText bidezko objektua
     private DatabaseHelper databaseHelper; // Datu-basea laguntzeko klasea
-
-    TextView dniLetraLabel;
-
+    private TextView dniLetraLabel; // Letraren kalkulua irakusteko labela
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
         editTextAbizena = findViewById(R.id.Abizena);  // Abizena sartzeko EditText objektua
-        editTextNewUsername = findViewById(R.id.editTextNewUsername);  // Erabiltzaile izena sartzeko EditText objektua
+        editTextAbizena.setFilters(new InputFilter[]{new LettersOnlyInputFilter()});
+
+        editTextNewUsername = findViewById(R.id.editTextNewUsername); // Erabiltzaile izena sartzeko EditText objektua
+        editTextNewUsername.setFilters(new InputFilter[]{new LettersOnlyInputFilter()});
+
         editTextNewDNI = findViewById(R.id.editTextNewDNI);  // Erabiltzailearen DNIa sartzeko EditText objektua
         editTextNewDNI.setFilters(new InputFilter[]{new InputFilter.LengthFilter(8), new DigitsKeyListener()});
+
         editTextNewPassword = findViewById(R.id.editTextNewPassword);  // Pasahitza sartzeko EditText objektua
         baieztatzePassword = findViewById(R.id.BaieztatuPasahitza);
+
         databaseHelper = new DatabaseHelper(this);  // Datu-basea laguntzeko klasea sortu
+
         dniLetraLabel = findViewById(R.id.dniLetraLabel);
 
         // Agrega un TextWatcher al EditText
@@ -62,28 +69,6 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    // Función para calcular la letra del DNI y actualizar la etiqueta
-    private void calcularLetraDNI(String dniNumeros) {
-        if (dniNumeros.length() == 8) {
-            // Convierte los primeros 7 caracteres a números y calcula la letra
-            int numerosDNI = Integer.parseInt(dniNumeros);
-            char letraDNI = calcularLetraDNI(numerosDNI);
-
-            // Actualiza la etiqueta con la letra del DNI calculada
-            dniLetraLabel.setText(String.valueOf(letraDNI));
-
-        } else {
-
-        }
-    }
-
-    // Función para calcular la letra del DNI
-    private char calcularLetraDNI(int numerosDNI) {
-        String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
-        int indiceLetra = numerosDNI % 23;
-        return letras.charAt(indiceLetra);
     }
 
     // Erregistroa egin nahi duzun DNIaren kontua existitzen bada
@@ -179,14 +164,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-    // Método para capitalizar solo la primera letra
-    private String capitalizeFirstLetter(String input) {
-        if (input == null || input.isEmpty()) {
-            return input;
-        }
-        return input.substring(0, 1).toUpperCase() + input.substring(1).toLowerCase();
-    }
-
     // Erabiltzailea datu-base barruan sartu
     private boolean registerUser(String username, String dni, String password) {
         SQLiteDatabase db = databaseHelper.getWritableDatabase();  // Idatzeko datu-basea ireki
@@ -217,6 +194,49 @@ public class RegisterActivity extends AppCompatActivity {
         return result != -1;
     }
 
+
+    // FILTROAK ETA KONPROBAKETAK
+    private static class LettersOnlyInputFilter implements InputFilter {
+
+        @Override
+        public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+            // Permitir solo letras
+            for (int i = start; i < end; i++) {
+                if (!Character.isLetter(source.charAt(i))) {
+                    return "";
+                }
+            }
+            return null; // Acepta el cambio
+        }
+    }
+
+    // Función para calcular la letra del DNI y actualizar la etiqueta
+    private void calcularLetraDNI(String dniNumeros) {
+        if (dniNumeros.length() == 8) {
+            // Convierte los primeros 7 caracteres a números y calcula la letra
+            int numerosDNI = Integer.parseInt(dniNumeros);
+            char letraDNI = calcularLetraDNI(numerosDNI);
+
+            // Actualiza la etiqueta con la letra del DNI calculada
+            dniLetraLabel.setText(String.valueOf(letraDNI));
+
+        }
+    }
+
+    // Función para calcular la letra del DNI
+    private char calcularLetraDNI(int numerosDNI) {
+        String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        int indiceLetra = numerosDNI % 23;
+        return letras.charAt(indiceLetra);
+    }
+
+    // Método para capitalizar solo la primera letra
+    private String capitalizeFirstLetter(String input) {
+        if (input == null || input.isEmpty()) {
+            return input;
+        }
+        return input.substring(0, 1).toUpperCase() + input.substring(1).toLowerCase();
+    }
 
 
 }

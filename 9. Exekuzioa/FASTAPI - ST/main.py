@@ -44,7 +44,7 @@ app.add_middleware(
 )
 
 class Ranking(BaseModel):
-    id: int
+    #id: int
     izena: str
     abizena: str
     nan: str

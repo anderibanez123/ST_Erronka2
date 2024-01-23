@@ -50,7 +50,7 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
             SQLiteDatabase db = dbHelper.getReadableDatabase();
 
             // Txapelketako datu guztiak hautatu
-            Cursor cursor = db.rawQuery("SELECT id, izena, abizena, nan, puntuaketa, denbora FROM " + DatabaseHelper.TABLE_TXAPELKETA, null);
+            Cursor cursor = db.rawQuery("SELECT izena, abizena, nan, puntuaketa, denbora FROM " + DatabaseHelper.TABLE_TXAPELKETA, null);
 
             // JSON array bat sortu datuak gordetzeko
             JSONArray jsonArray = new JSONArray();
@@ -60,7 +60,7 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
                 JSONObject jsonObject = new JSONObject();
 
                 // Datuak JSON objektuan sartu
-                jsonObject.put("id", cursor.getInt(cursor.getColumnIndex("id")));
+                //jsonObject.put("id", cursor.getInt(cursor.getColumnIndex("id")));
                 jsonObject.put("izena", cursor.getString(cursor.getColumnIndex("izena")));
                 jsonObject.put("abizena", cursor.getString(cursor.getColumnIndex("abizena")));
                 jsonObject.put("nan", cursor.getString(cursor.getColumnIndex("nan")));

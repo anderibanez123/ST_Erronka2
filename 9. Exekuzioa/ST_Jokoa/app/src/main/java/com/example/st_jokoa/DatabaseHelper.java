@@ -157,7 +157,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         insertQuestion(db, "Nola deitzen dira Islam erlijioaren eraikin sakratuak?", "Mezkitak", "Elizak", "Gazteluak", "Anfiteatroak");
         insertQuestion(db, "Nola deitzen Hinduismoaren tenpluak?", "Mandir", "Meka", "Eliza", "Gaztelua");
         insertQuestion(db, "Ze taldetako zalea zein Bin Laden?", "Arsenal", "Psg", "Madrid", "Barcelona");
-        insertQuestion(db, "Nork irabazi zuen 2002ko munduko txapelketa?", "Brasil", "Alemania", "Italia", "Frantzia");
+        insertQuestion(db, "Nork irabazi zuen 2002ko munduko futboleko txapelketa?", "Brasil", "Alemania", "Italia", "Frantzia");
         insertQuestion(db, "Soldataren 2/3 gastatu dut eta oraindik 210€ geratzen zaizkit. Zenbateko soldata daukat?", "630", "420", "620", "600");
         insertQuestion(db, "Gela baten 2/3 kirola egiten dute eta horietatik 3/4 futbola. Zer zatiki egiten du futbola?", "1/2", "1/4", "6/12", "3/12");
         insertQuestion(db, "Zein herrialdek ditu biztanle gutxien?", "Araba", "Gipuzkoa", "Nafarroa", "Bizkaia");
