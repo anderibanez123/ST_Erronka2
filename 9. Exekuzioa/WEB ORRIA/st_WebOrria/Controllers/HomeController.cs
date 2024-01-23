@@ -22,6 +22,10 @@ namespace st_WebOrria.Controllers
         {
             return View();
         }
+        public IActionResult Contact()
+        {
+            return View("Contact");
+        }
         public IActionResult Ranking()
         {
             return View("Ranking");
