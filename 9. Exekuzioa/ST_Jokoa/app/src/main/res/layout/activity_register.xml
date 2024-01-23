@@ -65,12 +65,13 @@
 
     <EditText
         android:id="@+id/editTextNewDNI"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="275dp"
+        android:layout_height="51dp"
         android:layout_below="@id/editTextNewUsername"
         android:layout_marginBottom="12dp"
         android:fontFamily="@font/chakrapetchbold"
         android:hint="DNI"
+        android:maxLength="8"
         android:textColor="@color/white"
         android:textColorHint="@color/Textuaren_Kolorea"
         app:layout_constraintBottom_toTopOf="@+id/editTextNewUsername"
@@ -137,6 +138,20 @@
         app:layout_constraintTop_toBottomOf="@+id/BaieztatuPasahitza"
         app:layout_constraintVertical_bias="0.261"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/dniLetraLabel"
+        android:layout_width="54dp"
+        android:layout_height="49dp"
+        android:fontFamily="@font/chakrapetchbold"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNewUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toEndOf="@+id/editTextNewDNI"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
