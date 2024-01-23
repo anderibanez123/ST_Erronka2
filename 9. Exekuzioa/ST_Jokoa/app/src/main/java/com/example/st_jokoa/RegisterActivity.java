@@ -30,23 +30,50 @@ public class RegisterActivity extends AppCompatActivity {
         databaseHelper = new DatabaseHelper(this);
     }
 
-    public void register(View view) {
-        String newUsername = editTextNewUsername.getText().toString();
-        String newAbizena = editTextAbizena.getText().toString();
-        String newDNI = editTextNewDNI.getText().toString();
-        String newPassword = editTextNewPassword.getText().toString();
+    // Erregistroa egin nahi duzun DNIaren kontua existitzen bada
+    public boolean konprobatuDNI(String newDNI){
 
-        if (registerUser(newUsername, newDNI, newPassword)) {
-            Toast.makeText(this, "Erabiltzailea erregistratu da.", Toast.LENGTH_SHORT).show();
-            registerTxapelketa(newUsername,newAbizena,newDNI);
 
-            startActivity(new Intent(RegisterActivity.this, MainActivity.class));
-            finish();
-        } else {
-            Toast.makeText(this, "Errorea erabiltzailea erregistratzen", Toast.LENGTH_SHORT).show();
-        }
+
+        //existitzen bada true bueltatu
+        return false;
+
     }
 
+    public void register(View view) {
+
+        String newUsername = editTextNewUsername.getText().toString().toUpperCase();
+        String newAbizena = editTextAbizena.getText().toString().toUpperCase();
+        String newDNI = editTextNewDNI.getText().toString().toUpperCase();
+        String newPassword = editTextNewPassword.getText().toString();
+
+        // COMPROBAR AQUI SI ESTA REGISTRADO O NO, Y DESPUES MOSTRAR EL MENSAJE CORRESPONDIENTE
+        boolean existe = konprobatuDNI(newDNI);
+
+        if (existe){
+
+            
+
+        }else {
+
+            if (registerUser(newUsername, newDNI, newPassword)) {
+
+                Toast.makeText(this, "Erabiltzailea erregistratu da.", Toast.LENGTH_SHORT).show();
+                registerTxapelketa(newUsername,newAbizena,newDNI);
+
+                startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+                finish();
+
+            } else {
+
+                Toast.makeText(this, "Errorea erabiltzailea erregistratzen", Toast.LENGTH_SHORT).show();
+
+            }
+        }
+
+    }
+
+    // Erabiltzailea datu base barruan sartu
     private boolean registerUser(String username, String dni, String password) {
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -61,6 +88,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         return result != -1;
     }
+
+
     private boolean registerTxapelketa(String izena,String abizena, String dni) {
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
         ContentValues values = new ContentValues();

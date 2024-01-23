@@ -1,25 +1,15 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse
-from fastapi.middleware.cors import CORSMiddleware
-import psycopg2
+from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker, Session
 from typing import List
+import psycopg2
 
-app = FastAPI()
+Base = declarative_base()
 
-
-# Dominio denetatik hartzeko
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-
-
-    
 class Jokalariak(BaseModel):
     id: int
     izena: str
@@ -28,26 +18,30 @@ class Jokalariak(BaseModel):
     puntuaketa: int
     denbora: int
 
-# NAN Postgre datu base barruan existitzen al den konprobatu
-def check_nan_exists(postgres_cursor, nan_value):
-    postgres_cursor.execute("SELECT COUNT(*) FROM txapelketa_txapelketa WHERE NAN = %s", (nan_value,))
-    count = postgres_cursor.fetchone()[0]
-    return count > 0
+class TxapelketaTxapelketa(Base):
+    __tablename__ = 'txapelketa_txapelketa'
 
+    id = Column(Integer, primary_key=True, index=True)
+    izena = Column(String, index=True)
+    abizena = Column(String, index=True)
+    nan = Column(String, unique=True, index=True)
+    puntuaketa = Column(Integer)
+    denbora = Column(Integer)
 
-# NAN postgreSQL barruan existitzen bada, denbora eta puntuaketa datuak aktualizatu
-def update_nan_data(postgres_cursor, row):
-    postgres_cursor.execute("UPDATE txapelketa_txapelketa SET denbora = %s, puntuaketa = %s WHERE NAN = %s",
-                            (row[3], row[4], row[2]))
+DATABASE_URL = "postgresql://odoo:odoo@10.23.28.192:5434/st_db"
+engine = create_engine(DATABASE_URL)
+Base.metadata.create_all(bind=engine)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-# NAN postgreSQL barruan ez bada existitzen, insert bat egin, datua berriak sartu ahal izateko
-def insert_nan_data(postgres_cursor, row):
-    postgres_cursor.execute("INSERT INTO txapelketa_txapelketa (izena, abizena, nan, denbora, puntuaketa) VALUES (%s, %s, %s, %s, %s)",
-                            (row[0], row[1], row[2], row[3], row[4]))
-    
-    
+app = FastAPI()
 
-from fastapi import FastAPI, HTTPException
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class Ranking(BaseModel):
     id: int
@@ -57,95 +51,59 @@ class Ranking(BaseModel):
     puntuaketa: int
     denbora: int
 
-# SQLiteko datua postgreSQLra pasatzeko funtzioa
-@app.post('/datuak_berritu')
-async def datuak_transferentzia(ranking_list: List[Ranking]):
+
+def get_db():
+    db = SessionLocal()
     try:
-        # Postgres datu basera konexioa egin
-        postgres_conn = psycopg2.connect(
-            database="st_db",
-            user="odoo",
-            password="odoo",
-            host="10.23.28.192",
-            port="5434"
-        )
-        
-        postgres_cursor = postgres_conn.cursor()
+        yield db
+    finally:
+        db.close()
 
-        # Insertar datos en PostgreSQL
+
+@app.post('/datuak_berritu')
+async def datuak_transferentzia(ranking_list: List[Ranking], db: Session = Depends(get_db)):
+    try:
         for ranking in ranking_list:
-            
-            # Konprobatu existitzen al den, datu base barruan DNI hori
-            kantitatea = check_nan_exists(postgres_cursor, ranking.nan)
+            db_entry = db.query(TxapelketaTxapelketa).filter(TxapelketaTxapelketa.nan == ranking.nan).first()
 
-            
-            
-            if(kantitatea > 0):
-                
-                # Datu base barruan existitzen bada, update egin datuei
-                update_nan_data(postgres_cursor, (ranking.izena, ranking.abizena, ranking.nan, ranking.denbora, ranking.puntuaketa))
-                
-            else: 
-                
-                # Existitzen ez bada datu base barruan, insert egin
-                insert_nan_data(postgres_cursor, (ranking.izena, ranking.abizena, ranking.nan, ranking.denbora, ranking.puntuaketa))
-                
+            if db_entry:
+                db_entry.denbora = ranking.denbora
+                db_entry.puntuaketa = ranking.puntuaketa
+            else:
+                db_entry = TxapelketaTxapelketa(**ranking.dict())
+                db.add(db_entry)
 
-
-        # Commit para guardar los datos
-        postgres_conn.commit()
-
-        # Cerrar la conexión
-        postgres_conn.close()
-
+        db.commit()
         return JSONResponse(content={"Mezua": "Datuak berritu dira."}, status_code=200)
 
     except HTTPException as http_exc:
-        # Manejar específicamente la excepción HTTPException
         print(f"HTTPException: {http_exc}")
         raise http_exc
 
     except Exception as e:
-        # Manejar otras excepciones
         print(f"Exception: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 
-# PostgreSQLko datuak lortu MVC barruan irakusteko
 @app.get('/lortu_datuak', response_model=List[Jokalariak])
-async def lortu_datuak():
+async def lortu_datuak(db: Session = Depends(get_db)):
     try:
-        # Postgres datu basera konexioa egin
-        postgres_conn = psycopg2.connect(
-            database="st_db",
-            user="odoo",
-            password="odoo",
-            host="10.23.28.192",
-            port="5434"
-        )
-        
-        postgres_cursor = postgres_conn.cursor()
+        # SQLAlchemy consulta para obtener los datos ordenados por puntuaketa descendentemente
+        data = db.query(TxapelketaTxapelketa).order_by(TxapelketaTxapelketa.puntuaketa.desc()).all()
 
-        # Postgres-etik datuak irakurri
-        postgres_cursor.execute("SELECT id, izena, abizena, nan, puntuaketa, denbora FROM txapelketa_txapelketa order by puntuaketa desc")
-        data = postgres_cursor.fetchall()
-        
-        
+        # Convertir los resultados a un formato compatible con la respuesta JSON
+        result_data = [{"id": row.id, "izena": row.izena, "abizena": row.abizena, "nan": row.nan,
+                        "puntuaketa": row.puntuaketa, "denbora": row.denbora} for row in data]
+
+        return JSONResponse(content={"Jokalariak": result_data}, status_code=200)
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
-    finally:
-        # Konexioa itxi
-        postgres_conn.close()
-
-    return JSONResponse(content={"Jokalariak": data}, status_code=200)
 
 
 @app.get("/ping")
 def ping():
     return {"message": "¡API ondo dabil, OK!"}
-
 
 if __name__ == "__main__":
     import uvicorn
