@@ -78,9 +78,10 @@ public class MainActivity extends AppCompatActivity {
 
     // Método para ocultar el teclado virtual
     private void hideKeyboard() {
-        InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-        if (imm != null) {
-            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        View currentFocus = getCurrentFocus();
+        if (currentFocus != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), 0);
         }
     }
 
