@@ -8,7 +8,8 @@
     android:padding="30dp"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteX="2dp"
-    tools:layout_editor_absoluteY="18dp">
+    tools:layout_editor_absoluteY="18dp"
+    android:id="@+id/main_activity">
 
     <EditText
         android:id="@+id/editTextDNI"

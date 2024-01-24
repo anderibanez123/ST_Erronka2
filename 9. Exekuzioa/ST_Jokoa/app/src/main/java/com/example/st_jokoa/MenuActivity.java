@@ -3,7 +3,9 @@ package com.example.st_jokoa;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -15,6 +17,19 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+
+        // Agrega un onTouchListener al layout principal para cerrar el teclado cuando tocas la pantalla
+        View mainLayout = findViewById(R.id.menu_activity); // Reemplaza con el ID de tu layout principal
+        mainLayout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                // Cierra el teclado cuando tocas la pantalla
+                hideKeyboard();
+                return false;
+            }
+        });
+
     }
 
     /**
@@ -42,4 +57,13 @@ public class MenuActivity extends AppCompatActivity {
 
         }
     }
+
+    // Método para ocultar el teclado virtual
+    private void hideKeyboard() {
+        InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        if (imm != null) {
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
+    }
+
 }

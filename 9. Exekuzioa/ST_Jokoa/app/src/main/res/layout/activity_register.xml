@@ -8,7 +8,8 @@
     android:padding="30dp"
     tools:context=".RegisterActivity"
     tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="-22dp">
+    tools:layout_editor_absoluteY="-22dp"
+    android:id="@+id/register_activity">
 
 
     <ImageView

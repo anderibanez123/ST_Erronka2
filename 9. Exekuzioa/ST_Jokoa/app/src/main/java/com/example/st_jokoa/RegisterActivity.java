@@ -12,7 +12,9 @@ import android.text.InputFilter;
 import android.text.Spanned;
 import android.text.TextWatcher;
 import android.text.method.DigitsKeyListener;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -66,6 +68,17 @@ public class RegisterActivity extends AppCompatActivity {
             public void afterTextChanged(Editable editable) {
                 // Llama a la función para calcular la letra del DNI y actualiza la etiqueta
                 calcularLetraDNI(editable.toString());
+            }
+        });
+
+        // Agrega un onTouchListener al layout principal para cerrar el teclado cuando tocas la pantalla
+        View mainLayout = findViewById(R.id.register_activity); // Reemplaza con el ID de tu layout principal
+        mainLayout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                // Cierra el teclado cuando tocas la pantalla
+                hideKeyboard();
+                return false;
             }
         });
 
@@ -236,6 +249,14 @@ public class RegisterActivity extends AppCompatActivity {
             return input;
         }
         return input.substring(0, 1).toUpperCase() + input.substring(1).toLowerCase();
+    }
+
+    // Método para ocultar el teclado virtual
+    private void hideKeyboard() {
+        InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        if (imm != null) {
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
     }
 
 
