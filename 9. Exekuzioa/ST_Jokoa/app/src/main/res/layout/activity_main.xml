@@ -17,6 +17,7 @@
         android:layout_marginTop="264dp"
         android:fontFamily="@font/chakrapetchbold"
         android:hint="Sartu zure DNIa"
+        android:maxLength="9"
         android:textColor="@color/white"
         android:textColorHint="@color/Textuaren_Kolorea"
         app:layout_constraintEnd_toEndOf="parent"
