@@ -16,6 +16,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,8 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText editTextAbizena;     // Abizena sartzeko EditText bidezko objektua
     private DatabaseHelper databaseHelper; // Datu-basea laguntzeko klasea
     private TextView dniLetraLabel; // Letraren kalkulua irakusteko labela
+
+    private ImageView atzera_botoia; // Atzera botoia
 
 
     @Override
@@ -47,6 +50,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         editTextNewPassword = findViewById(R.id.editTextNewPassword);  // Pasahitza sartzeko EditText objektua
         baieztatzePassword = findViewById(R.id.BaieztatuPasahitza);
+
+        atzera_botoia = findViewById(R.id.image_back);
 
         databaseHelper = new DatabaseHelper(this);  // Datu-basea laguntzeko klasea sortu
 
@@ -80,6 +85,14 @@ public class RegisterActivity extends AppCompatActivity {
                 hideKeyboard();
                 return false;
             }
+        });
+
+        // Atzera botoiari sakatzerakoan hau egingo du
+        atzera_botoia.setOnClickListener(view -> {
+
+            // Leixue itxi
+            finish();
+
         });
 
     }
