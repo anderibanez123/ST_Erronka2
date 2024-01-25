@@ -46,18 +46,22 @@ public class MainActivity extends AppCompatActivity {
         String dni = editTextDNI.getText().toString();
         String password = editTextPassword.getText().toString();
 
-        // Test erabiltzailea erabili ezkero
-        if (dni.equals("") && password.equals("")){
-
-            dni = "Test";
-            password = "Test";
-        }
-
-        if (authenticateUser(dni, password)) {
+        // Testerako erabiltzailearekin sartu
+        if (dni.equals("") && password.equals("") || dni.contains("test") && password.contains("test") || dni.contains("Test") && password.contains("Test")){
             startActivity(new Intent(MainActivity.this, MenuActivity.class));
-        } else {
-            Toast.makeText(this, "Erabiltzaile edo pasahitz ez zuzenak", Toast.LENGTH_SHORT).show();
+
+        } // Erabiltzaileekin sartu
+        else{
+
+            if (authenticateUser(dni, password)) {
+                startActivity(new Intent(MainActivity.this, MenuActivity.class));
+            } else {
+                Toast.makeText(this, "Erabiltzaile edo pasahitz ez zuzenak", Toast.LENGTH_SHORT).show();
+            }
+
         }
+
+
     }
     public void register(View view) {
         startActivity(new Intent(MainActivity.this, RegisterActivity.class));

@@ -79,8 +79,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         values.put(COLUMN_NAME, "Test");
         values.put(COLUMN_NAME2, "Test");
-        values.put(COLUMN_NAN, "Test");
-        values.put(COLUMN_PASSWORD, "Test");
+        values.put(COLUMN_NAN, "");
+        values.put(COLUMN_PASSWORD, "");
 
         db.insert(TABLE_USERS, null, values);
     }
