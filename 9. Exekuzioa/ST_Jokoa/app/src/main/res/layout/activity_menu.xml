@@ -42,11 +42,24 @@
             android:backgroundTint="@color/Botoien_kolorea"            android:fontFamily="@font/chakrapetchbold"
             android:onClick="main_btn"
             android:padding="8dp"
-            android:text="Jolastu"
+            android:text="Jokatu"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
+        <Button
+            android:id="@+id/btn_ranking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/Botoien_kolorea"
+            android:fontFamily="@font/chakrapetchbold"
+            android:onClick="main_btn"
+            android:padding="8dp"
+            android:text="Ranking"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_refresh"
@@ -70,7 +83,7 @@
             android:backgroundTint="@color/Botoien_kolorea"            android:fontFamily="@font/chakrapetchbold"
             android:onClick="main_btn"
             android:padding="8dp"
-            android:text="Irten"
+            android:text="Sesioa Itxi"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />

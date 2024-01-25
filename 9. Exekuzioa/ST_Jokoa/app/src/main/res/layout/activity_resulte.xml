@@ -22,14 +22,12 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.099" />
+        app:layout_constraintVertical_bias="0.075" />
 
     <Button
         android:id="@+id/btn_restart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_width="389dp"
+        android:layout_height="55dp"
         android:backgroundTint="@color/Botoien_kolorea"
         android:fontFamily="@font/chakrapetchbold"
         android:padding="8dp"
@@ -39,21 +37,22 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintTop_toBottomOf="@+id/rankingTaula"
+        app:layout_constraintVertical_bias="0.36" />
 
     <ScrollView
 
         android:id="@+id/rankingTaula"
-        android:layout_width="364dp"
-        android:layout_height="463dp"
+        android:layout_width="372dp"
+        android:layout_height="508dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_restart"
-        app:layout_constraintVertical_bias="0.306">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.076">
 
         <LinearLayout
             android:layout_width="match_parent"

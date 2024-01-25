@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -104,6 +105,11 @@ public class ResulteActivity extends AppCompatActivity {
         izenaTitleTextView.setTextColor(Color.WHITE);
         abizenaTitleTextView.setTextColor(Color.WHITE);
         puntuaketaTitleTextView.setTextColor(Color.WHITE);
+
+        izenaTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        abizenaTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        puntuaketaTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+
         izenaTitleTextView.setPadding(20, 0, 20, 0);
         abizenaTitleTextView.setPadding(20, 0, 20, 0);
         puntuaketaTitleTextView.setPadding(20, 0, 20, 0);
@@ -137,6 +143,10 @@ public class ResulteActivity extends AppCompatActivity {
             izenaTextView.setTextColor(Color.WHITE);
             abizenaTextView.setTextColor(Color.WHITE);
             puntuaketaTextView.setTextColor(Color.WHITE);
+
+            izenaTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+            abizenaTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+            puntuaketaTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
 
             // Establecer espaciado entre columnas
             izenaTextView.setPadding(20, 0, 20, 0);
