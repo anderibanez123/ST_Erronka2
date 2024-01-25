@@ -46,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
         String dni = editTextDNI.getText().toString();
         String password = editTextPassword.getText().toString();
 
+        // Test erabiltzailea erabili ezkero
+        if (dni.equals("") && password.equals("")){
+
+            dni = "Test";
+            password = "Test";
+        }
+
         if (authenticateUser(dni, password)) {
             startActivity(new Intent(MainActivity.this, MenuActivity.class));
         } else {

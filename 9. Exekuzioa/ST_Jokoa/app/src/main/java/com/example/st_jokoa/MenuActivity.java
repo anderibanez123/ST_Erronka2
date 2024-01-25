@@ -52,8 +52,8 @@ public class MenuActivity extends AppCompatActivity {
 
         } else if (viewId == R.id.btn_Exit) {
 
-            // "Exit" botoiaren kasuan, aplikazioa itxi
-            this.finishAffinity();
+            // "Exit" botoiaren kasuan, sesioa ixten du
+            finish();
 
         }
     }

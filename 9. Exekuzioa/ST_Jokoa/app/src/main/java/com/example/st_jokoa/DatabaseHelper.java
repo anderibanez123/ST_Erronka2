@@ -73,13 +73,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     COLUMN_PUNTUAKETA + " INTEGER, " +
                     COLUMN_DENBORA + " INTEGER);";
 
+    // TEST erabiltzailea
     private void insertDefaultUser(SQLiteDatabase db ) {
         ContentValues values = new ContentValues();
 
         values.put(COLUMN_NAME, "Test");
         values.put(COLUMN_NAME2, "Test");
-        values.put(COLUMN_NAN, "");
-        values.put(COLUMN_PASSWORD, "");
+        values.put(COLUMN_NAN, "Test");
+        values.put(COLUMN_PASSWORD, "Test");
 
         db.insert(TABLE_USERS, null, values);
     }
