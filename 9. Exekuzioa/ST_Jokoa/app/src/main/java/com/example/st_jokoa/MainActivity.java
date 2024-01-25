@@ -2,6 +2,7 @@ package com.example.st_jokoa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    @SuppressLint("StaticFieldLeak")
     public static EditText editTextDNI; // Cambiado de username a DNI
     private EditText editTextPassword;
     private DatabaseHelper databaseHelper;
