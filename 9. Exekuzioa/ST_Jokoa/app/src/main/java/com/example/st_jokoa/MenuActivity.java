@@ -10,7 +10,7 @@ import android.view.inputmethod.InputMethodManager;
 public class MenuActivity extends AppCompatActivity {
 
     private static final int BTN_PLAY_ID = R.id.btn_Play;
-    private static final int BTN_SETTING_ID = R.id.btn_Setting;
+    private static final int BTN_REFRESH_ID = R.id.btn_refresh;
     private static final int BTN_EXIT_ID = R.id.btn_Exit;
 
     @Override
@@ -45,7 +45,7 @@ public class MenuActivity extends AppCompatActivity {
             // "Play" botoiaren kasuan, jolasteko pantaila ireki
             startActivity(new Intent(MenuActivity.this, playActivity.class));
 
-        } else if (viewId == R.id.btn_Setting) {
+        } else if (viewId == R.id.btn_refresh) {
             // Botón "Eguneratu" bidez API deia egin
             DatuakBidali datuakBidali = new DatuakBidali(getApplicationContext());
             datuakBidali.execute();

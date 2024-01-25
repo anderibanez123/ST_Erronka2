@@ -8,7 +8,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -74,6 +73,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     COLUMN_PUNTUAKETA + " INTEGER, " +
                     COLUMN_DENBORA + " INTEGER);";
 
+    private void insertDefaultUser(SQLiteDatabase db ) {
+        ContentValues values = new ContentValues();
+
+        values.put(COLUMN_NAME, "Test");
+        values.put(COLUMN_NAME2, "Test");
+        values.put(COLUMN_NAN, "");
+        values.put(COLUMN_PASSWORD, "");
+
+        db.insert(TABLE_USERS, null, values);
+    }
+
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -86,6 +96,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_TABLE_TXAPELKETA);
 
         galderakSortu(db);
+        insertDefaultUser(db);
     }
 
     private void galderakSortu(SQLiteDatabase db) {
