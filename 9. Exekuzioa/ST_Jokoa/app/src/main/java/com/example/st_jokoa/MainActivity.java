@@ -7,10 +7,13 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     public static EditText editTextDNI; // Cambiado de username a DNI
     private EditText editTextPassword;
     private DatabaseHelper databaseHelper;
+    private Button laguntza;
+    private TextView laguntza_textua;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +32,17 @@ public class MainActivity extends AppCompatActivity {
 
         editTextDNI = findViewById(R.id.editTextDNI); // Cambiado de username a DNI
         editTextPassword = findViewById(R.id.editTextPassword);
+        laguntza = findViewById(R.id.btn_laguntza); // laguntza botoia
+        laguntza_textua = findViewById(R.id.laguntza_textua);
+
         databaseHelper = new DatabaseHelper(this);
+
+        // Laguntza textua irakusteko funtzioari hots egiteko botoia
+        laguntza.setOnClickListener(view -> {
+
+            showLaguntzaText();
+
+        });
 
 
         // Agrega un onTouchListener al layout principal para cerrar el teclado cuando tocas la pantalla
@@ -43,9 +58,29 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Laguntza textua irakusteko funtzioa
+    private void showLaguntzaText() {
+
+        // Hacer el TextView visible al presionar el botón
+        laguntza_textua.setVisibility(View.VISIBLE);
+
+        // Programar una tarea para hacer el TextView invisible después de 8 segundos
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                // Hacer el TextView invisible después de 8 segundos
+                laguntza_textua.setVisibility(View.INVISIBLE);
+
+            }
+
+        }, 5000); // 8000 milisegundos = 8 segundos
+
+    }
+
 
     public void login(View view) {
-        String dni = editTextDNI.getText().toString();
+        String dni = editTextDNI.getText().toString().toUpperCase();
         String password = editTextPassword.getText().toString();
 
         // Testerako erabiltzailearekin sartu

@@ -2,10 +2,14 @@ package com.example.st_jokoa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.TypedValue;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -23,7 +27,8 @@ public class ResulteActivity extends AppCompatActivity {
 
     ScrollView rankingScrollView;
 
-    TextView textView ;
+    TextView puntuazioaView ;
+    Button hasieraBTN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,17 +39,38 @@ public class ResulteActivity extends AppCompatActivity {
         DatuakBidali datuakBidali = new DatuakBidali(getApplicationContext());
         datuakBidali.execute();
 
-        textView = findViewById(R.id.textView);
-
+        puntuazioaView = findViewById(R.id.textView);
         rankingScrollView = findViewById(R.id.rankingTaula);
+        hasieraBTN = findViewById(R.id.btn_restart);
 
         int score = getIntent().getIntExtra("Emaitza",0);
 
         // Puntuazioa negatiboa ez izateko
         if (score < 0){
-            textView.setText("Puntuazioa : " + 0);
+            puntuazioaView.setText("Puntuazioa : " + 0);
         }else {
-            textView.setText("Puntuazioa : " + score);
+            puntuazioaView.setText("Puntuazioa : " + score);
+        }
+
+        hasieraBTN.setOnClickListener(
+                restart->{
+                    finish();
+                }
+        );
+
+        findViewById(R.id.btn_itxi).setOnClickListener(
+                restart->{
+                    finish();
+                }
+        );
+
+        int menutikDator = getIntent().getIntExtra("menutik", 0);
+
+        if(menutikDator == 1){
+
+            puntuazioaView.setVisibility(View.INVISIBLE);
+
+
         }
 
         // Realizar la solicitud HTTP
@@ -87,6 +113,7 @@ public class ResulteActivity extends AppCompatActivity {
     }
 
     private void displayData(JSONArray jokalariak) throws JSONException {
+
         TableLayout tableLayout = new TableLayout(this);
         tableLayout.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
 
@@ -97,18 +124,23 @@ public class ResulteActivity extends AppCompatActivity {
         TextView puntuaketaTitleTextView = new TextView(this);
 
         // Establecer los títulos de las columnas
-        izenaTitleTextView.setText("Izena");
-        abizenaTitleTextView.setText("Abizena");
-        puntuaketaTitleTextView.setText("Puntuaketa");
+        izenaTitleTextView.setText("IZENA");
+        abizenaTitleTextView.setText("ABIZENA");
+        puntuaketaTitleTextView.setText("PUNTUAKETA");
 
         // Establecer el estilo de los títulos
         izenaTitleTextView.setTextColor(Color.WHITE);
         abizenaTitleTextView.setTextColor(Color.WHITE);
         puntuaketaTitleTextView.setTextColor(Color.WHITE);
 
-        izenaTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
-        abizenaTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
-        puntuaketaTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        izenaTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        abizenaTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        puntuaketaTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+
+        izenaTitleTextView.setTypeface(null, Typeface.BOLD);
+        abizenaTitleTextView.setTypeface(null, Typeface.BOLD);
+        puntuaketaTitleTextView.setTypeface(null, Typeface.BOLD);
+
 
         izenaTitleTextView.setPadding(20, 0, 20, 0);
         abizenaTitleTextView.setPadding(20, 0, 20, 0);
@@ -144,9 +176,9 @@ public class ResulteActivity extends AppCompatActivity {
             abizenaTextView.setTextColor(Color.WHITE);
             puntuaketaTextView.setTextColor(Color.WHITE);
 
-            izenaTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
-            abizenaTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
-            puntuaketaTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+            izenaTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+            abizenaTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+            puntuaketaTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
 
             // Establecer espaciado entre columnas
             izenaTextView.setPadding(20, 0, 20, 0);
@@ -158,6 +190,7 @@ public class ResulteActivity extends AppCompatActivity {
             row.addView(puntuaketaTextView);
 
             tableLayout.addView(row);
+
         }
 
         rankingScrollView.removeAllViews();

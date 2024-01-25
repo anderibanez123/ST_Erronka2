@@ -13,6 +13,8 @@ public class MenuActivity extends AppCompatActivity {
     private static final int BTN_REFRESH_ID = R.id.btn_refresh;
     private static final int BTN_EXIT_ID = R.id.btn_Exit;
 
+    private static final int BTN_RANKING_ID = R.id.btn_ranking;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +47,15 @@ public class MenuActivity extends AppCompatActivity {
             // "Play" botoiaren kasuan, jolasteko pantaila ireki
             startActivity(new Intent(MenuActivity.this, playActivity.class));
 
-        } else if (viewId == R.id.btn_refresh) {
+        } else if(viewId == R.id.btn_ranking){
+
+            // Ranking ikusteko taula kargatu
+            int valor = 1;
+            Intent intent = new Intent(MenuActivity.this, ResulteActivity.class);
+            intent.putExtra("menutik", valor);
+            startActivity(intent);
+
+        }else if (viewId == R.id.btn_refresh) {
             // Botón "Eguneratu" bidez API deia egin
             DatuakBidali datuakBidali = new DatuakBidali(getApplicationContext());
             datuakBidali.execute();

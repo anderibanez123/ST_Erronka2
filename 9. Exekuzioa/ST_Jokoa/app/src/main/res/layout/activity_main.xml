@@ -31,31 +31,49 @@
         android:id="@+id/btn_Login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="@color/Botoien_kolorea"
         android:fontFamily="@font/chakrapetchbold"
         android:onClick="login"
         android:text="LOGIN"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
     <Button
         android:id="@+id/btn_Register"
-        android:layout_width="0dp"
+        android:layout_width="248dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="@color/Botoien_kolorea"
         android:fontFamily="@font/chakrapetchbold"
         android:onClick="register"
         android:text="REGISTER"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Login"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_laguntza"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/Textuaren_Kolorea"
+        android:fontFamily="@font/chakrapetchbold"
+        android:onClick="register"
+        android:text="❓"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Login" />
+        app:layout_constraintStart_toEndOf="@+id/btn_Register"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Login"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -83,6 +101,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.502"
         app:srcCompat="@drawable/logoaapp2" />
+
+
+    <TextView
+        android:id="@+id/laguntza_textua"
+        android:layout_width="353dp"
+        android:layout_height="134dp"
+        android:text="Zure puntuazioa gorde nahi baduzu, kontu bat sortu eta sartu beharko duzu. \n\nEz baduzu daturik gorde nahi, DNI eta PASAHITZA laukietan ezer sartu gabe, login egin. \n\nONDO PASA!"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Register"
+        app:layout_constraintVertical_bias="0.38" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
