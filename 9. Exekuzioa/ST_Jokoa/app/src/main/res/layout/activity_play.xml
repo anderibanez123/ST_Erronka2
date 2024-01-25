@@ -72,7 +72,7 @@
         android:backgroundTint="@color/primary_color"
         android:fontFamily="@font/chakrapetchbold"
         android:padding="12sp"
-        android:text="Next"
+        android:text="Hurrengoa"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

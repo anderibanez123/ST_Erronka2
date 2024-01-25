@@ -208,6 +208,11 @@ public class playActivity extends AppCompatActivity {
             fillData();
             valueChoose = "";
         } else {
+
+            // Datuak automatikoki aktualizatzen zaiatu
+            DatuakBidali datuakBidali = new DatuakBidali(getApplicationContext());
+            datuakBidali.execute();
+
             // Galderak desiratuta, ekintzak burutu (adibidez, emaitzen pantaila ireki)
             Intent intent = new Intent(playActivity.this, ResulteActivity.class);
             intent.putExtra("Emaitza", scorePlayer);

@@ -8,12 +8,12 @@ namespace st_WebOrria.Controllers
 {
     public class JokalariakController : Controller
     {
-        private readonly JokalariakZerrenda _jokalariakZerrenda;
+        /*private readonly JokalariakZerrenda _jokalariakZerrenda;
 
         public JokalariakController(JokalariakZerrenda jokalariakZerrenda)
         {
             _jokalariakZerrenda = jokalariakZerrenda;
-        }
+        }*/
 
         public IActionResult Index()
         {
@@ -27,8 +27,7 @@ namespace st_WebOrria.Controllers
 
         public IActionResult Ranking()
         {
-            var jokalariak = _jokalariakZerrenda.JokalariakIrakurri();
-            return View(jokalariak);
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

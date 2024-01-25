@@ -1,5 +1,4 @@
-﻿using Rentacar.Data;
-
+﻿
 namespace st_WebOrria.Models
 {
     public class Jokalariak
@@ -13,7 +12,7 @@ namespace st_WebOrria.Models
         public int puntuak { get; set; }
 
 
-        public class JokalariakZerrenda
+        /*public class JokalariakZerrenda
         {
             private readonly JokalariakContext _demoDbContext;
 
@@ -37,7 +36,7 @@ namespace st_WebOrria.Models
                     .ToList();
 
 
-                Console.WriteLine($"Número de elementos en la lista: {jokalariak.Count}");
+                Console.WriteLine($"Lista dauden jokalariak: {jokalariak.Count}");
                 foreach (var item in jokalariak)
                 {
                     Console.WriteLine($"Jokalariak: NAN={item.NAN}, Izena={item.izena}, Abizena={item.abizena}, Denbora={item.denbora}, Puntuak={item.puntuak}");
@@ -46,6 +45,6 @@ namespace st_WebOrria.Models
                 return jokalariak;
             }
 
-        }
+        }*/
     }
 }
