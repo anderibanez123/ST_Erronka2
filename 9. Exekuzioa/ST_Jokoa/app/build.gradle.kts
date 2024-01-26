@@ -10,8 +10,8 @@ android {
         applicationId = "com.stenpresa.st_jokoa"
         minSdk = 24
         targetSdk = 33
-        versionCode = 7
-        versionName = "1.0"
+        versionCode = 8
+        versionName = "8.3.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

@@ -5,10 +5,12 @@
 }
 
 @section Scripts {
+    <!-- JQuery-ren CDN-a gehitzen da -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function () {
 
+            // Datuak eskuratzeko AJAX deia egiten da
             $.get("http://10.23.28.190:8012/lortu_datuak", function (response) {
                 var data = response.Jokalariak;
                 console.log(data);
@@ -33,13 +35,15 @@
                             var irudia = '@Url.Content("~/irudiak/Top")' + posizioa + '.png';
 
                             // Taula errenkadak sortu
-                            var row = "<tr><td><img style='width: 50px;' src='" + irudia + "'></td><td>" + jokalaria.izena + "</td><td>" + jokalaria.abizena + "</td><td>" + jokalaria.puntuaketa + "</td></tr>";
+                            var row = "<tr><td><img style='width: 50px;' src='" + irudia + "'></td><td>" + jokalaria.izena + 
+                            "</td><td>" + jokalaria.abizena + "</td><td>" + jokalaria.puntuaketa + "</td></tr>";
                             $("tbody").append(row);
 
                         } else {
 
                             // Taula errenkadak sortu
-                            var row = "<tr><td>" + posizioa + "</td><td>" + jokalaria.izena + "</td><td>" + jokalaria.abizena + "</td><td>" + jokalaria.puntuaketa + "</td></tr>";
+                            var row = "<tr><td>" + posizioa + "</td><td>" + jokalaria.izena + "</td><td>" + jokalaria.abizena + 
+                            "</td><td>" + jokalaria.puntuaketa + "</td></tr>";
                             $("tbody").append(row);
 
                         }
@@ -55,8 +59,10 @@
 
 }
 
+<!-- CSS estilua gehitzen da -->
 <link rel="stylesheet" href="~/assets/css/ollie.css">
 
+<!-- HTML erakuslearen interfazea -->
 <div class="container mt-5" style="text-align: center;">
     <div class="row">
         <div class="col-md-12 text-center">

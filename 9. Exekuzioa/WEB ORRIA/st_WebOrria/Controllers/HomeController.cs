@@ -18,23 +18,24 @@ namespace st_WebOrria.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Kontaktua()
         {
-            return View();
-        }
-        public IActionResult Contact()
-        {
-            return View("Contact");
+            return View("Kontaktua");
         }
         public IActionResult Ranking()
         {
             return View("Ranking");
         }
 
-
         public IActionResult Proiektuak()
         {
             return View("Proiektuak");
+        }
+
+
+        public IActionResult Privacy()
+        {
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
