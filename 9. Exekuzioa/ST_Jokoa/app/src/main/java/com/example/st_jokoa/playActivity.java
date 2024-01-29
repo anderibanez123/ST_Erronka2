@@ -19,6 +19,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Jolasteko aktibitatea.
+ */
 public class playActivity extends AppCompatActivity {
     private static final int POINTS_PER_CORRECT_ANSWER = 100;
     private static final int MAX_SECONDS_PER_QUESTION = 30;
@@ -41,6 +44,9 @@ public class playActivity extends AppCompatActivity {
     int maxQuestionsToShow = 10;  // Definir galdera kopuru maximoa
     int currentSecondsRemaining = MAX_SECONDS_PER_QUESTION;
 
+    /**
+     * Aktibitatea sortzerakoan deitzen den metodoa.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,6 +130,9 @@ public class playActivity extends AppCompatActivity {
         startCountdownTimer();
     }
 
+    /**
+     * Globalen temporizadorea hasi.
+     */
     private void startGlobalTimer() {
         globalTimer = new CountDownTimer(Long.MAX_VALUE, 1000) {
             @Override
@@ -138,12 +147,18 @@ public class playActivity extends AppCompatActivity {
         }.start();
     }
 
+    /**
+     * Globalen temporizadorea gelditu.
+     */
     private void stopGlobalTimer() {
         if (globalTimer != null) {
             globalTimer.cancel();
         }
     }
 
+    /**
+     * Temporizadorea hasi.
+     */
     private void startCountdownTimer() {
         countDownTimer = new CountDownTimer(MAX_SECONDS_PER_QUESTION * 1000, 1000) {
             @Override
@@ -165,11 +180,17 @@ public class playActivity extends AppCompatActivity {
         }.start();
     }
 
+    /**
+     * Segundu bakoitzeko puntuak kalkulatu.
+     */
     private int calculatePointsDeductionPerSecond() {
         // Puntuak segundu bakoitzeko kalkulatzeko logika pertsonalizatu
         return 1;  // Adibidez, segundo bakoitzeko puntu bat kendu
     }
 
+    /**
+     * Denbora amaitzean burutu beharreko ekintzak kudeatu.
+     */
     private void handleTimeout() {
         // Puntuak kendu edo beste ekintzak burutu
         Toast.makeText(playActivity.this, "Denbora agortu da", Toast.LENGTH_LONG).show();
@@ -179,16 +200,26 @@ public class playActivity extends AppCompatActivity {
         nextQuestion();
     }
 
+    /**
+     * Denbora agortzean puntuak kentzeko.
+     */
     private void deductPointsDueToTimeout() {
         // Jokalariaren puntuak behar bezala kentzeko
         scorePlayer -= calculatePointsDeduction();
     }
-
+    /**
+     * Puntuak kendu denboraren amaitzean.
+     *
+     * @return Puntuak kentzeko balioa.
+     */
     private int calculatePointsDeduction() {
         // Puntuak kentzeko logika pertsonalizatu
         return 10;  // Adibidez, denboraren amaitzean 10 puntu kentzen ditu
     }
 
+    /**
+     * Hurrengo galdera erakutsi edo jolastu.
+     */
     private void nextQuestion() {
         // Temporizadorea gelditu
         countDownTimer.cancel();
@@ -226,6 +257,9 @@ public class playActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Galdera eta erantzunak pantailaratu.
+     */
     void fillData() {
         // Aldaketak hemen
         cpt_question.setText((currentQuestion + 1) + "/" + maxQuestionsToShow);
@@ -254,6 +288,9 @@ public class playActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Botoi batean klik egitean gertatzen den ekintza.
+     */
     public void ClickChoose(View view) {
         btn_click = (Button) view;
 
@@ -266,10 +303,14 @@ public class playActivity extends AppCompatActivity {
         chooseBtn();
     }
 
+    /**
+     * Botoi bat hautatzean gertatzen den ekintza.
+     */
     void chooseBtn() {
         btn_click.setBackgroundColor(ContextCompat.getColor(this, R.color.Textuaren_Kolorea));
         isclickBtn = true;
         valueChoose = btn_click.getText().toString();
     }
+
 }
 

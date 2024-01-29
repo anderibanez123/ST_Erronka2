@@ -23,20 +23,23 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * Klasea jokoen emaitzak eta ranking-a erakusteko.
+ */
 public class ResulteActivity extends AppCompatActivity {
 
-    ScrollView rankingScrollView;
+    ScrollView rankingScrollView; // Ranking-a ikusteko scroll view-a
 
-    TextView puntuazioaView ;
-    Button hasieraBTN;
-    TextView adi;
+    TextView puntuazioaView;  // Puntuazioa erakusteko testu bidea
+    Button hasieraBTN;  // Berrabiarazi botoia
+    TextView adi;  // Mezuak erakusteko testu bidea
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resulte);
 
-        // Datuak automatikoki aktualizatzen zaiatu
+        // Datuak automatikoki eguneratu
         DatuakBidali datuakBidali = new DatuakBidali(getApplicationContext());
         datuakBidali.execute();
 
@@ -45,45 +48,47 @@ public class ResulteActivity extends AppCompatActivity {
         hasieraBTN = findViewById(R.id.btn_restart);
         adi = findViewById(R.id.adi);
 
-        int score = getIntent().getIntExtra("Emaitza",0);
+        int score = getIntent().getIntExtra("Emaitza", 0); // "Emaitza" parametroa hartu eta score aldagaian gorde
 
-        // Puntuazioa negatiboa ez izateko
-        if (score < 0){
+        // Puntuazioa ez izateko negatiboa
+        if (score < 0) {
             puntuazioaView.setText("Puntuazioa : " + 0);
-        }else {
+        } else {
             puntuazioaView.setText("Puntuazioa : " + score);
         }
 
+        // Berrabiarazi botoia konfiguratu
         hasieraBTN.setOnClickListener(
-                restart->{
+                restart -> {
                     finish();
                 }
         );
 
+        // Itxi botoia konfiguratu
         findViewById(R.id.btn_itxi).setOnClickListener(
-                restart->{
+                restart -> {
                     finish();
                 }
         );
 
-        int menutikDator = getIntent().getIntExtra("menutik", 0);
+        int menutikDator = getIntent().getIntExtra("menutik", 0); // "menutik" parametroa hartu eta menutikDator aldagaian gorde
 
-        if(menutikDator == 1){
-
+        if (menutikDator == 1) {  // menutikDator aldagaia 1 bada, puntuazioa ezkutatu
             puntuazioaView.setVisibility(View.INVISIBLE);
-
-
         }
 
-        // Realizar la solicitud HTTP
+        // HTTP eskaera burutu
         new FetchDataTask().execute();
     }
 
+    /**
+     * Klasea burutzeko datuak eskuratzeko AsyncTask-a.
+     */
     private class FetchDataTask extends AsyncTask<Void, Void, String> {
 
         @Override
         protected String doInBackground(Void... voids) {
-            StringBuilder result = new StringBuilder();
+            StringBuilder result = new StringBuilder();  // Datuen iturburuaren bidezko karaktere-katea sortu
             try {
                 URL url = new URL("http://10.23.28.190:8012/lortu_datuak");
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -96,7 +101,7 @@ public class ResulteActivity extends AppCompatActivity {
                 reader.close();
                 connection.disconnect();
             } catch (Exception e) {
-                adi.setVisibility(View.VISIBLE);
+                adi.setVisibility(View.VISIBLE);  // Mezuak erakutsi
                 e.printStackTrace();
             }
             return result.toString();
@@ -106,32 +111,38 @@ public class ResulteActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
             try {
-                JSONObject jsonObject = new JSONObject(result);
-                JSONArray jokalariak = jsonObject.getJSONArray("Jokalariak");
-                displayData(jokalariak);
+                JSONObject jsonObject = new JSONObject(result);  // JSON objektua sortu
+                JSONArray jokalariak = jsonObject.getJSONArray("Jokalariak");  // "Jokalariak" gakoarekin JSON arraya hartu
+                displayData(jokalariak);  // Datuak erakutsi
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
     }
 
+    /**
+     * Datuak taulan erakutsi.
+     *
+     * @param jokalariak Jokalarien datuak daukan JSONArray-a.
+     * @throws JSONException JSON datuak prozesatzerakoan errorea badago.
+     */
     private void displayData(JSONArray jokalariak) throws JSONException {
 
-        TableLayout tableLayout = new TableLayout(this);
+        TableLayout tableLayout = new TableLayout(this);  // Taula diseinatu
         tableLayout.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
 
-        // Crear la fila de encabezados
-        TableRow headerRow = new TableRow(this);
+        // Goiburuko lerroak
+        TableRow headerRow = new TableRow(this);  // Taularen goiburuko lerroa
         TextView izenaTitleTextView = new TextView(this);
         TextView abizenaTitleTextView = new TextView(this);
         TextView puntuaketaTitleTextView = new TextView(this);
 
-        // Establecer los títulos de las columnas
+        // Zutabeen izenburuak
         izenaTitleTextView.setText("IZENA");
         abizenaTitleTextView.setText("ABIZENA");
         puntuaketaTitleTextView.setText("PUNTUAKETA");
 
-        // Establecer el estilo de los títulos
+        // Izenean estiloa
         izenaTitleTextView.setTextColor(Color.WHITE);
         abizenaTitleTextView.setTextColor(Color.WHITE);
         puntuaketaTitleTextView.setTextColor(Color.WHITE);
@@ -144,20 +155,17 @@ public class ResulteActivity extends AppCompatActivity {
         abizenaTitleTextView.setTypeface(null, Typeface.BOLD);
         puntuaketaTitleTextView.setTypeface(null, Typeface.BOLD);
 
-
         izenaTitleTextView.setPadding(20, 0, 20, 0);
         abizenaTitleTextView.setPadding(20, 0, 20, 0);
         puntuaketaTitleTextView.setPadding(20, 0, 20, 0);
 
-        // Agregar los títulos a la fila de encabezados
         headerRow.addView(izenaTitleTextView);
         headerRow.addView(abizenaTitleTextView);
         headerRow.addView(puntuaketaTitleTextView);
 
-        // Agregar la fila de encabezados a la tabla
         tableLayout.addView(headerRow);
 
-        // Agregar los datos
+        // Datuak
         for (int i = 0; i < jokalariak.length(); i++) {
 
             JSONObject jokalaria = jokalariak.getJSONObject(i);
