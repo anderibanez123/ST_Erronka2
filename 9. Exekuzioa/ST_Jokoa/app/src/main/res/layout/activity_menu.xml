@@ -61,19 +61,6 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btn_refresh"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="@color/Botoien_kolorea"
-            android:fontFamily="@font/chakrapetchbold"
-            android:onClick="main_btn"
-            android:padding="8dp"
-            android:text="Eguneratu"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_Exit"
@@ -87,6 +74,21 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/Botoien_kolorea"
+            android:fontFamily="@font/chakrapetchbold"
+            android:onClick="main_btn"
+            android:padding="8dp"
+            android:text="Eguneratu"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="invisible"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

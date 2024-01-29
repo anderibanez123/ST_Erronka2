@@ -29,6 +29,7 @@ public class ResulteActivity extends AppCompatActivity {
 
     TextView puntuazioaView ;
     Button hasieraBTN;
+    TextView adi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class ResulteActivity extends AppCompatActivity {
         puntuazioaView = findViewById(R.id.textView);
         rankingScrollView = findViewById(R.id.rankingTaula);
         hasieraBTN = findViewById(R.id.btn_restart);
+        adi = findViewById(R.id.adi);
 
         int score = getIntent().getIntExtra("Emaitza",0);
 
@@ -94,6 +96,7 @@ public class ResulteActivity extends AppCompatActivity {
                 reader.close();
                 connection.disconnect();
             } catch (Exception e) {
+                adi.setVisibility(View.VISIBLE);
                 e.printStackTrace();
             }
             return result.toString();
