@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     android:background="@color/primary_color"
     android:textColor="@color/white"
     tools:context=".settingActivity">
@@ -26,16 +27,16 @@
 
     <TextView
         android:id="@+id/adi"
-        android:layout_width="322dp"
-        android:layout_height="45dp"
+        android:layout_width="323dp"
+        android:layout_height="176dp"
         android:fontFamily="@font/chakrapetchbold"
-        android:text="ADI! Zure partidako datuak gordetzeko Izarraitz LHII ikastetxeko sarean konektatuta egon behar zara."
-        android:textColor="@color/white"
-        android:visibility="invisible"
         android:padding="2dp"
+        android:text="ADI! Zure partidako datuak gordetzeko Izarraitz LHII ikastetxeko sarean konektatuta eta kontu batekin sesioa hasita egon behar zara."
+        android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/rankingTaula"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_restart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />

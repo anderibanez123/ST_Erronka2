@@ -101,7 +101,6 @@ public class ResulteActivity extends AppCompatActivity {
                 reader.close();
                 connection.disconnect();
             } catch (Exception e) {
-                adi.setVisibility(View.VISIBLE);  // Mezuak erakutsi
                 e.printStackTrace();
             }
             return result.toString();
@@ -110,6 +109,11 @@ public class ResulteActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
+
+            if (result.isEmpty()) {
+                adi.setVisibility(View.VISIBLE); //APIarekin konexiorik ez badu, mezua irakutsi
+                return;
+            }
             try {
                 JSONObject jsonObject = new JSONObject(result);  // JSON objektua sortu
                 JSONArray jokalariak = jsonObject.getJSONArray("Jokalariak");  // "Jokalariak" gakoarekin JSON arraya hartu
@@ -194,7 +198,7 @@ public class ResulteActivity extends AppCompatActivity {
             // Establecer espaciado entre columnas
             izenaTextView.setPadding(20, 0, 20, 0);
             abizenaTextView.setPadding(20, 0, 20, 0);
-            puntuaketaTextView.setPadding(20, 0, 20, 0);
+            puntuaketaTextView.setPadding(20, 0, 0, 0);
 
             row.addView(izenaTextView);
             row.addView(abizenaTextView);
