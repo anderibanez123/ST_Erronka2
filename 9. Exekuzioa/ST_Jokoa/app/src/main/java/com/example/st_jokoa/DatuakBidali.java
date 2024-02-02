@@ -40,8 +40,6 @@ public class DatuakBidali extends AsyncTask<Void, Void, Void> {
             // URL API barrotik sartzeko
             String apiUrl = "http://10.23.28.190:8012/datuak_berritu";
 
-            // URL API kanpotik sartzeko
-            //String apiUrl = "https://www.pythonanywhere.com:8012/datuak_berritu";
 
             // SQLite klasearen instantzia sortu
             DatabaseHelper dbHelper = new DatabaseHelper(context);
