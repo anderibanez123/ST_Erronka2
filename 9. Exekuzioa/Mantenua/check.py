@@ -5,14 +5,14 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-# Configuración de los servicios a comprobar
+# Zerbitzuak egiaztatzeko konfigurazioa
 services = [
     {"name": "API", "url": "http://10.23.28.190:8012/ping", "expected_response": "¡API ondo dabil, OK!"},
     {"name": "Odoo", "url": "http://10.23.28.192:8069", "expected_response": "Odoo"},
     
 ]
 
-# Configuración del correo electrónico
+# Email konfigurazioa
 sender_email = "st.enpresa.sl@gmail.com"
 receiver_email = "aibanez22@izarraitz.eus"
 password = "kifc lhgh fldv ayjk"
@@ -35,26 +35,26 @@ def check_services():
         for service in services:
             try:
                 if service["name"] == "PostgreSQL":
-                    # Intenta conectarte a PostgreSQL
+                    # Konexioa PostgreSQLean saiatu
                     conn = psycopg2.connect(
-                        host="10.23.28.192",  # Reemplaza con la dirección IP de tu contenedor de PostgreSQL
+                        host="10.23.28.192",  # Aldatu zure PostgreSQL kontainerraren IP helbidearekin
                         port="5434",
                         user="odoo",
                         password="odoo"
                     )
-                    # Si la conexión es exitosa, no envíes un correo electrónico
+                    # Konexioa egokia bada, ez bidali emailik
                     conn.close()
                 else:
-                    # Verifica otros servicios como lo hacías antes
+                    # Beste zerbitzuak egiaztatu lehen bezala
                     response = requests.get(service["url"])
                     if service["expected_response"] not in response.text:
-                        send_email("Alerta: Servicio {} parado".format(service["name"]),
-                                   "El servicio {} no está en marcha.".format(service["name"]))
+                        send_email("Kontuz: Zerbitzu {} geldituta".format(service["name"]),
+                                   "Zerbitzuak {} martxan ez dago.".format(service["name"]))
             except Exception as e:
-                send_email("Error al verificar servicio {}".format(service["name"]),
-                           "Se produjo un error al verificar el servicio {}: {}".format(service["name"], str(e)))
+                send_email("Errorea zerbitzua {} egiaztatzean".format(service["name"]),
+                           "Zerbitzua {} egiaztatzean errorea gertatu da: {}".format(service["name"], str(e)))
 
-        time.sleep(600)  # Esperar 10 minutos antes de realizar la próxima comprobación
+        time.sleep(600)  # Hurrengo egiaztapena egin baino lehen 10 minutu itxaron
 
 if __name__ == "__main__":
     check_services()
