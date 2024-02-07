@@ -1,11 +1,18 @@
 package com.example.st_jokoa;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -15,22 +22,24 @@ public class MenuActivity extends AppCompatActivity {
 
     private static final int BTN_RANKING_ID = R.id.btn_ranking;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
 
-        // Agrega un onTouchListener al layout principal para cerrar el teclado cuando tocas la pantalla
-        View mainLayout = findViewById(R.id.menu_activity); // Reemplaza con el ID de tu layout principal
+        // Pantalla ikutzerakoan teklatua itxi
+        View mainLayout = findViewById(R.id.menu_activity);
         mainLayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                // Cierra el teclado cuando tocas la pantalla
+                // Teklatua itxi
                 hideKeyboard();
                 return false;
             }
         });
+
 
     }
 
@@ -76,5 +85,4 @@ public class MenuActivity extends AppCompatActivity {
             imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), 0);
         }
     }
-
 }
