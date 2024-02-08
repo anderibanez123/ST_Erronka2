@@ -19,7 +19,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("StaticFieldLeak")
-    public static EditText editTextDNI; // Cambiado de username a DNI
+    public static EditText editTextDNI;
     private EditText editTextPassword;
     private DatabaseHelper databaseHelper;
     private Button laguntza;
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextDNI = findViewById(R.id.editTextDNI); // Cambiado de username a DNI
+        editTextDNI = findViewById(R.id.editTextDNI);
         editTextPassword = findViewById(R.id.editTextPassword);
         laguntza = findViewById(R.id.btn_laguntza); // laguntza botoia
         laguntza_textua = findViewById(R.id.laguntza_textua);
@@ -44,13 +44,11 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-
-        // Agrega un onTouchListener al layout principal para cerrar el teclado cuando tocas la pantalla
-        View mainLayout = findViewById(R.id.main_activity); // Reemplaza con el ID de tu layout principal
+        View mainLayout = findViewById(R.id.main_activity);
         mainLayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                // Cierra el teclado cuando tocas la pantalla
+                // Teklatua itxi pantaila ikutzerakoan
                 hideKeyboard();
                 return false;
             }
@@ -61,24 +59,23 @@ public class MainActivity extends AppCompatActivity {
     // Laguntza textua irakusteko funtzioa
     private void showLaguntzaText() {
 
-        // Hacer el TextView visible al presionar el botón
+        // TextView sakatzerakoan
         laguntza_textua.setVisibility(View.VISIBLE);
 
-        // Programar una tarea para hacer el TextView invisible después de 8 segundos
+        // 8 segundo eta gero invisible egiteko
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                // Hacer el TextView invisible después de 8 segundos
                 laguntza_textua.setVisibility(View.INVISIBLE);
 
             }
 
-        }, 5000); // 8000 milisegundos = 8 segundos
+        }, 5000);
 
     }
 
-
+    // Login egiteko funtzioa
     public void login(View view) {
         String dni = editTextDNI.getText().toString().toUpperCase();
         String password = editTextPassword.getText().toString();
@@ -98,12 +95,14 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-
     }
+
+    // Erabiltzaileak registratzeko pantaila ireki
     public void register(View view) {
         startActivity(new Intent(MainActivity.this, RegisterActivity.class));
     }
 
+    // Erabiltzailea ondo al dagoen konprobatu
     private boolean authenticateUser(String nan, String pasahitza) {
         SQLiteDatabase db = databaseHelper.getReadableDatabase();
         Cursor cursor = db.query(
@@ -124,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         return result;
     }
 
-    // Método para ocultar el teclado virtual
+    // Teklatua ixteko pantaila barruan ikutu
     private void hideKeyboard() {
         View currentFocus = getCurrentFocus();
         if (currentFocus != null) {

@@ -86,7 +86,7 @@
         android:fontFamily="@font/chakrapetchbold"
         android:hint="Zure pasahitza sartu"
         android:inputType="textPassword"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
         android:textColor="@color/white"
         android:textColorHint="@color/Textuaren_Kolorea"
         app:layout_constraintEnd_toEndOf="parent"
