@@ -1,6 +1,8 @@
 package com.example.st_jokoa;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -19,7 +21,6 @@ public class MenuActivity extends AppCompatActivity {
     private static final int BTN_PLAY_ID = R.id.btn_Play;
     private static final int BTN_REFRESH_ID = R.id.btn_refresh;
     private static final int BTN_EXIT_ID = R.id.btn_Exit;
-
     private static final int BTN_RANKING_ID = R.id.btn_ranking;
 
 
@@ -28,6 +29,18 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        Button btn_ranking_ = findViewById(R.id.btn_ranking);
+
+        // Intent balorea hartu
+        int modua = getIntent().getIntExtra("valor", 0);
+
+        // Ranking botoia offline edo online
+        if (modua == 1){
+            btn_ranking_.setEnabled(false);
+            btn_ranking_.setBackgroundColor(ContextCompat.getColor(this, R.color.Textuaren_Kolorea));
+        }else{
+            btn_ranking_.setEnabled(true);
+        }
 
         // Pantalla ikutzerakoan teklatua itxi
         View mainLayout = findViewById(R.id.menu_activity);

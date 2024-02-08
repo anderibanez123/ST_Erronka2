@@ -8,6 +8,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseHelper databaseHelper;
     private Button laguntza;
     private TextView laguntza_textua;
+    private TextView dniLetraLabel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.editTextPassword);
         laguntza = findViewById(R.id.btn_laguntza); // laguntza botoia
         laguntza_textua = findViewById(R.id.laguntza_textua);
+        dniLetraLabel = findViewById(R.id.dniLetraLabel);
 
         databaseHelper = new DatabaseHelper(this);
 
@@ -42,6 +46,25 @@ public class MainActivity extends AppCompatActivity {
 
             showLaguntzaText();
 
+        });
+
+        // Agrega un TextWatcher al EditText del DNI
+        editTextDNI.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                // Ezer egin beharrezkoa ez da testua aldatu baino lehen
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                // Ezer egin beharrezkoa ez da testua aldatzen den bitartean
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                // DNI-ren letra kalkulatzeko eta etiketa eguneratzeko funtzioa deitu
+                calcularLetraDNI(editable.toString());
+            }
         });
 
         View mainLayout = findViewById(R.id.main_activity);
@@ -77,18 +100,40 @@ public class MainActivity extends AppCompatActivity {
 
     // Login egiteko funtzioa
     public void login(View view) {
-        String dni = editTextDNI.getText().toString().toUpperCase();
+
+        // Sarrerak hartu
+        String dniLetra = dniLetraLabel.getText().toString().toUpperCase();
+        String dniZenbakia = editTextDNI.getText().toString().toUpperCase();
+        String dni = dniZenbakia + dniLetra; // DNI LETRA ETA DNI ZENBAKIA BATERA JARRI
         String password = editTextPassword.getText().toString();
+
+        // Offline edo online dagoen jakiteko menuaren barruan
+        int modua = 1;
 
         // Testerako erabiltzailearekin sartu
         if (dni.equals("") && password.equals("") || dni.contains("test") && password.contains("test") || dni.contains("Test") && password.contains("Test")){
-            startActivity(new Intent(MainActivity.this, MenuActivity.class));
+
+            // Sarrerak garbitu
+            editTextDNI.setText("");
+            dniLetraLabel.setText("");
+            editTextPassword.setText("");
+
+            modua = 1;
+            startActivity(new Intent(MainActivity.this, MenuActivity.class).putExtra("valor", modua));
+
 
         } // Erabiltzaileekin sartu
         else{
 
             if (authenticateUser(dni, password)) {
-                startActivity(new Intent(MainActivity.this, MenuActivity.class));
+
+                // Sarrerak garbitu
+                editTextDNI.setText("");
+                dniLetraLabel.setText("");
+                editTextPassword.setText("");
+
+                modua = 0;
+                startActivity(new Intent(MainActivity.this, MenuActivity.class).putExtra("valor", modua));
             } else {
                 Toast.makeText(this, "Erabiltzaile edo pasahitz ez zuzenak", Toast.LENGTH_SHORT).show();
             }
@@ -130,6 +175,26 @@ public class MainActivity extends AppCompatActivity {
             InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), 0);
         }
+    }
+
+    // DNI-ren letra kalkulatzeko funtzioa eta etiketa eguneratzeko
+    private void calcularLetraDNI(String dniZenbakiak) {
+        if (dniZenbakiak.length() == 8) {
+            // Lehenengo 7 karaktereak zenbaki bihurtu eta letra kalkulatu
+            int zenbakiakDNI = Integer.parseInt(dniZenbakiak);
+            char letraDNI = calcularLetraDNI(zenbakiakDNI);
+
+            // Etiketa eguneratu kalkulatutako DNI-aren letra batekin
+            dniLetraLabel.setText(String.valueOf(letraDNI));
+
+        }
+    }
+
+    // DNI-ren letra kalkulatzeko funtzioa
+    private char calcularLetraDNI(int numerosDNI) {
+        String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        int indiceLetra = numerosDNI % 23;
+        return letras.charAt(indiceLetra);
     }
 
 }
