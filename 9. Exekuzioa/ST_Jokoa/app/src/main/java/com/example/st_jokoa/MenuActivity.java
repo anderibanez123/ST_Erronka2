@@ -77,7 +77,7 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
-    // Método para ocultar el teclado virtual
+    // Teklatua kentzeko metodoa
     private void hideKeyboard() {
         View currentFocus = getCurrentFocus();
         if (currentFocus != null) {

@@ -101,7 +101,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void galderakSortu(SQLiteDatabase db) {
-        // Insertar preguntas de ejemplo
+        // Galdera insert
         insertQuestion(db, "Ordenagailuko teklatuari begiratzen badiozu, ze letra aurkitzen da E eta T letren artean?", "R", "D", "F", "U");
         insertQuestion(db, "Zein da munduko kirolik ezagunena?", "Futbola", "Saskibaloia", "Boleibola", "Surfa");
         insertQuestion(db, "Kolore horia eta kolore urdina nahasten badituzu, zein kolore lortuko duzu?", "Berdea", "Gorria", "Laranja", "Morea");
@@ -200,7 +200,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         insertQuestion(db, "Zein da munduko ibairik luzeena?", "Nilo", "Amazonas", "Mississippi", "Yangtsé");
         insertQuestion(db, "Non sortu ziren Olinpiar Jokoak?", "Grecia", "Londres", "Roma", "AEB");
         insertQuestion(db, "Zenbat hezur daude giza gorputzean?", "206", "200", "203", "205");
-        insertQuestion(db, "Nork margotu zuen “Azken Afaria”?", "Leonardo da Vinci", "Miguel Ángel", "Picasso", "Rafael Sanzio");
         insertQuestion(db, "50 % 100 bada, zer da % 90?", "45", "60", "40", "42");
         insertQuestion(db, "Zein herrialdetan dago Taj Mahal monumentu ospetsua?", "India", "China", "Mongolia", "Arabia Saudita");
         insertQuestion(db, "Zenbat urte ditu lustro batek?", "5", "10", "15", "7");
@@ -266,6 +265,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         insertQuestion(db, "Abeslaria", "Kenye West", "Jamoroquei", "Will Smith", "Lander Chamorro");
     }
 
+    // Galderak sartzeko funtzioa
     private void insertQuestion(SQLiteDatabase db, String pregunta, String respuestaCorrecta, String respuestaIncorrecta1, String respuestaIncorrecta2, String respuestaIncorrecta3) {
         ContentValues values = new ContentValues();
         values.put(COLUMN_GALDERA, pregunta);
@@ -277,6 +277,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(TABLE_GALDERAK, null, values);
     }
 
+    // Taula aktualizatu
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
@@ -285,14 +286,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-
+    // Jokoaren barruan galderak irakutsi
     @SuppressLint("Range")
     public List<Galdera> getRandomGalderak(int count) {
         List<Galdera> galderaList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
         Random random = new Random();
 
-        // Obtener todas las preguntas
+        // Galdera guztiak hartu
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_GALDERAK, null);
 
         if (cursor.moveToFirst()) {
@@ -305,8 +306,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 galdera.setErantzunOkerra2(cursor.getString(cursor.getColumnIndex(COLUMN_ERANTZUN_OKERRA_2)));
                 galdera.setErantzunOkerra3(cursor.getString(cursor.getColumnIndex(COLUMN_ERANTZUN_OKERRA_3)));
 
-                // Establecer aleatoriamente el índice de la respuesta correcta
-                int correctAnswerIndex = random.nextInt(4); // 4 opciones posibles
+                // Erantzun zuzena random jarri
+                int correctAnswerIndex = random.nextInt(4); // 4 aukera
                 galdera.setCorrectAnswerIndex(correctAnswerIndex);
 
                 galderaList.add(galdera);
@@ -316,7 +317,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cursor.close();
         db.close();
 
-        // Barajar aleatoriamente la lista y devolver el número especificado de preguntas
+        // Random moduan jarri erantzunak
         Collections.shuffle(galderaList, random);
         return galderaList.subList(0, count);
     }
