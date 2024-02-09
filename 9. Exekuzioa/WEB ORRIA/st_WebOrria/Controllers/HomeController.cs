@@ -18,6 +18,7 @@ namespace st_WebOrria.Controllers
             return View();
         }
 
+/*
         public IActionResult Kontaktua()
         {
             return View("Kontaktua");
@@ -32,11 +33,7 @@ namespace st_WebOrria.Controllers
             return View("Proiektuak");
         }
 
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+*/
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
