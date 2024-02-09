@@ -88,10 +88,10 @@ async def datuak_transferentzia(ranking_list: List[Ranking], db: Session = Depen
 @app.get('/lortu_datuak', response_model=List[Jokalariak])
 async def lortu_datuak(db: Session = Depends(get_db)):
     try:
-        # SQLAlchemy consulta para obtener los datos ordenados por puntuaketa descendentemente
+        
         data = db.query(TxapelketaTxapelketa).order_by(TxapelketaTxapelketa.puntuaketa.desc()).all()
 
-        # Convertir los resultados a un formato compatible con la respuesta JSON
+        # JSONera pasa datuak
         result_data = [{"id": row.id, "izena": row.izena, "abizena": row.abizena, "nan": row.nan,
                         "puntuaketa": row.puntuaketa, "denbora": row.denbora} for row in data]
 
