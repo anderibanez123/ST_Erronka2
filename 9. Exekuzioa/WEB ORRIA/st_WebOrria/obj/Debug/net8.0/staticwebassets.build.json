@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lUMSf77HTrsjkpSMPvULFH4eL9RS46J1be5HRwS14JQ=",
+  "Hash": "dlcxERQ8eUAU6YfNbEqaTBmArccRQMvLA2Id5sjrN6M=",
   "Source": "st_WebOrria",
   "BasePath": "_content/st_WebOrria",
   "Mode": "Default",
@@ -3036,6 +3036,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Irudiak\\logoaa.png"
+    },
+    {
+      "Identity": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\Irudiak\\mantenua.png",
+      "SourceId": "st_WebOrria",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\",
+      "BasePath": "_content/st_WebOrria",
+      "RelativePath": "Irudiak/mantenua.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Irudiak\\mantenua.png"
     },
     {
       "Identity": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\Irudiak\\notizia.png",
