@@ -1,0 +1,913 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\st_WebOrria.bundle.scp.css",
+      "PackagePath": "staticwebassets\\st_WebOrria.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\Irudiak\\Logoa.png",
+      "PackagePath": "staticwebassets\\Irudiak\\Logoa.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\Irudiak\\Top1.png",
+      "PackagePath": "staticwebassets\\Irudiak\\Top1.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\Irudiak\\karrusela1.png",
+      "PackagePath": "staticwebassets\\Irudiak\\karrusela1.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\Irudiak\\karrusela2.png",
+      "PackagePath": "staticwebassets\\Irudiak\\karrusela2.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\Irudiak\\logoaa.png",
+      "PackagePath": "staticwebassets\\Irudiak\\logoaa.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\Irudiak\\mantenua.png",
+      "PackagePath": "staticwebassets\\Irudiak\\mantenua.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\Irudiak\\notizia.png",
+      "PackagePath": "staticwebassets\\Irudiak\\notizia.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\Irudiak\\notizia2.png",
+      "PackagePath": "staticwebassets\\Irudiak\\notizia2.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\Irudiak\\top2.png",
+      "PackagePath": "staticwebassets\\Irudiak\\top2.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\Irudiak\\top3.png",
+      "PackagePath": "staticwebassets\\Irudiak\\top3.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\css\\ollie.css",
+      "PackagePath": "staticwebassets\\assets\\css\\ollie.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\avatar1.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\avatar1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\avatar2.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\avatar2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\avatar3.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\avatar3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\brand.svg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\brand.svg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\header.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\header.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\header1.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\header1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\img-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\img-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\img-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\img-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\img-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\img-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\img-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\img-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\img-8.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\img-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\img-9.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\img-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\kolaboratzaileak1.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\kolaboratzaileak1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\kolaboratzaileak2.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\kolaboratzaileak2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\kolaboratzaileak3.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\kolaboratzaileak3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\kolaboratzaileak4.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\kolaboratzaileak4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\zerbitzuak1.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\zerbitzuak1.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\zerbitzuak2.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\zerbitzuak2.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\imgs\\zerbitzuak3.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\zerbitzuak3.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\js\\ollie.js",
+      "PackagePath": "staticwebassets\\assets\\js\\ollie.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\abstracts\\_mixins.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\abstracts\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\abstracts\\_variables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\abstracts\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\components\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\components\\_button.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_button.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\components\\_card.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\components\\_code.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_code.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\components\\_dropdowns.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_dropdowns.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\components\\_navbar.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\components\\_pagination.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\layout\\_footer.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\layout\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\layout\\_header.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\layout\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\layout\\_sections.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\layout\\_sections.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\ollie.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\ollie.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_alert.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_badge.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_button-group.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_card.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_carousel.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_close.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_code.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_code.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_custom-forms.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_custom-forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_forms.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_functions.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_grid.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_images.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_input-group.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_jumbotron.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_jumbotron.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_list-group.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_media.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_media.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_mixins.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_modal.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_nav.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_navbar.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_pagination.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_popover.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_print.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_print.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_progress.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_reboot.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_root.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_spinners.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_tables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_toasts.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_transitions.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_type.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_utilities.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_variables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_background-variant.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_background-variant.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_badge.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_float.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_float.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_grid-framework.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_grid-framework.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_hover.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_hover.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_nav-divider.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_nav-divider.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_screen-reader.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_size.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_size.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_table-row.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_table-row.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_text-emphasis.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_text-emphasis.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_text-hide.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_text-hide.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_visibility.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_visibility.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_align.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_align.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_background.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_background.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_borders.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_borders.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_display.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_display.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_embed.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_embed.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_flex.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_flex.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_float.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_float.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_overflow.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_overflow.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_position.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_screenreaders.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_screenreaders.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_shadows.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_shadows.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_sizing.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_sizing.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_spacing.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_spacing.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_text.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_text.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_visibility.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_visibility.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.affix.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.affix.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\jquery\\jquery-3.4.1.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery-3.4.1.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\jquery\\jquery-3.4.1.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery-3.4.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\jquery\\jquery-3.4.1.min.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery-3.4.1.min.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\jquery\\jquery-3.4.1.slim.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery-3.4.1.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\jquery\\jquery-3.4.1.slim.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery-3.4.1.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\jquery\\jquery-3.4.1.slim.min.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery-3.4.1.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\owl-carousel\\css\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\assets\\vendors\\owl-carousel\\css\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\owl-carousel\\css\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\owl-carousel\\css\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\owl-carousel\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\owl-carousel\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\owl-carousel\\css\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\owl-carousel\\css\\owl.theme.default.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\owl-carousel\\css\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\owl-carousel\\css\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\owl-carousel\\css\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\owl-carousel\\css\\owl.theme.green.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\owl-carousel\\css\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\owl-carousel\\css\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\owl-carousel\\css\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\assets\\vendors\\owl-carousel\\css\\owl.video.play.png"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\owl-carousel\\js\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\owl-carousel\\js\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\owl-carousel\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\owl-carousel\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\themify-icons\\css\\themify-icons.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\themify-icons\\css\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\themify-icons\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\assets\\vendors\\themify-icons\\fonts\\themify.eot"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\themify-icons\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\assets\\vendors\\themify-icons\\fonts\\themify.svg"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\themify-icons\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\assets\\vendors\\themify-icons\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\assets\\vendors\\themify-icons\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\assets\\vendors\\themify-icons\\fonts\\themify.woff"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\css\\ollie.css",
+      "PackagePath": "staticwebassets\\css\\ollie.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\js\\ollie.js",
+      "PackagePath": "staticwebassets\\js\\ollie.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ikaltamirapaag2\\Desktop\\ST_Erronka2\\9. Exekuzioa\\WEB ORRIA\\st_WebOrria\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.st_WebOrria.props",
+      "PackagePath": "build\\st_WebOrria.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.st_WebOrria.props",
+      "PackagePath": "buildMultiTargeting\\st_WebOrria.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.st_WebOrria.props",
+      "PackagePath": "buildTransitive\\st_WebOrria.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.st_WebOrria.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

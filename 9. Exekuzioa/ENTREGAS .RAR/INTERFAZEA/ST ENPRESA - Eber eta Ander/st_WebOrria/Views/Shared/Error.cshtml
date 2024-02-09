@@ -1,0 +1,29 @@
+﻿@model ErrorViewModel
+@{
+    // Titulua
+    ViewData["Title"] = "Error";
+}
+
+<!-- Errora -->
+<h1 class="text-danger">Error.</h1>
+<h2 class="text-danger">Zure eskaera prozesatzean errorea gertatu da.</h2>
+
+@if (Model.ShowRequestId)
+{
+    <!-- Eskaera ID-a -->
+    <p>
+        <strong>Eskaera ID-a:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<!-- Garapen modua -->
+<h3>Garapen Modua</h3>
+<p>
+    <strong>Garapen</strong> ingurunea aktibatzean, errorearen inguruko informazio zehatzagoa erakusten da.
+</p>
+<p>
+    <strong>Garapen</strong> ingurunea ezin da aktibatuta egon aplikazioa bereizten den bitartean.
+    Erabiltzaileei datu sensitiboak erakusteko arriskua dauka, salbuespenetik.
+    Lokal erroreak arazteko, aktibatu <strong>Garapen</strong> ingurunea ezarrita, <strong>ASPNETCORE_ENVIRONMENT</strong> ingurune aldagaia <strong>Garapen</strong> gisa ezartuz
+    eta aplikazioa berrabiaraziz.
+</p>
