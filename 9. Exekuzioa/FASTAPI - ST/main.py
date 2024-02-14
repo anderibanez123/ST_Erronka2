@@ -8,8 +8,12 @@ from sqlalchemy.orm import sessionmaker, Session
 from typing import List
 import psycopg2
 
+
+# SQLAlchemy erabiltzeko datu-basea definitu
 Base = declarative_base()
 
+
+# Jokalarien datu-mota
 class Jokalariak(BaseModel):
     id: int
     izena: str
@@ -18,6 +22,8 @@ class Jokalariak(BaseModel):
     puntuaketa: int
     denbora: int
 
+
+# Txapelketen datu-mota
 class TxapelketaTxapelketa(Base):
     __tablename__ = 'txapelketa_txapelketa'
 
@@ -28,13 +34,19 @@ class TxapelketaTxapelketa(Base):
     puntuaketa = Column(Integer)
     denbora = Column(Integer)
 
+
+# Datu-basearen konexioa sortu
 DATABASE_URL = "postgresql://odoo:odoo@10.23.28.192:5434/st_db"
 engine = create_engine(DATABASE_URL)
 Base.metadata.create_all(bind=engine)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
+
+# FastAPI aplikazioa sortu
 app = FastAPI()
 
+
+# CORS Middlewarea gehitu
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -43,6 +55,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+# Ranking klasea definitu
 class Ranking(BaseModel):
     #id: int
     izena: str
@@ -52,6 +66,7 @@ class Ranking(BaseModel):
     denbora: int
 
 
+# Datu-basea lortzeko funtzioa
 def get_db():
     db = SessionLocal()
     try:
@@ -60,6 +75,7 @@ def get_db():
         db.close()
 
 
+# Datuak berritzeko API endpoint-a
 @app.post('/datuak_berritu')
 async def datuak_transferentzia(ranking_list: List[Ranking], db: Session = Depends(get_db)):
     try:
@@ -85,6 +101,7 @@ async def datuak_transferentzia(ranking_list: List[Ranking], db: Session = Depen
         raise HTTPException(status_code=500, detail=str(e))
 
 
+# Datuak lortzeko API endpoint-a
 @app.get('/lortu_datuak', response_model=List[Jokalariak])
 async def lortu_datuak(db: Session = Depends(get_db)):
     try:
@@ -101,10 +118,13 @@ async def lortu_datuak(db: Session = Depends(get_db)):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+# Ping endpoint-a
 @app.get("/ping")
 def ping():
     return {"message": "¡API ondo dabil, OK!"}
 
+
+# Server exekutatzeko kodea
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8012)
